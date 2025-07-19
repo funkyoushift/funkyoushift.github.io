@@ -21,9 +21,10 @@ header.hero {
 
 header.hero img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto; /* Show natural height */
+    display: block;
     margin-bottom: 20px;
+    border-radius: 0;
 }
 
 header.hero h1 {
