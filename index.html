@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    
+
     <meta name="description" content="FunkYouSHiFT - Modded Borderlands Streams, Giveaways, and Community.">
     <meta property="og:title" content="FunkYouSHiFT | Twitch Streamer">
     <meta property="og:description" content="Modded Borderlands, Giveaways, and Chaos. Join the fun!">
@@ -17,7 +17,12 @@
 <body>
 
     <header class="hero">
-        <img src="images/banner.jpeg" alt="FunkYouSHiFT Cover">
+        <iframe
+            src="https://player.twitch.tv/?channel=funkyoushift&parent=www.funkyoushift.com"
+            height="400"
+            width="100%"
+            allowfullscreen>
+        </iframe>
         <h1>Welcome to FunkYouSHiFT</h1>
         <p>Modded Borderlands • Giveaways • Chaos</p>
         <a href="https://www.twitch.tv/funkyoushift" target="_blank">🎥 Watch Live on Twitch</a>
@@ -26,16 +31,6 @@
     <section class="about">
         <h2>About Me</h2>
         <p>I'm FunkYouSHiFT — a Twitch streamer from Michigan with three kids, three cats, and a love for modded Borderlands and community giveaways.</p>
-    </section>
-
-    <section class="twitch-embed">
-        <h2>Live Stream</h2>
-        <iframe
-            src="https://player.twitch.tv/?channel=funkyoushift&parent=www.funkyoushift.com"
-            height="480"
-            width="100%"
-            allowfullscreen>
-        </iframe>
     </section>
 
     <section class="socials">
@@ -49,18 +44,21 @@
         </div>
     </section>
 
-<section class="merch">
-    <h2>Check Out the Merch</h2>
-    <p>Grab some FunkYouSHiFT gear and support the stream! Shirts, mugs, and more available now.</p>
-    <iframe 
-        src="https://streamlabs.com/funkyoushift/merch" 
-        width="100%" 
-        height="900" 
-        style="border: 4px solid #FFCC00; box-shadow: 4px 4px #000;"
-        allowfullscreen>
-    </iframe>
-</section>
-
+    <section class="merch">
+        <h2>Check Out the Merch</h2>
+        <p>Grab some FunkYouSHiFT gear and support the stream! Shirts, mugs, and more available now.</p>
+        <div class="merch-gallery">
+            <a href="https://streamlabs.com/funkyoushift/merch" target="_blank">
+                <img src="images/shirt.png" alt="T-Shirt">
+            </a>
+            <a href="https://streamlabs.com/funkyoushift/merch" target="_blank">
+                <img src="images/mug.png" alt="Mug">
+            </a>
+        </div>
+        <a href="https://streamlabs.com/funkyoushift/merch" target="_blank">
+            <button>🛍️ Visit the Merch Store</button>
+        </a>
+    </section>
 
     <section class="donate">
         <a href="https://streamlabs.com/funkyoushift/tip" target="_blank">
