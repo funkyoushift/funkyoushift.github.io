@@ -30,7 +30,7 @@ header.hero iframe {
 
 header.hero h1 {
     font-size: 4rem;
-    color: #FFCC00;
+    color: #FF9900;
     margin-bottom: 10px;
     text-shadow: 2px 2px #000;
 }
@@ -60,7 +60,7 @@ header.hero p {
 
 section h2, section h3 {
     font-size: 2rem;
-    color: #FFCC00;
+    color: #FF9900;
     margin-bottom: 20px;
     text-shadow: 2px 2px #000;
 }
@@ -81,12 +81,12 @@ section p {
     margin-bottom: 40px;
 }
 
-/* Buttons with Grunge Texture */
+/* Borderlands Orange Buttons with Grunge Texture */
 section.merch button,
 section.donate button,
 header.hero a,
 .social-buttons a {
-    background-color: #FFCC00;
+    background-color: #FF9900;
     background-image: url('images/grunge.png');
     background-size: cover;
     background-blend-mode: multiply;
@@ -106,7 +106,7 @@ section.merch button:hover,
 section.donate button:hover,
 header.hero a:hover,
 .social-buttons a:hover {
-    background-color: #FFD700;
+    background-color: #FFB347;
     background-image: url('images/grunge.png');
     background-size: cover;
     background-blend-mode: multiply;
@@ -148,13 +148,5 @@ section.discord {
 
 section.discord h2 {
     font-size: 2rem;
-    color: #FFCC00;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #000;
-}
-
-section.discord p {
-    color: #ccc;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px #000;
-}
+    color: #FF9900;
+    margin-bottom: 
