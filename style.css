@@ -58,6 +58,15 @@ header.hero p {
     border-radius: 8px;
 }
 
+section.about {
+    padding: 40px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 700px;
+    box-shadow: 2px 2px #000;
+}
+
 section h2, section h3 {
     font-size: 2rem;
     color: #FF9900;
@@ -149,4 +158,12 @@ section.discord {
 section.discord h2 {
     font-size: 2rem;
     color: #FF9900;
-    margin-bottom: 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+section.discord p {
+    color: #ccc;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
+}
