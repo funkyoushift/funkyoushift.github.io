@@ -135,3 +135,26 @@ header.hero a:hover,
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px #000;
 }
+
+/* Discord Section */
+section.discord {
+    padding: 40px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 2px 2px #000;
+}
+
+section.discord h2 {
+    font-size: 2rem;
+    color: #FFCC00;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+section.discord p {
+    color: #ccc;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
+}
