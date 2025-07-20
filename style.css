@@ -19,7 +19,6 @@ body {
 
 header.hero {
     padding: 40px 20px;
-    background-color: transparent;
 }
 
 header.hero iframe {
@@ -62,14 +61,25 @@ header.hero a:hover {
     box-shadow: 4px 4px #000;
 }
 
-section {
-    padding: 60px 20px;
-    margin: 40px 0;
-    background-color: transparent;
+.two-column {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.two-column section {
+    flex: 1 1 400px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
 }
 
 section h2, section h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FFCC00;
     margin-bottom: 20px;
     text-shadow: 2px 2px #000;
