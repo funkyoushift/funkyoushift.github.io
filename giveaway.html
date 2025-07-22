@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FunkYouSHiFT Gallery | Stream Highlights & Screenshots</title>
-    <meta name="description" content="View stream highlights, loot drops, and chaos from FunkYouSHiFT’s Borderlands adventures.">
+    <title>Support FunkYouSHiFT | Donate & Giveaways</title>
+    <meta name="description" content="Support FunkYouSHiFT’s stream with donations or enter the latest gaming giveaways!">
     <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
+
 <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="merch.html">Merch</a>
@@ -17,27 +18,22 @@
 </nav>
 
 <header class="hero">
-    <h1>GALLERY</h1>
+    <h1>SUPPORT THE STREAM</h1>
 </header>
 
 <main>
-    <section class="gallery-grid">
-        <h2>📸 Click to View Full Image</h2>
-        <div class="thumbnail-grid">
-            <img src="slideshow/slide1.jpg" alt="Gallery 1" onclick="openLightbox(this.src)">
-            <img src="slideshow/slide2.jpg" alt="Gallery 2" onclick="openLightbox(this.src)">
-            <img src="slideshow/slide3.jpg" alt="Gallery 3" onclick="openLightbox(this.src)">
-            <!-- Repeat as needed up to slide37.jpg -->
-            <img src="slideshow/slide37.jpg" alt="Gallery 37" onclick="openLightbox(this.src)">
-        </div>
+    <section>
+        <a href="https://streamlabs.com/funkyoushift/tip" target="_blank" class="big-button">
+            💸 Donate via Streamlabs
+        </a>
     </section>
 
     <section>
-        <h2>🎥 Video Highlight</h2>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/Eo2fyS4E3NY" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+        <h2>💥 Enter My Latest Giveaway 💥</h2>
+        <a class="e-widget no-button" href="https://gleam.io/OijsS/bl4-giveaway" rel="nofollow">
+            🎁 Enter the Borderlands 4 Giveaway!
+        </a>
+        <script type="text/javascript" src="https://widget.gleamjs.io/e.js" async="true"></script>
     </section>
 </main>
 
@@ -50,20 +46,5 @@
     <a href="https://throne.com/funkyoushift" target="_blank">Throne</a>
 </footer>
 
-<!-- Lightbox -->
-<div id="lightbox" onclick="closeLightbox()">
-    <span class="close-btn">X</span>
-    <img id="lightbox-img" src="">
-</div>
-
-<script>
-    function openLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
-        document.getElementById('lightbox').style.display = 'flex';
-    }
-    function closeLightbox() {
-        document.getElementById('lightbox').style.display = 'none';
-    }
-</script>
 </body>
 </html>
