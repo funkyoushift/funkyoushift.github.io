@@ -143,11 +143,16 @@ section h2 {
 
 .merch-gallery img {
     width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background-color: #000;
     border: 2px solid #FF9900;
     border-radius: 8px;
     box-shadow: 4px 4px #000;
     transition: 0.3s;
+    padding: 10px;
 }
+
 
 .merch-gallery img:hover {
     transform: scale(1.05);
