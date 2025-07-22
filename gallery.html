@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FunkYouSHiFT Gallery | Stream Highlights & Screenshots</title>
-    <meta name="description" content="View stream highlights, loot drops, and chaos from FunkYouSHiFT’s Borderlands adventures.">
-    <link rel="stylesheet" href="style.css?v=2">
+    <title>FunkYouSHiFT: Behind the Scenes | Gallery</title>
+    <meta name="description" content="A peek behind the scenes of FunkYouSHiFT. Life, chaos, cats, and fun beyond the Borderlands.">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <nav class="navbar">
@@ -17,50 +17,18 @@
 </nav>
 
 <header class="hero">
-    <h1>GALLERY</h1>
+    <h1>FUNKYOUSHIFT: BEHIND THE SCENES</h1>
 </header>
 
 <main>
-    <section class="slideshow">
-        <h2>🎞️ Stream Highlights</h2>
-        <div class="slides">
-            <img src="slideshow/slide1.jpg" class="active">
-            <img src="slideshow/slide2.jpg">
-            <img src="slideshow/slide3.jpg">
-            <img src="slideshow/slide4.jpg">
-            <img src="slideshow/slide5.jpg">
-            <img src="slideshow/slide6.jpg">
-            <img src="slideshow/slide7.jpg">
-            <img src="slideshow/slide8.jpg">
-            <img src="slideshow/slide9.jpg">
-            <img src="slideshow/slide10.jpg">
-            <img src="slideshow/slide11.jpg">
-            <img src="slideshow/slide12.jpg">
-            <img src="slideshow/slide13.jpg">
-            <img src="slideshow/slide14.jpg">
-            <img src="slideshow/slide15.jpg">
-            <img src="slideshow/slide16.jpg">
-            <img src="slideshow/slide17.jpg">
-            <img src="slideshow/slide18.jpg">
-            <img src="slideshow/slide19.jpg">
-            <img src="slideshow/slide20.jpg">
-            <img src="slideshow/slide21.jpg">
-            <img src="slideshow/slide22.jpg">
-            <img src="slideshow/slide23.jpg">
-            <img src="slideshow/slide24.jpg">
-            <img src="slideshow/slide25.jpg">
-            <img src="slideshow/slide26.jpg">
-            <img src="slideshow/slide27.jpg">
-            <img src="slideshow/slide28.jpg">
-            <img src="slideshow/slide29.jpg">
-            <img src="slideshow/slide30.jpg">
-            <img src="slideshow/slide31.jpg">
-            <img src="slideshow/slide32.jpg">
-            <img src="slideshow/slide33.jpg">
-            <img src="slideshow/slide34.jpg">
-            <img src="slideshow/slide35.jpg">
-            <img src="slideshow/slide36.jpg">
-            <img src="slideshow/slide37.jpg">
+    <section class="gallery-grid">
+        <h2>📸 Click to View Full Image</h2>
+        <div class="thumbnail-grid">
+            <img src="slideshow/slide1.jpg" alt="Gallery 1" onclick="openLightbox(this.src)">
+            <img src="slideshow/slide2.jpg" alt="Gallery 2" onclick="openLightbox(this.src)">
+            <img src="slideshow/slide3.jpg" alt="Gallery 3" onclick="openLightbox(this.src)">
+            <!-- ... through slide37.jpg ... -->
+            <img src="slideshow/slide37.jpg" alt="Gallery 37" onclick="openLightbox(this.src)">
         </div>
     </section>
 
@@ -82,15 +50,19 @@
     <a href="https://throne.com/funkyoushift" target="_blank">Throne</a>
 </footer>
 
+<div id="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">X</span>
+    <img id="lightbox-img" src="">
+</div>
+
 <script>
-    const slides = document.querySelectorAll('.slides img');
-    let current = 0;
-    function nextSlide() {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
     }
-    setInterval(nextSlide, 4000);
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
 </script>
 </body>
 </html>
