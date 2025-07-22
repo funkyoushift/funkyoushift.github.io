@@ -20,7 +20,9 @@ body {
 }
 
 .navbar a {
-    color: #FF9900;
+    color: #000;
+    font-weight: bold;
+    text-shadow: none;
     text-decoration: none;
     padding: 0.8rem 1.5rem;
     font-size: 1.4rem;
