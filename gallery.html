@@ -2,17 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>FunkYouSHiFT: Behind the Scenes | Gallery</title>
-<meta name="description" content="A peek behind the scenes of FunkYouSHiFT. Life, chaos, cats, and fun beyond the Borderlands."/>
-<link rel="stylesheet" href="style.css?v=3"/>
+<meta name="description" content="A peek behind the scenes of FunkYouSHiFT: life, chaos, cats, and fun beyond the Borderlands."/>
+<link rel="stylesheet" href="style.css?v=5"/>
 <link rel="canonical" href="https://www.funkyoushift.com/gallery.html"/>
+<style>
+  /* Minimal local styles in case style.css doesn't define these */
+  .thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    gap: 12px;
+    align-items: stretch;
+  }
+  .thumb {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thumb img, .thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .thumb .badge {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 6px;
+  }
+  /* lightbox */
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  #lightbox-inner {
+    position: relative;
+    max-width: 96vw;
+    max-height: 90vh;
+    width: min(1200px, 96vw);
+    margin: auto;
+  }
+  #lightbox img, #lightbox video {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    display: block;
+    border-radius: 12px;
+    background: #000;
+  }
+  #lightbox .close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #fff;
+    color: #000;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+  }
+  #lightbox .close-btn:hover { transform: scale(1.05); }
+  .hero h1 { text-align: center; margin: 1.2rem 0 0.5rem; }
+  .section-title { margin: 1rem 0; }
+  .hint { color: #9aa0a6; font-size: .95rem; }
+</style>
 </head>
 <body>
 <nav class="navbar">
   <a href="index.html">Home</a>
   <a href="merch.html">Merch</a>
   <a href="donate.html">Donate</a>
-  <a href="gallery.html">Gallery</a>
+  <a href="gallery.html" aria-current="page">Gallery</a>
   <a href="giveaway.html">Giveaway</a>
   <a href="discord.html">Discord</a>
 </nav>
@@ -23,18 +106,16 @@
 
 <main>
   <section class="gallery-grid">
-    <h2>📸 Click to View Full Image</h2>
-
-    <!-- Thumbnails will be inserted here only if the image actually exists -->
-    <div id="thumbs" class="thumbnail-grid" aria-live="polite"></div>
-
-    <p id="no-images" style="display:none; color:#ccc; margin-top:1rem;">
-      No images found yet. Add files to <code>/slideshow/</code> like <code>slide1.jpg</code>, <code>slide2.jpg</code>, etc.
+    <h2 class="section-title">📸 Click any tile to view</h2>
+    <div class="thumbnail-grid" id="thumbs" aria-live="polite"></div>
+    <p id="no-images" class="hint" style="display:none">
+      No media found. I looked in <code>/slideshow/</code> for files named <code>slide1</code>, <code>slide2</code>, …
+      with extensions <code>jpg</code>, <code>jpeg</code>, <code>png</code>, <code>webp</code>, and <code>mp4</code> (any case).
     </p>
   </section>
 
   <section>
-    <h2>🎥 Video Highlight</h2>
+    <h2 class="section-title">🎥 Video Highlight</h2>
     <iframe width="100%" height="500" src="https://www.youtube.com/embed/Eo2fyS4E3NY"
       title="YouTube video player"
       frameborder="0"
@@ -53,62 +134,125 @@
 </footer>
 
 <!-- Lightbox -->
-<div id="lightbox" onclick="closeLightbox()">
-  <span class="close-btn">X</span>
-  <img id="lightbox-img" src="" alt="Full-size gallery image"/>
+<div id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" onclick="closeLightbox(event)">
+  <div id="lightbox-inner">
+    <div class="close-btn" onclick="closeLightbox(event)" title="Close">✕</div>
+    <div id="lb-content"></div>
+  </div>
 </div>
 
 <script>
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
+  function openLightboxImage(src, alt='') {
+    const c = document.getElementById('lb-content');
+    c.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt || src.split('/').pop();
+    c.appendChild(img);
     document.getElementById('lightbox').style.display = 'flex';
   }
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
+  function openLightboxVideo(src) {
+    const c = document.getElementById('lb-content');
+    c.innerHTML = '';
+    const video = document.createElement('video');
+    video.src = src;
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.style.background = '#000';
+    c.appendChild(video);
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox(e) {
+    if (!e || e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
+      const c = document.getElementById('lb-content');
+      c.innerHTML = '';
+      document.getElementById('lightbox').style.display = 'none';
+    }
   }
 
-  // Dynamically probe for existing images and only show ones that load.
   (function buildGallery() {
     const container = document.getElementById('thumbs');
     const noImages = document.getElementById('no-images');
 
-    // Adjust range as needed. We'll try 1..60.
-    const start = 1;
-    const end = 60;
+    // Probe extensions (any case) and include videos
+    const imgExts = ['jpg', 'jpeg', 'png', 'webp'];
+    const vidExts = ['mp4'];
+    const allExts = [...imgExts, ...vidExts];
+    const maxSlides = 200; // generous upper bound
 
     let found = 0;
+    let pending = 0;
 
-    for (let i = start; i <= end; i++) {
-      const path = `slideshow/slide${i}.jpg`;
+    function addThumb(media) {
+      const wrap = document.createElement('div');
+      wrap.className = 'thumb';
 
-      const probe = new Image();
-      probe.decoding = 'async';
-      probe.loading = 'lazy';
+      if (media.type === 'video') {
+        // Inline silent looping preview looks slick
+        const v = document.createElement('video');
+        v.src = media.src;
+        v.muted = true;
+        v.loop = true;
+        v.playsInline = true;
+        v.preload = 'metadata';
+        v.onmouseenter = () => v.play();
+        v.onmouseleave = () => v.pause();
+        v.onclick = () => openLightboxVideo(media.src);
+        wrap.appendChild(v);
 
-      probe.onload = function () {
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = 'VIDEO';
+        wrap.appendChild(badge);
+      } else {
         const img = document.createElement('img');
-        img.src = path;
-        img.alt = `Gallery ${i}`;
+        img.src = media.src;
+        img.alt = media.alt || media.name;
         img.loading = 'lazy';
         img.decoding = 'async';
-        img.onclick = () => openLightbox(path);
-        container.appendChild(img);
-        found++;
-      };
-
-      // If 404 or any load error, skip silently
-      probe.onerror = function () { /* do nothing */ };
-
-      // Kick off the request
-      probe.src = path;
+        img.onclick = () => openLightboxImage(media.src, media.alt);
+        wrap.appendChild(img);
+      }
+      container.appendChild(wrap);
     }
 
-    // If nothing loads after a short delay, show a hint
-    setTimeout(() => {
-      if (found === 0) {
-        noImages.style.display = 'block';
+    // Try slide1..slideN.* across all extensions (case-insensitive)
+    for (let i = 1; i <= maxSlides; i++) {
+      for (const ext of allExts) {
+        const candidates = [
+          `slideshow/slide${i}.${ext}`,
+          `slideshow/slide${i}.${ext.toUpperCase()}`
+        ];
+        for (const src of candidates) {
+          pending++;
+          // Image probe for both images and videos (videos won't load as Image; we detect error and test via fetch HEAD)
+          const img = new Image();
+          img.onload = () => {
+            found++;
+            addThumb({ type: imgExts.includes(ext) ? 'image' : 'video', src, name: `slide${i}` });
+            if (--pending === 0 && found === 0) noImages.style.display = 'block';
+          };
+          img.onerror = async () => {
+            // If it's a video type, try a quick fetch to detect existence
+            if (vidExts.includes(ext)) {
+              try {
+                const res = await fetch(src, { method: 'HEAD', cache: 'no-store' });
+                if (res.ok) {
+                  found++;
+                  addThumb({ type: 'video', src, name: `slide${i}` });
+                }
+              } catch (_) {}
+            }
+            if (--pending === 0 && found === 0) noImages.style.display = 'block';
+          };
+          img.src = src;
+        }
       }
-    }, 1200);
+    }
+
+    // Failsafe: after a short delay, if none found, show hint
+    setTimeout(() => { if (found === 0) noImages.style.display = 'block'; }, 1500);
   })();
 </script>
 </body>
