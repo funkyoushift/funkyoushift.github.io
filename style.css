@@ -273,18 +273,18 @@ section h2 {
         flex-direction: column;
         gap: 10px;
     }
+}
 
-
-/* === Twitch embed === */
+/* === Twitch embed (double size) === */
 .twitch-embed {
-  max-width: 900px;
+  max-width: 1800px; /* doubled from 900px */
   margin: 24px auto 0;
 }
 
 .twitch-embed__frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;                /* modern responsive ratio */
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 4px 4px #000;
@@ -311,5 +311,4 @@ section h2 {
 }
 .twitch-embed__fallback a:hover {
   text-decoration: underline;
-}
 }
