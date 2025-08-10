@@ -1,92 +1,115 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>FunkYouSHiFT: Behind the Scenes | Gallery</title>
-<meta content="A peek behind the scenes of FunkYouSHiFT. Life, chaos, cats, and fun beyond the Borderlands." name="description"/>
-<link href="style.css?v=3" rel="stylesheet"/>
-<link href="https://www.funkyoushift.com/gallery.html" rel="canonical"/></head>
+<meta name="description" content="A peek behind the scenes of FunkYouSHiFT. Life, chaos, cats, and fun beyond the Borderlands."/>
+<link rel="stylesheet" href="style.css?v=3"/>
+<link rel="canonical" href="https://www.funkyoushift.com/gallery.html"/>
+</head>
 <body>
 <nav class="navbar">
-<a href="index.html">Home</a>
-<a href="merch.html">Merch</a>
-<a href="donate.html">Donate</a>
-<a href="gallery.html">Gallery</a>
-<a href="giveaway.html">Giveaway</a>
-<a href="discord.html">Discord</a>
+  <a href="index.html">Home</a>
+  <a href="merch.html">Merch</a>
+  <a href="donate.html">Donate</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="giveaway.html">Giveaway</a>
+  <a href="discord.html">Discord</a>
 </nav>
+
 <header class="hero">
-<h1>FUNKYOUSHIFT: BEHIND THE SCENES</h1>
+  <h1>FUNKYOUSHIFT: BEHIND THE SCENES</h1>
 </header>
+
 <main>
-<section class="gallery-grid">
-<h2>📸 Click to View Full Image</h2>
-<div class="thumbnail-grid">
-<img alt="Gallery 1" onclick="openLightbox(this.src)" src="slideshow/slide1.jpg"/>
-<img alt="Gallery 2" onclick="openLightbox(this.src)" src="slideshow/slide2.jpg"/>
-<img alt="Gallery 3" onclick="openLightbox(this.src)" src="slideshow/slide3.jpg"/>
-<img alt="Gallery 4" onclick="openLightbox(this.src)" src="slideshow/slide4.jpg"/>
-<img alt="Gallery 5" onclick="openLightbox(this.src)" src="slideshow/slide5.jpg"/>
-<img alt="Gallery 6" onclick="openLightbox(this.src)" src="slideshow/slide6.jpg"/>
-<img alt="Gallery 7" onclick="openLightbox(this.src)" src="slideshow/slide7.jpg"/>
-<img alt="Gallery 8" onclick="openLightbox(this.src)" src="slideshow/slide8.jpg"/>
-<img alt="Gallery 9" onclick="openLightbox(this.src)" src="slideshow/slide9.jpg"/>
-<img alt="Gallery 10" onclick="openLightbox(this.src)" src="slideshow/slide10.jpg"/>
-<img alt="Gallery 11" onclick="openLightbox(this.src)" src="slideshow/slide11.jpg"/>
-<img alt="Gallery 12" onclick="openLightbox(this.src)" src="slideshow/slide12.jpg"/>
-<img alt="Gallery 13" onclick="openLightbox(this.src)" src="slideshow/slide13.jpg"/>
-<img alt="Gallery 14" onclick="openLightbox(this.src)" src="slideshow/slide14.jpg"/>
-<img alt="Gallery 15" onclick="openLightbox(this.src)" src="slideshow/slide15.jpg"/>
-<img alt="Gallery 16" onclick="openLightbox(this.src)" src="slideshow/slide16.jpg"/>
-<img alt="Gallery 17" onclick="openLightbox(this.src)" src="slideshow/slide17.jpg"/>
-<img alt="Gallery 18" onclick="openLightbox(this.src)" src="slideshow/slide18.jpg"/>
-<img alt="Gallery 19" onclick="openLightbox(this.src)" src="slideshow/slide19.jpg"/>
-<img alt="Gallery 20" onclick="openLightbox(this.src)" src="slideshow/slide20.jpg"/>
-<img alt="Gallery 21" onclick="openLightbox(this.src)" src="slideshow/slide21.jpg"/>
-<img alt="Gallery 22" onclick="openLightbox(this.src)" src="slideshow/slide22.jpg"/>
-<img alt="Gallery 23" onclick="openLightbox(this.src)" src="slideshow/slide23.jpg"/>
-<img alt="Gallery 24" onclick="openLightbox(this.src)" src="slideshow/slide24.jpg"/>
-<img alt="Gallery 25" onclick="openLightbox(this.src)" src="slideshow/slide25.jpg"/>
-<img alt="Gallery 26" onclick="openLightbox(this.src)" src="slideshow/slide26.jpg"/>
-<img alt="Gallery 27" onclick="openLightbox(this.src)" src="slideshow/slide27.jpg"/>
-<img alt="Gallery 28" onclick="openLightbox(this.src)" src="slideshow/slide28.jpg"/>
-<img alt="Gallery 29" onclick="openLightbox(this.src)" src="slideshow/slide29.jpg"/>
-<img alt="Gallery 30" onclick="openLightbox(this.src)" src="slideshow/slide30.jpg"/>
-<img alt="Gallery 31" onclick="openLightbox(this.src)" src="slideshow/slide31.jpg"/>
-<img alt="Gallery 32" onclick="openLightbox(this.src)" src="slideshow/slide32.jpg"/>
-<img alt="Gallery 33" onclick="openLightbox(this.src)" src="slideshow/slide33.jpg"/>
-<img alt="Gallery 34" onclick="openLightbox(this.src)" src="slideshow/slide34.jpg"/>
-<img alt="Gallery 35" onclick="openLightbox(this.src)" src="slideshow/slide35.jpg"/>
-<img alt="Gallery 36" onclick="openLightbox(this.src)" src="slideshow/slide36.jpg"/>
-<img alt="Gallery 37" onclick="openLightbox(this.src)" src="slideshow/slide37.jpg"/>
-</div>
-</section>
-<section>
-<h2>🎥 Video Highlight</h2>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="500" src="https://www.youtube.com/embed/Eo2fyS4E3NY" title="YouTube video player" width="100%"></iframe>
-</section>
+  <section class="gallery-grid">
+    <h2>📸 Click to View Full Image</h2>
+
+    <!-- Thumbnails will be inserted here only if the image actually exists -->
+    <div id="thumbs" class="thumbnail-grid" aria-live="polite"></div>
+
+    <p id="no-images" style="display:none; color:#ccc; margin-top:1rem;">
+      No images found yet. Add files to <code>/slideshow/</code> like <code>slide1.jpg</code>, <code>slide2.jpg</code>, etc.
+    </p>
+  </section>
+
+  <section>
+    <h2>🎥 Video Highlight</h2>
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/Eo2fyS4E3NY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </section>
 </main>
+
 <footer class="social-links">
-<a href="https://www.twitch.tv/funkyoushift" target="_blank">Twitch</a>
-<a href="https://www.youtube.com/@funkyoushift" target="_blank">YouTube</a>
-<a href="https://x.com/funkyoushift" target="_blank">X (Twitter)</a>
-<a href="https://www.facebook.com/funkyoushift" target="_blank">Facebook</a>
-<a href="https://discord.gg/ttwl-bl3-trading" target="_blank">Discord</a>
-<a href="https://throne.com/funkyoushift" target="_blank">Throne</a>
+  <a href="https://www.twitch.tv/funkyoushift" target="_blank">Twitch</a>
+  <a href="https://www.youtube.com/@funkyoushift" target="_blank">YouTube</a>
+  <a href="https://x.com/funkyoushift" target="_blank">X (Twitter)</a>
+  <a href="https://www.facebook.com/funkyoushift" target="_blank">Facebook</a>
+  <a href="https://discord.gg/ttwl-bl3-trading" target="_blank">Discord</a>
+  <a href="https://throne.com/funkyoushift" target="_blank">Throne</a>
 </footer>
+
+<!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
-<span class="close-btn">X</span>
-<img id="lightbox-img" src=""/>
+  <span class="close-btn">X</span>
+  <img id="lightbox-img" src="" alt="Full-size gallery image"/>
 </div>
+
 <script>
-    function openLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
-        document.getElementById('lightbox').style.display = 'flex';
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  // Dynamically probe for existing images and only show ones that load.
+  (function buildGallery() {
+    const container = document.getElementById('thumbs');
+    const noImages = document.getElementById('no-images');
+
+    // Adjust range as needed. We'll try 1..60.
+    const start = 1;
+    const end = 60;
+
+    let found = 0;
+
+    for (let i = start; i <= end; i++) {
+      const path = `slideshow/slide${i}.jpg`;
+
+      const probe = new Image();
+      probe.decoding = 'async';
+      probe.loading = 'lazy';
+
+      probe.onload = function () {
+        const img = document.createElement('img');
+        img.src = path;
+        img.alt = `Gallery ${i}`;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.onclick = () => openLightbox(path);
+        container.appendChild(img);
+        found++;
+      };
+
+      // If 404 or any load error, skip silently
+      probe.onerror = function () { /* do nothing */ };
+
+      // Kick off the request
+      probe.src = path;
     }
-    function closeLightbox() {
-        document.getElementById('lightbox').style.display = 'none';
-    }
+
+    // If nothing loads after a short delay, show a hint
+    setTimeout(() => {
+      if (found === 0) {
+        noImages.style.display = 'block';
+      }
+    }, 1200);
+  })();
 </script>
 </body>
 </html>
