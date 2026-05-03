@@ -39,3 +39,11 @@
 - Restored stream/offline/channel assets into Gallery so it is not only AI brand art.
 - Updated `style.css` with v2.1.0 traffic/resource card styles.
 - Updated `sitemap.xml`, `robots.txt`, `llms.txt`, project notes, and cache busting.
+
+## v2.1.1 — Slideshow restore + image optimization — 2026-05-03
+- Added the optimized `/slideshow/` asset folder back into the deployable site package.
+- Added a visible Community Slideshow section to `gallery.html` using lazy-loaded optimized images.
+- Optimized oversized site images for faster mobile loading and smaller deploy ZIP size.
+- Converted opaque oversized brand art from heavy PNG files to compressed JPG references while preserving the transparent FU logo PNG.
+- Added image dimensions/decoding attributes across local image tags to reduce layout shift and improve PageSpeed behavior.
+- Updated cache busting from `style.css?v=2.1.0` to `style.css?v=2.1.1`.

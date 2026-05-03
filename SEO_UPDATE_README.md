@@ -24,8 +24,8 @@ This ZIP does not include the image folder to keep the package small. The HTML r
 The SEO update assumes these image files already exist:
 
 - `/images/fu-logo-2026.png`
-- `/images/team-funkyoushift-people-2026.png`
-- `/images/team-funkyoushift-bots-2026.png`
+- `/images/team-funkyoushift-people-2026.jpg`
+- `/images/team-funkyoushift-bots-2026.jpg`
 - `/images/favicon.ico`
 
 ## What changed

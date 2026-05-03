@@ -1122,3 +1122,13 @@ body[data-version="2.0.2"] .gallery-hero {
     text-align: center;
   }
 }
+
+/* v2.1.1 - community slideshow + image optimization helpers */
+.slideshow-card-grid .gallery-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.community-slideshow-showcase {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}

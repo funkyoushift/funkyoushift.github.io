@@ -55,3 +55,10 @@ v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
 - Discord remains the primary conversion target for modding/trading/help traffic.
 - Gallery regression addressed by restoring visible stream/offline/channel assets alongside newer AI/brand artwork.
 - Sitemap, llms.txt, nav/footer, cache busting, and internal links updated for v2.1.0.
+
+## v2.1.1 Slideshow + Performance Notes
+- The `/slideshow/` folder is now part of the deployable ZIP and contains optimized JPG slideshow images.
+- Gallery should keep slideshow images lazy-loaded and below the primary brand/merch sections so mobile visitors see core actions first.
+- Do not re-upload raw full-size slideshow images over these optimized files unless they are resized/compressed again.
+- Large opaque PNG brand artwork was replaced with JPG references for speed. Keep transparent logo art as PNG unless a tested WebP fallback system is added.
+- Maintain explicit `width`, `height`, `loading`, and `decoding` attributes on local images for Google PageSpeed and CLS stability.
