@@ -62,3 +62,8 @@ v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
 - Do not re-upload raw full-size slideshow images over these optimized files unless they are resized/compressed again.
 - Large opaque PNG brand artwork was replaced with JPG references for speed. Keep transparent logo art as PNG unless a tested WebP fallback system is added.
 - Maintain explicit `width`, `height`, `loading`, and `decoding` attributes on local images for Google PageSpeed and CLS stability.
+
+
+## v2.1.4 Notes
+- Resource descriptions/card grid was removed after review; page should not show the old resource boxes above the embeds.
+- Keep embeds/fallback buttons as the main resource page format.

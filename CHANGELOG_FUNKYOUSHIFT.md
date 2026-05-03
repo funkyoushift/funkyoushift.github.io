@@ -63,3 +63,10 @@
 - Added direct fallback links for external resources because some outside sites may block iframe previews.
 - Updated build videos page with embedded creator videos plus a Discord build-showoff CTA.
 - Updated cache busting to style.css?v=2.1.3.
+
+
+## v2.1.4 - Resources cleanup
+- Removed the old description card grid from borderlands-resources.html.
+- Resources page now starts with embed-focused sections and simple action buttons only.
+- Added anchors for build videos and resource site embeds.
+- Updated cache busting to style.css?v=2.1.4.

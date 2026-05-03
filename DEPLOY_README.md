@@ -27,3 +27,5 @@ Upload the contents of this ZIP to the site root, replacing existing files.
 5. Confirm new traffic pages load.
 
 Version: v2.1.0
+
+Resource page cleanup: old text-card resource grid removed.
