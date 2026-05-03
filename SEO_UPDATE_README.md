@@ -33,3 +33,13 @@ The SEO update assumes these image files already exist:
 - Added `llms.txt` for AI/search discovery.
 - Improved sitemap with lastmod, changefreq, and priority.
 - Updated project notes/changelog so future edits have context.
+
+
+## v2.1.7 Search Console follow-up
+After pushing this version:
+1. Confirm https://www.funkyoushift.com/sitemap.xml loads and shows non-www URLs.
+2. In Search Console, keep/sub submit only https://www.funkyoushift.com/sitemap.xml and remove the www sitemap submission.
+3. Validate fixes for canonical, page redirect, video indexing, and donate structured data after Cloudflare redirects are configured.
+4. Configure Cloudflare to redirect http -> https, www -> non-www, and /index.html -> /.
+
+Preferred domain for this deploy is https://www.funkyoushift.com/. Keep only the www sitemap submitted in Search Console unless you intentionally change Cloudflare/GitHub to apex-only later.

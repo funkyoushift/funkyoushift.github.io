@@ -46,7 +46,7 @@
 - Optimized oversized site images for faster mobile loading and smaller deploy ZIP size.
 - Converted opaque oversized brand art from heavy PNG files to compressed JPG references while preserving the transparent FU logo PNG.
 - Added image dimensions/decoding attributes across local image tags to reduce layout shift and improve PageSpeed behavior.
-- Updated cache busting from `style.css?v=2.1.0` to `style.css?v=2.1.1`.
+- Updated cache busting from `style.css?v=2.1.7` to `style.css?v=2.1.7`.
 
 
 ## v2.1.2 - Page uniqueness and gallery cleanup
@@ -54,7 +54,7 @@
 - Kept Gallery focused on community slideshow images and video highlight.
 - Updated slideshow image CSS to preserve full images instead of cropping tall/narrow photos.
 - Tightened homepage, Discord, merch, donate, giveaway, and Borderlands support page copy so each page has a clearer unique purpose.
-- Updated CSS cache busting to style.css?v=2.1.2.
+- Updated CSS cache busting to style.css?v=2.1.7.
 
 
 ## v2.1.3 - Embedded resource upgrade
@@ -62,25 +62,37 @@
 - Added MentalMars Borderlands 4 Hub to the resources page and schema list.
 - Added direct fallback links for external resources because some outside sites may block iframe previews.
 - Updated build videos page with embedded creator videos plus a Discord build-showoff CTA.
-- Updated cache busting to style.css?v=2.1.3.
+- Updated cache busting to style.css?v=2.1.7.
 
 
 ## v2.1.4 - Resources cleanup
 - Removed the old description card grid from borderlands-resources.html.
 - Resources page now starts with embed-focused sections and simple action buttons only.
 - Added anchors for build videos and resource site embeds.
-- Updated cache busting to style.css?v=2.1.4.
+- Updated cache busting to style.css?v=2.1.7.
 
 
 ## v2.1.6
 - Removed the Discord preview from the Resources page so the page focuses only on tools, videos, and resource embeds.
 - Tightened Resources page spacing for better mobile scrolling.
 - Reduced external iframe heights and card padding so embeds feel less oversized.
-- Updated cache busting to `style.css?v=2.1.5`.
+- Updated cache busting to `style.css?v=2.1.7`.
 
 ## v2.1.6 - Sitemap optimization
 - Rebuilt sitemap.xml with explicit <lastmod> values for all indexed pages.
 - Confirmed sitemap URLs match actual HTML files in the deploy package.
 - Adjusted priority/changefreq values to better match current site goals: home, Discord, merch, resources, content, then supporting pages.
-- Updated CSS cache busting to style.css?v=2.1.6.
+- Updated CSS cache busting to style.css?v=2.1.7.
 
+
+
+## v2.1.7 - Search Console SEO cleanup
+- Switched canonicals, Open Graph URLs, sitemap, robots.txt, and schema URLs to the preferred non-www domain: https://www.funkyoushift.com/.
+- Added dedicated video.html watch page with VideoObject schema for embedded Borderlands build videos.
+- Updated navigation Watch links to point to the dedicated video page.
+- Cleaned donate.html structured data and added valid BreadcrumbList + DonateAction schema to avoid itemListElement/name rich result errors.
+- Updated sitemap.xml with video.html and refreshed lastmod values.
+- Updated cache busting to style.css?v=2.1.7.
+- Added _redirects helper for Cloudflare Pages-style redirect handling; Cloudflare dashboard rules should still be configured after deploy.
+
+- Preferred canonical domain kept as https://www.funkyoushift.com/ to match the site CNAME and existing live routing.

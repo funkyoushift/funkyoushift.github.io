@@ -13,11 +13,10 @@
 <meta content="https://www.funkyoushift.com/donate.html" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<link href="style.css?v=2.1.6" rel="stylesheet"/>
+<link href="style.css?v=2.1.7" rel="stylesheet"/>
 <link href="images/favicon.ico" rel="icon"/>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -57,15 +56,53 @@
         "@id": "https://www.funkyoushift.com/#funkyoushift"
       },
       "primaryImageOfPage": "https://www.funkyoushift.com/images/fu-logo-2026.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.funkyoushift.com/donate.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.funkyoushift.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support FunkYouSHiFT",
+          "item": "https://www.funkyoushift.com/donate.html"
+        }
+      ]
+    },
+    {
+      "@type": "DonateAction",
+      "@id": "https://www.funkyoushift.com/donate.html#donate-action",
+      "name": "Support FunkYouSHiFT",
+      "description": "Support FunkYouSHiFT through Streamlabs tips or the Throne wishlist.",
+      "target": [
+        {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://streamlabs.com/funkyoushift/tip",
+          "name": "Donate via Streamlabs"
+        },
+        {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://throne.com/funkyoushift",
+          "name": "View Throne Wishlist"
+        }
+      ],
+      "recipient": {
+        "@id": "https://www.funkyoushift.com/#funkyoushift"
+      }
     }
   ]
-}
-</script>
-</head>
-<body data-version="2.1.5">
+}</script>
+<meta content="index, follow" name="robots"/></head>
+<body data-version="2.1.7">
 <nav aria-label="Main navigation" class="navbar">
 <a href="index.html">Home</a>
-<a href="index.html#watch">Watch</a>
+<a href="video.html">Watch</a>
 <a href="discord.html">Discord</a>
 <a href="merch.html">Merch</a>
 <a href="borderlands-resources.html">Resources</a>

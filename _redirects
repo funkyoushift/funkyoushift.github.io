@@ -1,0 +1,4 @@
+http://funkyoushift.com/* https://www.funkyoushift.com/:splat 301!
+http://www.funkyoushift.com/* https://www.funkyoushift.com/:splat 301!
+https://funkyoushift.com/* https://www.funkyoushift.com/:splat 301!
+/index.html / 301!
