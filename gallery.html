@@ -3,108 +3,81 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FunkYouSHiFT: Behind the Scenes | Gallery</title>
-<meta name="description" content="A peek behind the scenes of FunkYouSHiFT: life, chaos, cats, and fun beyond the Borderlands."/>
-<link rel="stylesheet" href="style.css?v=5"/>
+<title>FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community</title>
+<meta name="description" content="View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images."/>
 <link rel="canonical" href="https://www.funkyoushift.com/gallery.html"/>
-<style>
-  /* Minimal local styles in case style.css doesn't define these */
-  .thumbnail-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
-    gap: 12px;
-    align-items: stretch;
-  }
-  .thumb {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #111;
-    aspect-ratio: 1 / 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .thumb img, .thumb video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .thumb .badge {
-    position: absolute;
-    bottom: 8px;
-    left: 8px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 12px;
-    padding: 4px 6px;
-    border-radius: 6px;
-  }
-  /* lightbox */
-  #lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
-  #lightbox-inner {
-    position: relative;
-    max-width: 96vw;
-    max-height: 90vh;
-    width: min(1200px, 96vw);
-    margin: auto;
-  }
-  #lightbox img, #lightbox video {
-    width: 100%;
-    height: auto;
-    max-height: 90vh;
-    display: block;
-    border-radius: 12px;
-    background: #000;
-  }
-  #lightbox .close-btn {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    background: #fff;
-    color: #000;
-    width: 36px;
-    height: 36px;
-    border-radius: 999px;
-    display: grid;
-    place-items: center;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
-  }
-  #lightbox .close-btn:hover { transform: scale(1.05); }
-  .hero h1 { text-align: center; margin: 1.2rem 0 0.5rem; }
-  .section-title { margin: 1rem 0; }
-  .hint { color: #9aa0a6; font-size: .95rem; }
-</style>
+<meta property="og:title" content="FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community"/>
+<meta property="og:description" content="View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images."/>
+<meta property="og:image" content="https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png"/>
+<meta property="og:url" content="https://www.funkyoushift.com/gallery.html"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="style.css?v=2.0.0" rel="stylesheet"/>
+<link href="images/favicon.ico" rel="icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.funkyoushift.com/#website",
+      "name": "FunkYouSHiFT",
+      "url": "https://www.funkyoushift.com/",
+      "description": "Official home base for FunkYouSHiFT Borderlands content, Discord, merch, giveaways, and socials."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.funkyoushift.com/#funkyoushift",
+      "name": "FunkYouSHiFT",
+      "url": "https://www.funkyoushift.com/",
+      "image": "https://www.funkyoushift.com/images/fu-logo-2026.png",
+      "sameAs": [
+        "https://www.twitch.tv/funkyoushift",
+        "https://www.youtube.com/@funkyoushift",
+        "https://www.facebook.com/funkyoushift",
+        "https://x.com/funkyoushift",
+        "https://discord.gg/ttwl-bl3-trading",
+        "https://streamlabs.com/funkyoushift/merch",
+        "https://throne.com/funkyoushift"
+      ],
+      "description": "FunkYouSHiFT streams Borderlands, runs an active Discord community, shares giveaways, and creates merch for the community."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.funkyoushift.com/gallery.html#webpage",
+      "url": "https://www.funkyoushift.com/gallery.html",
+      "name": "FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community",
+      "description": "View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images.",
+      "isPartOf": {
+        "@id": "https://www.funkyoushift.com/#website"
+      },
+      "about": {
+        "@id": "https://www.funkyoushift.com/#funkyoushift"
+      },
+      "primaryImageOfPage": "https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png"
+    }
+  ]
+}
+</script>
 </head>
-<body>
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="merch.html">Merch</a>
-  <a href="donate.html">Donate</a>
-  <a href="gallery.html" aria-current="page">Gallery</a>
-  <a href="giveaway.html">Giveaway</a>
-  <a href="discord.html">Discord</a>
+<body data-version="2.0.0">
+<nav class="navbar" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="index.html#watch">Watch</a>
+<a href="discord.html">Discord</a>
+<a href="merch.html">Merch</a>
+<a href="giveaway.html">Giveaway</a>
+<a href="gallery.html" aria-current="page">Gallery</a>
+<a href="donate.html">Donate</a>
 </nav>
-
-<header class="hero">
-  <h1>FUNKYOUSHIFT: BEHIND THE SCENES</h1>
+<header class="hero page-hero">
+  <p class="eyebrow">FunkYouSHiFT • Borderlands • Community</p>
+  <h1>Gallery</h1>
+  <p class="hero-lead">Behind-the-scenes stuff, community chaos, and whatever else makes it into the vault.</p>
 </header>
-
 <main>
+
   <section class="gallery-grid">
     <h2 class="section-title">📸 Click any tile to view</h2>
     <div class="thumbnail-grid" id="thumbs" aria-live="polite"></div>
@@ -122,138 +95,16 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
   </section>
+
 </main>
-
-<footer class="social-links">
-  <a href="https://www.twitch.tv/funkyoushift" target="_blank">Twitch</a>
-  <a href="https://www.youtube.com/@funkyoushift" target="_blank">YouTube</a>
-  <a href="https://x.com/funkyoushift" target="_blank">X (Twitter)</a>
-  <a href="https://www.facebook.com/funkyoushift" target="_blank">Facebook</a>
-  <a href="https://discord.gg/ttwl-bl3-trading" target="_blank">Discord</a>
-  <a href="https://throne.com/funkyoushift" target="_blank">Throne</a>
+<footer class="social-links" aria-label="FunkYouSHiFT links">
+<a href="https://www.twitch.tv/funkyoushift" target="_blank" rel="noopener">Twitch</a>
+<a href="https://www.youtube.com/@funkyoushift" target="_blank" rel="noopener">YouTube</a>
+<a href="https://x.com/funkyoushift" target="_blank" rel="noopener">X</a>
+<a href="https://www.facebook.com/funkyoushift" target="_blank" rel="noopener">Facebook</a>
+<a href="https://discord.gg/ttwl-bl3-trading" target="_blank" rel="noopener">Discord</a>
+<a href="https://streamlabs.com/funkyoushift/merch" target="_blank" rel="noopener">Merch</a>
+<a href="https://throne.com/funkyoushift" target="_blank" rel="noopener">Throne</a>
 </footer>
-
-<!-- Lightbox -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" onclick="closeLightbox(event)">
-  <div id="lightbox-inner">
-    <div class="close-btn" onclick="closeLightbox(event)" title="Close">✕</div>
-    <div id="lb-content"></div>
-  </div>
-</div>
-
-<script>
-  function openLightboxImage(src, alt='') {
-    const c = document.getElementById('lb-content');
-    c.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = alt || src.split('/').pop();
-    c.appendChild(img);
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-  function openLightboxVideo(src) {
-    const c = document.getElementById('lb-content');
-    c.innerHTML = '';
-    const video = document.createElement('video');
-    video.src = src;
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    video.style.background = '#000';
-    c.appendChild(video);
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-  function closeLightbox(e) {
-    if (!e || e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
-      const c = document.getElementById('lb-content');
-      c.innerHTML = '';
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  }
-
-  (function buildGallery() {
-    const container = document.getElementById('thumbs');
-    const noImages = document.getElementById('no-images');
-
-    // Probe extensions (any case) and include videos
-    const imgExts = ['jpg', 'jpeg', 'png', 'webp'];
-    const vidExts = ['mp4'];
-    const allExts = [...imgExts, ...vidExts];
-    const maxSlides = 200; // generous upper bound
-
-    let found = 0;
-    let pending = 0;
-
-    function addThumb(media) {
-      const wrap = document.createElement('div');
-      wrap.className = 'thumb';
-
-      if (media.type === 'video') {
-        // Inline silent looping preview looks slick
-        const v = document.createElement('video');
-        v.src = media.src;
-        v.muted = true;
-        v.loop = true;
-        v.playsInline = true;
-        v.preload = 'metadata';
-        v.onmouseenter = () => v.play();
-        v.onmouseleave = () => v.pause();
-        v.onclick = () => openLightboxVideo(media.src);
-        wrap.appendChild(v);
-
-        const badge = document.createElement('span');
-        badge.className = 'badge';
-        badge.textContent = 'VIDEO';
-        wrap.appendChild(badge);
-      } else {
-        const img = document.createElement('img');
-        img.src = media.src;
-        img.alt = media.alt || media.name;
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.onclick = () => openLightboxImage(media.src, media.alt);
-        wrap.appendChild(img);
-      }
-      container.appendChild(wrap);
-    }
-
-    // Try slide1..slideN.* across all extensions (case-insensitive)
-    for (let i = 1; i <= maxSlides; i++) {
-      for (const ext of allExts) {
-        const candidates = [
-          `slideshow/slide${i}.${ext}`,
-          `slideshow/slide${i}.${ext.toUpperCase()}`
-        ];
-        for (const src of candidates) {
-          pending++;
-          // Image probe for both images and videos (videos won't load as Image; we detect error and test via fetch HEAD)
-          const img = new Image();
-          img.onload = () => {
-            found++;
-            addThumb({ type: imgExts.includes(ext) ? 'image' : 'video', src, name: `slide${i}` });
-            if (--pending === 0 && found === 0) noImages.style.display = 'block';
-          };
-          img.onerror = async () => {
-            // If it's a video type, try a quick fetch to detect existence
-            if (vidExts.includes(ext)) {
-              try {
-                const res = await fetch(src, { method: 'HEAD', cache: 'no-store' });
-                if (res.ok) {
-                  found++;
-                  addThumb({ type: 'video', src, name: `slide${i}` });
-                }
-              } catch (_) {}
-            }
-            if (--pending === 0 && found === 0) noImages.style.display = 'block';
-          };
-          img.src = src;
-        }
-      }
-    }
-
-    // Failsafe: after a short delay, if none found, show hint
-    setTimeout(() => { if (found === 0) noImages.style.display = 'block'; }, 1500);
-  })();
-</script>
 </body>
 </html>

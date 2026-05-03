@@ -1,8 +1,11 @@
 # FunkYouSHiFT
 
-Official site: https://www.funkyoushift.com/
+Official creator hub for FunkYouSHiFT.
 
-FunkYouSHiFT is a Borderlands-focused creator and community hub. The site routes visitors to Discord, Twitch/content, merch, giveaways, and social links.
+Primary goals:
+- Route visitors to Discord, content, merch, socials, giveaways, and support links.
+- Keep the site direct, human, and creator-branded.
+- Avoid corporate filler. The voice should sound like Funk: helpful, direct, a little chaotic, not fake-professional.
 
 Important pages:
 - Homepage: https://www.funkyoushift.com/
@@ -10,13 +13,6 @@ Important pages:
 - Merch: https://www.funkyoushift.com/merch.html
 - Giveaway: https://www.funkyoushift.com/giveaway.html
 - Gallery: https://www.funkyoushift.com/gallery.html
-- Donate/support: https://www.funkyoushift.com/donate.html
+- Donate: https://www.funkyoushift.com/donate.html
 
-Primary external destinations:
-- Twitch: https://www.twitch.tv/funkyoushift
-- YouTube: https://www.youtube.com/@funkyoushift
-- Facebook: https://www.facebook.com/funkyoushift
-- X: https://x.com/funkyoushift
-- Discord: https://discord.gg/ttwl-bl3-trading
-- Merch: https://streamlabs.com/funkyoushift/merch
-- Throne: https://throne.com/funkyoushift
+Current version: v2.0.0
