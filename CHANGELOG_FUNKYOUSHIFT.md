@@ -72,8 +72,15 @@
 - Updated cache busting to style.css?v=2.1.4.
 
 
-## v2.1.5
+## v2.1.6
 - Removed the Discord preview from the Resources page so the page focuses only on tools, videos, and resource embeds.
 - Tightened Resources page spacing for better mobile scrolling.
 - Reduced external iframe heights and card padding so embeds feel less oversized.
 - Updated cache busting to `style.css?v=2.1.5`.
+
+## v2.1.6 - Sitemap optimization
+- Rebuilt sitemap.xml with explicit <lastmod> values for all indexed pages.
+- Confirmed sitemap URLs match actual HTML files in the deploy package.
+- Adjusted priority/changefreq values to better match current site goals: home, Discord, merch, resources, content, then supporting pages.
+- Updated CSS cache busting to style.css?v=2.1.6.
+

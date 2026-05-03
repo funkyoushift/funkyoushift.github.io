@@ -69,7 +69,7 @@ v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
 - Keep embeds/fallback buttons as the main resource page format.
 
 
-## v2.1.5
+## v2.1.6
 - Removed the Discord preview from the Resources page so the page focuses only on tools, videos, and resource embeds.
 - Tightened Resources page spacing for better mobile scrolling.
 - Reduced external iframe heights and card padding so embeds feel less oversized.
