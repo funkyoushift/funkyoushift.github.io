@@ -1,7 +1,7 @@
 # PROJECT_NOTES_FUNKYOUSHIFT
 
 ## Current version
-v2.0.2 — Merch link conversion + natural sitewide fixes (2026-05-03)
+v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
 
 ## Workflow rules
 - Treat this like the Subtronics site workflow: make real files, do not only provide advice.
@@ -46,3 +46,12 @@ v2.0.2 — Merch link conversion + natural sitewide fixes (2026-05-03)
 - Homepage merch art now links to the onsite merch page instead of behaving like decoration only.
 - Gallery merch-design cards now send users toward merch shopping instead of opening raw image files.
 - Updated cache busting to `style.css?v=2.0.2` and body version to `data-version="2.0.2"`.
+
+
+## v2.1.0 Traffic Pages Notes
+- Added search-entry pages for Borderlands modding, trading, resources, and build-video resources.
+- Build content is intentionally positioned as community growth / curated creator resources for now, because FunkYouSHiFT does not currently own the skill-build lane yet.
+- Added links to Lootlemon and BL4Hunt as useful external resources; these support user trust and make the site more useful instead of trying to fake being a complete guide database.
+- Discord remains the primary conversion target for modding/trading/help traffic.
+- Gallery regression addressed by restoring visible stream/offline/channel assets alongside newer AI/brand artwork.
+- Sitemap, llms.txt, nav/footer, cache busting, and internal links updated for v2.1.0.

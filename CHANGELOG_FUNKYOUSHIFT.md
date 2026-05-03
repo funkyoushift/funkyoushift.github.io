@@ -26,3 +26,16 @@
 - Updated gallery merch artwork cards to point users to the Streamlabs merch store instead of raw image files.
 - Added scoped CSS for clickable merch cards, hover/focus states, and mobile display.
 - Updated version/cache busting from `2.0.1` to `2.0.2` across HTML/CSS.
+
+
+## v2.1.0 — SEO traffic pages + resources hub — 2026-05-03
+- Added `borderlands-modding.html` targeting Borderlands modding/modded item help.
+- Added `borderlands-trading.html` targeting Borderlands trading/loot help.
+- Added `borderlands-resources.html` linking Discord, Lootlemon, BL4Hunt, creator build video searches, and onsite traffic pages.
+- Added `borderlands-build-videos.html` as a bridge page while build channels grow in Discord.
+- Added homepage traffic-entry cards for modding, trading, and resources.
+- Added resource links to nav/footer.
+- Added internal link block to Discord page.
+- Restored stream/offline/channel assets into Gallery so it is not only AI brand art.
+- Updated `style.css` with v2.1.0 traffic/resource card styles.
+- Updated `sitemap.xml`, `robots.txt`, `llms.txt`, project notes, and cache busting.

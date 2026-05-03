@@ -1,19 +1,29 @@
-# FunkYouSHiFT v2.0.2 Deploy Notes
+# FunkYouSHiFT v2.1.0 Traffic Pages Package
 
-Upload this package over the current site root.
+Upload the contents of this ZIP to the site root, replacing existing files.
 
-## Main changes
-- Merch previews are now clickable shopping cards.
-- Homepage merch art links to the merch page.
-- Gallery merch artwork points to the merch store instead of opening raw image files.
-- Version/cache busting updated to `style.css?v=2.0.2`.
+## Added pages
+- borderlands-modding.html
+- borderlands-trading.html
+- borderlands-resources.html
+- borderlands-build-videos.html
+
+## Updated files
+- index.html
+- discord.html
+- gallery.html
+- style.css
+- sitemap.xml
+- robots.txt
+- llms.txt
+- PROJECT_NOTES_FUNKYOUSHIFT.md
+- CHANGELOG_FUNKYOUSHIFT.md
 
 ## After upload
-1. Hard refresh the site.
-2. Open `/merch.html` and click each merch preview.
-3. Confirm they open the Streamlabs merch store in a new tab.
-4. Open homepage and confirm merch art/card links work.
-5. Open gallery and confirm merch-related cards send users toward merch shopping.
+1. Hard refresh the browser.
+2. Confirm nav includes Resources.
+3. Confirm homepage has “Need Borderlands help?” cards.
+4. Confirm Gallery includes Live / Offline / Stream Assets.
+5. Confirm new traffic pages load.
 
-## Note on item-level Streamlabs links
-The site currently has one stable Streamlabs merch storefront URL. If Streamlabs provides exact item-level URLs later, replace the individual merch card `href` values in `merch.html`.
+Version: v2.1.0

@@ -1,18 +1,27 @@
 # FunkYouSHiFT
 
-Official creator hub for FunkYouSHiFT.
+Official site: https://www.funkyoushift.com/
 
-Primary goals:
-- Route visitors to Discord, content, merch, socials, giveaways, and support links.
-- Keep the site direct, human, and creator-branded.
-- Avoid corporate filler. The voice should sound like Funk: helpful, direct, a little chaotic, not fake-professional.
+FunkYouSHiFT is a Borderlands creator/community hub for Discord, trading, modded gear discussion, giveaways, embedded content, merch, and useful Borderlands resources.
 
-Important pages:
-- Homepage: https://www.funkyoushift.com/
-- Discord: https://www.funkyoushift.com/discord.html
+## Important pages
+- Home: https://www.funkyoushift.com/
+- Discord/community: https://www.funkyoushift.com/discord.html
+- Borderlands modding help: https://www.funkyoushift.com/borderlands-modding.html
+- Borderlands trading help: https://www.funkyoushift.com/borderlands-trading.html
+- Borderlands resources: https://www.funkyoushift.com/borderlands-resources.html
+- Borderlands build video resources: https://www.funkyoushift.com/borderlands-build-videos.html
 - Merch: https://www.funkyoushift.com/merch.html
-- Giveaway: https://www.funkyoushift.com/giveaway.html
 - Gallery: https://www.funkyoushift.com/gallery.html
-- Donate: https://www.funkyoushift.com/donate.html
+- Giveaways: https://www.funkyoushift.com/giveaway.html
+- Donate/support: https://www.funkyoushift.com/donate.html
 
-Current version: v2.0.0
+## External resources referenced
+- Lootlemon: https://www.lootlemon.com/
+- BL4Hunt: https://www.bl4hunt.com/
+- Twitch: https://www.twitch.tv/funkyoushift
+- YouTube: https://www.youtube.com/@funkyoushift
+- Streamlabs merch: https://streamlabs.com/funkyoushift/merch
+
+## Site direction
+The site should route visitors quickly to Discord, merch, content, socials, and helpful Borderlands resource pages. Tone should stay direct, helpful, and FunkYouSHiFT-branded rather than corporate.
