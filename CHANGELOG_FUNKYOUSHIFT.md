@@ -1,17 +1,12 @@
-# FunkYouSHiFT.com Changelog
+# CHANGELOG_FUNKYOUSHIFT.md
 
-## 2026-05-03 - Homepage Flow Optimization v1
-- Converted homepage into a brand hub for Discord, content, merch, and socials.
-- Added clear action cards immediately after hero.
-- Added merch feature section pointing to Streamlabs merch store.
-- Added new branding images to `/images/` and referenced them from homepage/merch page.
-- Updated merch page with stronger copy and new brand art.
-- Added project notes file for future ChatGPT/site update continuity.
+## 2026-05-03 - Homepage flow + broken image/style fix v2
+- Rebuilt index.html as a clean homepage hub for Discord, Watch, Merch, and Socials.
+- Added real 2026 branding images into /images.
+- Updated style.css with v2 fixes for action cards, mobile layout, hero image, merch images, and link styling.
+- Changed stylesheet cache-buster to style.css?v=4.
+- Added/updated homepage schema, Open Graph, robots.txt, sitemap.xml, and llms.txt.
+- Added project notes so future updates can follow the same workflow.
 
-## 2026-05-03 - SEO / Schema System v1
-- Added site-wide SEO metadata to all major pages.
-- Added JSON-LD schema graphs for the FunkYouSHiFT creator/brand entity, website, community, merch, and page-specific entities.
-- Updated sitemap and robots files.
-- Added `llms.txt` for AI/search discovery.
-- Updated project notes with future SEO rules.
-
+## Important correction
+The earlier SEO-only ZIP did not include images or the updated full stylesheet, which caused broken image icons and unstyled default blue links when deployed by itself. This package includes the required assets and CSS.
