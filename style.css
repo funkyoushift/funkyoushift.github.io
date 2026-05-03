@@ -1123,12 +1123,23 @@ body[data-version="2.0.2"] .gallery-hero {
   }
 }
 
-/* v2.1.1 - community slideshow + image optimization helpers */
+/* v2.1.2 - community slideshow display fix: preserve full photos instead of cropping tall/narrow images */
 .slideshow-card-grid .gallery-card img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #000;
 }
 .community-slideshow-showcase {
   content-visibility: auto;
   contain-intrinsic-size: 900px;
+}
+@media (max-width: 700px) {
+  .slideshow-card-grid .gallery-card img {
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
 }

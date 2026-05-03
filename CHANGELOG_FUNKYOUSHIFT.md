@@ -47,3 +47,11 @@
 - Converted opaque oversized brand art from heavy PNG files to compressed JPG references while preserving the transparent FU logo PNG.
 - Added image dimensions/decoding attributes across local image tags to reduce layout shift and improve PageSpeed behavior.
 - Updated cache busting from `style.css?v=2.1.0` to `style.css?v=2.1.1`.
+
+
+## v2.1.2 - Page uniqueness and gallery cleanup
+- Removed page-design assets, merch previews, and stream asset duplicates from the public Gallery page.
+- Kept Gallery focused on community slideshow images and video highlight.
+- Updated slideshow image CSS to preserve full images instead of cropping tall/narrow photos.
+- Tightened homepage, Discord, merch, donate, giveaway, and Borderlands support page copy so each page has a clearer unique purpose.
+- Updated CSS cache busting to style.css?v=2.1.2.
