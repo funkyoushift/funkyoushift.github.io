@@ -29,3 +29,10 @@ Upload the contents of this ZIP to the site root, replacing existing files.
 Version: v2.1.0
 
 Resource page cleanup: old text-card resource grid removed.
+
+
+## v2.1.5
+- Removed the Discord preview from the Resources page so the page focuses only on tools, videos, and resource embeds.
+- Tightened Resources page spacing for better mobile scrolling.
+- Reduced external iframe heights and card padding so embeds feel less oversized.
+- Updated cache busting to `style.css?v=2.1.5`.

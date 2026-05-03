@@ -70,3 +70,10 @@
 - Resources page now starts with embed-focused sections and simple action buttons only.
 - Added anchors for build videos and resource site embeds.
 - Updated cache busting to style.css?v=2.1.4.
+
+
+## v2.1.5
+- Removed the Discord preview from the Resources page so the page focuses only on tools, videos, and resource embeds.
+- Tightened Resources page spacing for better mobile scrolling.
+- Reduced external iframe heights and card padding so embeds feel less oversized.
+- Updated cache busting to `style.css?v=2.1.5`.

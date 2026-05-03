@@ -1145,7 +1145,7 @@ body[data-version="2.0.2"] .gallery-hero {
 }
 
 
-/* v2.1.3 - embedded resources: keep resource page useful without turning it into a slow wall of text */
+/* v2.1.5 - tightened resources page: removed duplicate Discord preview, reduced spacing, optimized embeds */
 .compact-resource-links {
   margin-bottom: 18px;
 }
@@ -1236,5 +1236,112 @@ body[data-version="2.0.2"] .gallery-hero {
 
   .external-site-frame {
     height: 360px;
+  }
+}
+
+
+/* v2.1.5 - Resources page cleanup: tighter spacing and optimized embeds */
+.resources-page-main {
+  padding-top: 18px;
+  padding-bottom: 24px;
+}
+
+.compact-resource-intro,
+.compact-embed-section {
+  margin-top: 22px;
+  margin-bottom: 26px;
+  padding: 28px 30px;
+}
+
+.compact-resource-intro h2,
+.compact-embed-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.resource-jump-row {
+  margin-top: 18px;
+  gap: 12px;
+}
+
+.resource-embed-section {
+  margin-top: 24px;
+}
+
+.resource-embed-card {
+  padding: 14px;
+}
+
+.resource-embed-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.22rem;
+}
+
+.embed-grid {
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.video-embed-grid {
+  align-items: stretch;
+}
+
+.site-embed-grid {
+  gap: 14px;
+}
+
+.external-site-frame {
+  height: 300px;
+}
+
+.embed-fallback {
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  main.resources-page-main {
+    padding: 18px 14px 24px;
+  }
+
+  .compact-resource-intro,
+  .compact-embed-section {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    padding: 22px 16px;
+  }
+
+  .external-site-frame {
+    height: 260px;
+  }
+}
+
+@media (max-width: 560px) {
+  header.hero {
+    padding: 38px 14px 22px;
+  }
+
+  header.hero h1 {
+    font-size: 2.7rem;
+    padding-bottom: .2rem;
+  }
+
+  .traffic-content p,
+  .traffic-feature p,
+  .faq-section p {
+    font-size: .95rem;
+    line-height: 1.45;
+  }
+
+  .quick-action-row.resource-jump-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .resource-embed-card {
+    padding: 12px;
+  }
+
+  .external-site-frame {
+    height: 230px;
   }
 }
