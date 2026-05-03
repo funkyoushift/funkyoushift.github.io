@@ -1,19 +1,19 @@
-# FunkYouSHiFT v2.0.0 Deploy Notes
+# FunkYouSHiFT v2.0.2 Deploy Notes
 
-Upload the contents of this folder to the site root.
+Upload this package over the current site root.
 
-After upload:
-1. Hard refresh the homepage.
-2. Check that every nav item works.
-3. Check mobile layout.
-4. Confirm the following pages load:
-   - /
-   - /discord.html
-   - /merch.html
-   - /giveaway.html
-   - /gallery.html
-   - /donate.html
-5. Confirm images load from /images/.
-6. Submit/refresh sitemap if needed: https://www.funkyoushift.com/sitemap.xml
+## Main changes
+- Merch previews are now clickable shopping cards.
+- Homepage merch art links to the merch page.
+- Gallery merch artwork points to the merch store instead of opening raw image files.
+- Version/cache busting updated to `style.css?v=2.0.2`.
 
-This package intentionally keeps the site static and simple.
+## After upload
+1. Hard refresh the site.
+2. Open `/merch.html` and click each merch preview.
+3. Confirm they open the Streamlabs merch store in a new tab.
+4. Open homepage and confirm merch art/card links work.
+5. Open gallery and confirm merch-related cards send users toward merch shopping.
+
+## Note on item-level Streamlabs links
+The site currently has one stable Streamlabs merch storefront URL. If Streamlabs provides exact item-level URLs later, replace the individual merch card `href` values in `merch.html`.

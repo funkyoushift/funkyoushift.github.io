@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community</title>
-<meta name="description" content="View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images."/>
-<link rel="canonical" href="https://www.funkyoushift.com/gallery.html"/>
-<meta property="og:title" content="FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community"/>
-<meta property="og:description" content="View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images."/>
-<meta property="og:image" content="https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png"/>
-<meta property="og:url" content="https://www.funkyoushift.com/gallery.html"/>
-<meta property="og:type" content="website"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<link href="style.css?v=2.0.0" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FunkYouSHiFT Gallery | Brand Art, Stream Highlights &amp; Community Chaos</title>
+<meta content="View FunkYouSHiFT brand art, stream visuals, merch designs, and community content from the Borderlands creator hub." name="description"/>
+<link href="https://www.funkyoushift.com/gallery.html" rel="canonical"/>
+<meta content="FunkYouSHiFT Gallery | Brand Art, Stream Highlights &amp; Community Chaos" property="og:title"/>
+<meta content="View FunkYouSHiFT brand art, stream visuals, merch designs, and community content from the Borderlands creator hub." property="og:description"/>
+<meta content="https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png" property="og:image"/>
+<meta content="https://www.funkyoushift.com/gallery.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="style.css?v=2.0.2" rel="stylesheet"/>
 <link href="images/favicon.ico" rel="icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,67 +45,151 @@
       "description": "FunkYouSHiFT streams Borderlands, runs an active Discord community, shares giveaways, and creates merch for the community."
     },
     {
-      "@type": "WebPage",
-      "@id": "https://www.funkyoushift.com/gallery.html#webpage",
+      "@type": "ImageGallery",
+      "@id": "https://www.funkyoushift.com/gallery.html#gallery",
       "url": "https://www.funkyoushift.com/gallery.html",
-      "name": "FunkYouSHiFT Gallery | Behind the Scenes, Chaos & Community",
-      "description": "View FunkYouSHiFT behind-the-scenes photos, community moments, stream chaos, and brand images.",
-      "isPartOf": {
-        "@id": "https://www.funkyoushift.com/#website"
-      },
-      "about": {
-        "@id": "https://www.funkyoushift.com/#funkyoushift"
-      },
-      "primaryImageOfPage": "https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png"
+      "name": "FunkYouSHiFT Gallery",
+      "description": "Brand art, stream visuals, merch designs, and community content for FunkYouSHiFT.",
+      "isPartOf": { "@id": "https://www.funkyoushift.com/#website" },
+      "about": { "@id": "https://www.funkyoushift.com/#funkyoushift" },
+      "image": [
+        "https://www.funkyoushift.com/images/team-funkyoushift-people-2026.png",
+        "https://www.funkyoushift.com/images/team-funkyoushift-bots-2026.png",
+        "https://www.funkyoushift.com/images/fu-logo-2026.png"
+      ]
     }
   ]
 }
 </script>
 </head>
-<body data-version="2.0.0">
-<nav class="navbar" aria-label="Main navigation">
+<body data-version="2.0.2">
+<nav aria-label="Main navigation" class="navbar">
 <a href="index.html">Home</a>
 <a href="index.html#watch">Watch</a>
 <a href="discord.html">Discord</a>
 <a href="merch.html">Merch</a>
 <a href="giveaway.html">Giveaway</a>
-<a href="gallery.html" aria-current="page">Gallery</a>
+<a aria-current="page" href="gallery.html">Gallery</a>
 <a href="donate.html">Donate</a>
 </nav>
-<header class="hero page-hero">
-  <p class="eyebrow">FunkYouSHiFT • Borderlands • Community</p>
-  <h1>Gallery</h1>
-  <p class="hero-lead">Behind-the-scenes stuff, community chaos, and whatever else makes it into the vault.</p>
+<header class="hero page-hero gallery-hero">
+<p class="eyebrow">FunkYouSHiFT • Borderlands • Community</p>
+<h1>Gallery</h1>
+<p class="hero-lead">Brand art, stream visuals, merch designs, and the stuff that makes the FunkYouSHiFT world feel like FunkYouSHiFT.</p>
 </header>
 <main>
-
-  <section class="gallery-grid">
-    <h2 class="section-title">📸 Click any tile to view</h2>
-    <div class="thumbnail-grid" id="thumbs" aria-live="polite"></div>
-    <p id="no-images" class="hint" style="display:none">
-      No media found. I looked in <code>/slideshow/</code> for files named <code>slide1</code>, <code>slide2</code>, …
-      with extensions <code>jpg</code>, <code>jpeg</code>, <code>png</code>, <code>webp</code>, and <code>mp4</code> (any case).
-    </p>
-  </section>
-
-  <section>
-    <h2 class="section-title">🎥 Video Highlight</h2>
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/Eo2fyS4E3NY"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </section>
-
+<section class="gallery-feature split-feature">
+<div>
+<h2>Brand art people recognize</h2>
+<p class="section-intro">
+        This is the main visual language now: orange, black, lightning, the FU mark, and Team FunkYouSHiFT.
+        The gallery should show that off instead of hiding it behind empty tiles.
+      </p>
+<div class="hero-actions gallery-actions">
+<a class="big-button" href="merch.html">Shop Merch</a>
+<a class="big-button" href="discord.html">Join Discord</a>
+</div>
+</div>
+<div class="feature-art">
+<img alt="Team FunkYouSHiFT character artwork with lightning" loading="eager" src="images/team-funkyoushift-people-2026.png"/>
+</div>
+</section>
+<section class="gallery-showcase">
+<div class="section-heading">
+<h2>Featured Artwork</h2>
+<p class="section-intro">The main pieces being used across the site, Discord, merch, and social posts.</p>
+</div>
+<div class="gallery-card-grid">
+<a class="gallery-card gallery-card-large" href="images/team-funkyoushift-people-2026.png" rel="noopener" target="_blank">
+<img alt="Team FunkYouSHiFT people artwork" loading="lazy" src="images/team-funkyoushift-people-2026.png"/>
+<strong>Team FunkYouSHiFT</strong>
+<span>Main brand artwork</span>
+</a>
+<a class="gallery-card" href="images/team-funkyoushift-bots-2026.png" rel="noopener" target="_blank">
+<img alt="Team FunkYouSHiFT bot artwork" loading="lazy" src="images/team-funkyoushift-bots-2026.png"/>
+<strong>Bot Crew Art</strong>
+<span>Community / Discord style</span>
+</a>
+<a class="gallery-card" href="images/fu-logo-2026.png" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT FU logo" loading="lazy" src="images/fu-logo-2026.png"/>
+<strong>FU Logo</strong>
+<span>Clean mark for merch and socials</span>
+</a>
+</div>
+</section>
+<section class="gallery-showcase">
+<div class="section-heading">
+<h2>Stream &amp; Social Assets</h2>
+<p class="section-intro">Artwork and visuals used around the stream, YouTube, socials, and channel branding.</p>
+</div>
+<div class="gallery-card-grid gallery-card-grid-small">
+<a class="gallery-card" href="images/twitch-cover.jpg" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT Twitch cover artwork" loading="lazy" src="images/twitch-cover.jpg"/>
+<strong>Twitch Cover</strong>
+<span>Channel banner</span>
+</a>
+<a class="gallery-card" href="images/offline-banner.jpg" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT offline banner" loading="lazy" src="images/offline-banner.jpg"/>
+<strong>Offline Banner</strong>
+<span>Stream page art</span>
+</a>
+<a class="gallery-card" href="images/thumbnail.jpeg" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT video thumbnail" loading="lazy" src="images/thumbnail.jpeg"/>
+<strong>Thumbnail</strong>
+<span>Video / social graphic</span>
+</a>
+<a class="gallery-card" href="images/panels.jpg" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT Twitch panels" loading="lazy" src="images/panels.jpg"/>
+<strong>Panels</strong>
+<span>Twitch page graphics</span>
+</a>
+</div>
+</section>
+<section class="gallery-showcase">
+<div class="section-heading">
+<h2>Merch Designs</h2>
+<p class="section-intro">The stuff people can actually wear, use, or rep.</p>
+</div>
+<div class="gallery-card-grid gallery-card-grid-small">
+<a aria-label="Shop this FunkYouSHiFT merch design on Streamlabs" class="gallery-card" href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT shirt design" loading="lazy" src="images/funkhubshirt.png"/>
+<strong>Shirts</strong>
+<span>Click to shop the merch store.</span>
+</a>
+<a aria-label="Shop this FunkYouSHiFT merch design on Streamlabs" class="gallery-card" href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT hoodie design" loading="lazy" src="images/hoodie.png"/>
+<strong>Hoodies</strong>
+<span>Click to shop the merch store.</span>
+</a>
+<a aria-label="Shop this FunkYouSHiFT merch design on Streamlabs" class="gallery-card" href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT hat design" loading="lazy" src="images/hat.png"/>
+<strong>Hats</strong>
+<span>Click to shop the merch store.</span>
+</a>
+<a aria-label="Shop this FunkYouSHiFT merch design on Streamlabs" class="gallery-card" href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">
+<img alt="FunkYouSHiFT mug design" loading="lazy" src="images/mug.png"/>
+<strong>Mugs</strong>
+<span>Click to shop the merch store.</span>
+</a>
+</div>
+<a class="big-button" href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">Shop the Merch Store</a>
+</section>
+<section class="video-highlight">
+<h2 class="section-title">Video Highlight</h2>
+<p class="section-intro">A quick look at the kind of content and community energy that built this whole thing.</p>
+<div class="responsive-video">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/Eo2fyS4E3NY" title="FunkYouSHiFT video highlight"></iframe>
+</div>
+</section>
 </main>
-<footer class="social-links" aria-label="FunkYouSHiFT links">
-<a href="https://www.twitch.tv/funkyoushift" target="_blank" rel="noopener">Twitch</a>
-<a href="https://www.youtube.com/@funkyoushift" target="_blank" rel="noopener">YouTube</a>
-<a href="https://x.com/funkyoushift" target="_blank" rel="noopener">X</a>
-<a href="https://www.facebook.com/funkyoushift" target="_blank" rel="noopener">Facebook</a>
-<a href="https://discord.gg/ttwl-bl3-trading" target="_blank" rel="noopener">Discord</a>
-<a href="https://streamlabs.com/funkyoushift/merch" target="_blank" rel="noopener">Merch</a>
-<a href="https://throne.com/funkyoushift" target="_blank" rel="noopener">Throne</a>
+<footer aria-label="FunkYouSHiFT links" class="social-links">
+<a href="https://www.twitch.tv/funkyoushift" rel="noopener" target="_blank">Twitch</a>
+<a href="https://www.youtube.com/@funkyoushift" rel="noopener" target="_blank">YouTube</a>
+<a href="https://x.com/funkyoushift" rel="noopener" target="_blank">X</a>
+<a href="https://www.facebook.com/funkyoushift" rel="noopener" target="_blank">Facebook</a>
+<a href="https://discord.gg/ttwl-bl3-trading" rel="noopener" target="_blank">Discord</a>
+<a href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">Merch</a>
+<a href="https://throne.com/funkyoushift" rel="noopener" target="_blank">Throne</a>
 </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # PROJECT_NOTES_FUNKYOUSHIFT
 
 ## Current version
-v2.0.0 — Sitewide consistency + SEO/schema pass (2026-05-03)
+v2.0.2 — Merch link conversion + natural sitewide fixes (2026-05-03)
 
 ## Workflow rules
 - Treat this like the Subtronics site workflow: make real files, do not only provide advice.
@@ -31,3 +31,18 @@ v2.0.0 — Sitewide consistency + SEO/schema pass (2026-05-03)
 - Reworked Discord, Merch, Giveaway, Donate pages to match homepage goals and tone.
 - Kept homepage as hub/router for Discord, Watch, Merch, and Socials.
 - Updated robots.txt, sitemap.xml, and llms.txt.
+
+
+## v2.0.1 Gallery Rebuild Notes
+- Gallery page should not rely on an empty `/slideshow/` folder or invisible JavaScript-generated tiles.
+- Gallery is now a curated page with real image cards using assets already bundled in `/images/`.
+- Gallery goals: show recognizable brand art, drive merch clicks, reinforce Discord/community identity, and keep embedded video visible.
+- Future gallery updates should add real visible cards with proper alt text, not placeholder empty loaders.
+
+
+## v2.0.2 Merch Link Conversion Notes
+- Merch page preview images are now clickable shopping cards.
+- Because the Streamlabs store does not expose stable individual product URLs inside the site files, product cards point to the official Streamlabs merch storefront. If exact item-level URLs become available, replace each `href` on the merch cards individually.
+- Homepage merch art now links to the onsite merch page instead of behaving like decoration only.
+- Gallery merch-design cards now send users toward merch shopping instead of opening raw image files.
+- Updated cache busting to `style.css?v=2.0.2` and body version to `data-version="2.0.2"`.

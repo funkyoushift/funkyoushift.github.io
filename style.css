@@ -697,7 +697,8 @@ body {
 /* === FunkYouSHiFT v2.0.0 sitewide consistency pass - 2026-05-03 ===
    Goals: keep the site as a creator hub, make all pages feel consistent,
    improve mobile routing, and keep Discord / merch / socials / embedded content easy to reach. */
-body[data-version="2.0.0"] .navbar a[aria-current="page"] {
+body[data-version="2.0.0"] .navbar a[aria-current="page"],
+body[data-version="2.0.2"] .navbar a[aria-current="page"] {
   outline: 2px solid rgba(255,255,255,.28);
   box-shadow: 5px 5px #000, 0 0 0 3px rgba(255,153,0,.18);
 }
@@ -781,5 +782,236 @@ body[data-version="2.0.0"] .navbar a[aria-current="page"] {
   .cta-row {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* === FunkYouSHiFT v2.0.1 gallery rebuild - 2026-05-03 ===
+   Purpose: replace the empty /slideshow loader with real curated gallery sections,
+   show the new brand assets clearly, keep merch/social goals visible, and improve mobile display. */
+body[data-version="2.0.2"] .gallery-hero {
+  padding-bottom: 28px;
+}
+
+.gallery-feature {
+  margin-top: 22px;
+}
+
+.gallery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.gallery-showcase,
+.video-highlight {
+  max-width: 1180px;
+}
+
+.section-heading {
+  max-width: 820px;
+  margin: 0 auto 24px;
+}
+
+.gallery-card-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .875fr .875fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.gallery-card-grid-small {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery-card,
+.gallery-card:visited,
+.gallery-card:hover,
+.gallery-card:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+  padding: 14px;
+  border: 2px solid var(--funk-orange, #ff9900);
+  border-radius: 12px;
+  background: rgba(0,0,0,.72);
+  box-shadow: 4px 4px #000;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 7px 7px #000;
+  border-color: #ffd166;
+}
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #000;
+}
+
+.gallery-card-grid-small .gallery-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.gallery-card strong {
+  display: block;
+  color: var(--funk-orange, #ff9900);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: .95;
+  text-shadow: 2px 2px #000;
+}
+
+.gallery-card span {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #d8d8d8;
+  font-size: .95rem;
+  line-height: 1.35;
+}
+
+.responsive-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 2px solid var(--funk-orange, #ff9900);
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 4px 4px #000;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .gallery-card-grid,
+  .gallery-card-grid-small {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-card-large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .gallery-card-grid,
+  .gallery-card-grid-small {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card-large {
+    grid-column: auto;
+  }
+
+  .gallery-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    padding: 12px;
+  }
+
+  .gallery-card img,
+  .gallery-card-grid-small .gallery-card img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+/* === FunkYouSHiFT v2.0.2 merch link conversion pass - 2026-05-03 ===
+   Purpose: make merch previews behave like shopping cards, keep image clicks useful,
+   and send users to the Streamlabs merch store instead of dead/non-clickable previews. */
+.merch-gallery-linked {
+  align-items: stretch;
+}
+
+.merch-gallery .merch-card-link,
+.merch-gallery .merch-card-link:visited,
+.merch-gallery .merch-card-link:hover,
+.merch-gallery .merch-card-link:active,
+.merch-art-link,
+.merch-art-link:visited,
+.merch-art-link:hover,
+.merch-art-link:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.merch-gallery .merch-card-link {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid var(--funk-orange, #ff9900);
+  border-radius: 10px;
+  background: rgba(0,0,0,.66);
+  box-shadow: 4px 4px #000;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.merch-gallery .merch-card-link:hover,
+.merch-gallery .merch-card-link:focus-visible,
+.merch-art-link:hover,
+.merch-art-link:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 7px 7px #000;
+  border-color: #ffd166;
+  outline: none;
+}
+
+.merch-gallery .merch-card-link img {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+}
+
+.merch-gallery .merch-card-link strong {
+  color: var(--funk-orange, #ff9900);
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 2px 2px #000;
+}
+
+.merch-gallery .merch-card-link span {
+  font-family: Arial, sans-serif;
+  color: #d8d8d8;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.merch-art-link {
+  display: block;
+  border-radius: 12px;
+}
+
+.merch-art-link img {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .merch-gallery .merch-card-link {
+    width: min(100%, 280px);
   }
 }
