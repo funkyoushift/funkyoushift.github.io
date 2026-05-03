@@ -1,0 +1,28 @@
+# FunkYouSHiFT
+
+FunkYouSHiFT is the official creator and community hub for FunkYouSHiFT, a Borderlands-focused gaming creator and community builder.
+
+## Site Purpose
+- Route visitors to Discord, merch, embedded content, socials, giveaways, and support links.
+- Make FunkYouSHiFT recognizable as a creator brand and community ecosystem.
+- Keep the voice direct, gamer-friendly, helpful, and a little chaotic without confusing visitors.
+
+## Primary Pages
+- Home: https://www.funkyoushift.com/
+- Discord: https://www.funkyoushift.com/discord.html
+- Merch: https://www.funkyoushift.com/merch.html
+- Giveaway: https://www.funkyoushift.com/giveaway.html
+- Gallery: https://www.funkyoushift.com/gallery.html
+- Donate: https://www.funkyoushift.com/donate.html
+
+## Official Links
+- Twitch: https://www.twitch.tv/funkyoushift
+- YouTube: https://www.youtube.com/@funkyoushift
+- Facebook: https://www.facebook.com/funkyoushift
+- X: https://x.com/funkyoushift
+- Discord: https://discord.gg/ttwl-bl3-trading
+- Merch: https://streamlabs.com/funkyoushift/merch
+- Throne: https://throne.com/funkyoushift
+
+## Brand Summary
+FunkYouSHiFT creates Borderlands content, runs an active Discord community for trading, modded gear, giveaways, and player help, and sells official merch through Streamlabs.
