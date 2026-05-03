@@ -55,3 +55,11 @@
 - Updated slideshow image CSS to preserve full images instead of cropping tall/narrow photos.
 - Tightened homepage, Discord, merch, donate, giveaway, and Borderlands support page copy so each page has a clearer unique purpose.
 - Updated CSS cache busting to style.css?v=2.1.2.
+
+
+## v2.1.3 - Embedded resource upgrade
+- Replaced description-only resource sections with embedded Discord and YouTube content.
+- Added MentalMars Borderlands 4 Hub to the resources page and schema list.
+- Added direct fallback links for external resources because some outside sites may block iframe previews.
+- Updated build videos page with embedded creator videos plus a Discord build-showoff CTA.
+- Updated cache busting to style.css?v=2.1.3.

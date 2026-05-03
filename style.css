@@ -1123,7 +1123,7 @@ body[data-version="2.0.2"] .gallery-hero {
   }
 }
 
-/* v2.1.2 - community slideshow display fix: preserve full photos instead of cropping tall/narrow images */
+/* v2.1.3 - community slideshow display fix: preserve full photos instead of cropping tall/narrow images */
 .slideshow-card-grid .gallery-card img {
   width: 100%;
   height: auto;
@@ -1141,5 +1141,100 @@ body[data-version="2.0.2"] .gallery-hero {
     max-height: none;
     aspect-ratio: auto;
     object-fit: contain;
+  }
+}
+
+
+/* v2.1.3 - embedded resources: keep resource page useful without turning it into a slow wall of text */
+.compact-resource-links {
+  margin-bottom: 18px;
+}
+
+.resource-embed-section {
+  margin-top: 34px;
+}
+
+.embed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.site-embed-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-embed-card {
+  padding: 18px;
+  border: 2px solid rgba(255,153,0,.85);
+  border-radius: 12px;
+  background: rgba(0,0,0,.72);
+  box-shadow: 4px 4px #000;
+  text-align: left;
+}
+
+.resource-embed-card h3 {
+  margin: 0 0 12px;
+  color: #ff9900;
+  font-size: 1.35rem;
+  line-height: 1.05;
+  text-shadow: 2px 2px #000;
+}
+
+.resource-embed-card p {
+  font-family: Arial, sans-serif;
+  color: #ddd;
+  text-shadow: none;
+}
+
+.resource-video {
+  margin: 0;
+  border: 1px solid rgba(255,153,0,.35);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.external-site-frame,
+.discord-embed-card iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  background: #050505;
+}
+
+.external-site-frame {
+  height: 420px;
+  border: 1px solid rgba(255,153,0,.35);
+}
+
+.embed-fallback {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ff9900 !important;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.build-join-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .embed-grid,
+  .site-embed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-embed-card {
+    text-align: center;
+  }
+
+  .external-site-frame {
+    height: 360px;
   }
 }
