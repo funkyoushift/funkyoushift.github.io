@@ -2510,3 +2510,47 @@ span,
     min-height: 240px;
   }
 }
+
+/* v3.3.4 homepage compression: shorter mobile flow without removing SEO routes */
+.home-hub-section { margin-bottom: clamp(1.25rem, 3vw, 2.25rem); }
+.home-hub-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.action-grid--compact .action-card p { margin-bottom: 0; }
+.home-mini-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: stretch;
+  max-width: 1180px;
+  margin: clamp(1.75rem, 4vw, 3rem) auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+.mini-feature-card {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  background: rgba(0,0,0,.34);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 18px 45px rgba(0,0,0,.22);
+}
+.mini-feature-card h2 { margin-top: 0; }
+.mini-feature-card p { line-height: 1.55; }
+.twitch-lite--compact { margin-top: .8rem; }
+.twitch-lite--compact img { max-height: 280px; object-fit: cover; }
+.compact-actions { margin-top: .85rem; }
+.home-faq-compact { margin-top: clamp(1.25rem, 3vw, 2rem); }
+@media (max-width: 760px) {
+  .home-hub-section,
+  .home-quick-actions,
+  .social-hub,
+  .home-faq-compact { padding-top: 1.35rem; padding-bottom: 1.35rem; }
+  .home-hub-grid,
+  .action-grid--compact { gap: .85rem; }
+  .home-hub-grid .traffic-card:nth-child(n+4) { display: none; }
+  .action-grid--compact .action-card { padding: .9rem; }
+  .action-grid--compact .action-card span { font-size: 1.25rem; }
+  .home-mini-feature { grid-template-columns: 1fr; margin: 1.25rem auto; gap: .9rem; }
+  .mini-feature-card { padding: 1rem; border-radius: 18px; }
+  .home-about-mini p:last-child { margin-bottom: 0; }
+  .twitch-lite--compact img { max-height: 210px; }
+  .compact-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .compact-actions .big-button { min-width: 0; padding-left: .75rem; padding-right: .75rem; }
+}

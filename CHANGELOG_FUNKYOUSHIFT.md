@@ -210,3 +210,11 @@
 - Converted Maxroll BL4 planner to click-to-load iframe attempt with direct fallback.
 - Expanded creator SEO/resource mentions for Moxsy, Ki11er Six, Joltzdude139, LazyData, Dantics, and RestAssured.
 - Kept third-party creator/resource language clear: links are references, not FunkYouSHiFT-owned content.
+
+
+## v3.3.4 - Homepage Compression Without Losing SEO
+- Shortened the homepage mobile flow by replacing duplicate long sections with focused routing cards.
+- Kept Borderlands modding, modded weapons, Discord, builds, and resources language near the top for CTR/SEO.
+- Moved the homepage toward a hub model: Home routes traffic, Modding explains, Resources holds tools, Discord converts.
+- Kept lazy Twitch click-to-load behavior.
+- Kept global footer/internal links to the new SEO pages for crawl flow.
