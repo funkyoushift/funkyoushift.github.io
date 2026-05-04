@@ -1,6 +1,6 @@
 # FunkYouSHiFT Project Reference
 
-_Last updated: 2026-05-03 — v3.1.0 full human tone + SEO pass_
+_Last updated: 2026-05-04 — v3.3.0 modding authority build_
 
 ## Working rules for future edits
 - Work from the actual site files in the ZIP/project. Do not guess the file structure, page names, image paths, or current implementation.
@@ -144,3 +144,20 @@ Home, Watch, Discord, Merch, Resources, Giveaway, Gallery, Donate
 - Missing gallery images remove their own cards instead of showing broken image icons.
 - Added no-JS fallback for the first slideshow images.
 - Updated cache busting/body versions to `3.2.1`.
+
+## v3.3.0 - Modding authority build - 2026-05-04
+- Rebuilt `borderlands-modding.html` into the primary authority page for Borderlands modding, modded weapons, BL3/BL4 help, trusted resources, and Discord conversion.
+- Updated title/meta/OG/schema with direct `Borderlands modding`, `modded weapons`, `BL3`, `BL4`, `Discord help`, and resource language so Google has a stronger snippet source than generic About copy.
+- Added Article + FAQPage schema to the modding page and refreshed FAQ questions around modding, modded weapons, downloads, and BL3/BL4 help.
+- Updated homepage title/description and the top search-entry section to route modding searches directly into the modding guide.
+- Updated Borderlands Discord and Modded Weapons page metadata to reinforce modding/trading/gear search intent.
+- Updated sitemap priority/lastmod, llms.txt, cache busting, and body version to v3.3.0.
+
+
+## v3.3.1 - Internal linking system - 2026-05-04
+- Added global nav links for Modding, Weapons, and Builds so the new SEO pages are not orphaned behind Resources only.
+- Added footer links to Borderlands Discord, Modding Guide, Modded Weapons, Builds, and Resources across every HTML page.
+- Added a reusable “More Borderlands help” internal-link cluster to every page so authority flows between the modding, Discord, modded weapons, and builds pages.
+- Rebuilt sitemap.xml with the modding authority page, Discord page, modded weapons page, and builds page prioritized before lower-value support pages.
+- Confirmed canonical strategy remains consistent: homepage canonical is https://www.funkyoushift.com/ and content pages use https://www.funkyoushift.com/page-name.html.
+- Updated cache busting/body version to v3.3.1.

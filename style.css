@@ -2321,3 +2321,63 @@ span,
     order: 6 !important;
   }
 }
+
+
+/* === v3.3.1 modding authority build === */
+.authority-hero .hero-actions,
+.authority-actions { justify-content: center; gap: 14px; flex-wrap: wrap; }
+.authority-summary,
+.authority-section { text-align: left; }
+.authority-summary h2,
+.authority-section h2,
+.authority-faq h2 { text-align: center; }
+.authority-summary p,
+.authority-section p { max-width: 860px; margin-left: auto; margin-right: auto; }
+.authority-card-grid .traffic-card strong { font-size: 1.25rem; }
+.authority-steps { max-width: 860px; margin: 18px auto 0; padding: 0 0 0 1.4rem; color: #e6e6e6; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+.authority-steps li { margin: 10px 0; }
+.authority-steps strong,
+.authority-note { color: #ffb13b; }
+.authority-note { margin-top: 18px !important; font-weight: 700; }
+@media (max-width: 760px) {
+  .authority-hero .hero-actions,
+  .authority-actions { display: grid !important; grid-template-columns: 1fr !important; width: min(100%, 430px) !important; margin-left: auto !important; margin-right: auto !important; }
+  .authority-summary,
+  .authority-section { text-align: center; }
+  .authority-steps { text-align: left; padding-left: 1.2rem; }
+}
+
+
+/* === v3.3.1 internal linking system === */
+.internal-link-cluster {
+  max-width: 1040px;
+  margin: 36px auto;
+  padding: 28px;
+  border: 1px solid rgba(255,153,0,.45);
+  border-radius: 16px;
+  background: rgba(0,0,0,.62);
+  box-shadow: 6px 6px #000;
+}
+.internal-link-cluster .section-intro {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.internal-link-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.internal-link-grid .traffic-card {
+  min-height: 150px;
+}
+@media (max-width: 980px) {
+  .internal-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .internal-link-cluster {
+    width: min(100%, 520px) !important;
+    margin: 24px auto !important;
+    padding: 18px 14px !important;
+    box-sizing: border-box !important;
+  }
+  .internal-link-grid { grid-template-columns: 1fr !important; }
+}
