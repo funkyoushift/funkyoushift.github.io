@@ -7,6 +7,7 @@ FunkYouSHiFT is a Borderlands creator/community hub for Discord, trading, modded
 ## Important pages
 - Home: https://www.funkyoushift.com/
 - Discord/community: https://www.funkyoushift.com/discord.html
+- Video/watch page: https://www.funkyoushift.com/video.html
 - Borderlands modding help: https://www.funkyoushift.com/borderlands-modding.html
 - Borderlands trading help: https://www.funkyoushift.com/borderlands-trading.html
 - Borderlands resources: https://www.funkyoushift.com/borderlands-resources.html

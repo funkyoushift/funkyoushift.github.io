@@ -96,3 +96,13 @@
 - Added _redirects helper for Cloudflare Pages-style redirect handling; Cloudflare dashboard rules should still be configured after deploy.
 
 - Preferred canonical domain kept as https://www.funkyoushift.com/ to match the site CNAME and existing live routing.
+
+## v2.1.8 - Homepage priority + SEO/AEO/PageSpeed polish
+- Made Discord visually dominant on the homepage while keeping Watch as the secondary action; merch/socials remain available but no longer compete equally above the fold.
+- Added a community proof strip and visible Quick Answers sections for AEO-style crawler/user clarity.
+- Rebuilt JSON-LD across pages with consistent WebSite, Person, WebPage, BreadcrumbList, FAQPage, ItemList, Store, Event, DonateAction, and VideoObject where appropriate.
+- Added lazy loading/referrer policies to embeds and preconnect hints for common external content providers.
+- Created a WebP FU logo and updated logo references for smaller downloads.
+- Optimized JPG assets and refreshed image width/height attributes to reduce file weight and layout shift.
+- Rebuilt sitemap.xml with video sitemap data and current priority order: Home, Discord, Watch, Resources, Merch, supporting Borderlands pages, Giveaway, Gallery, Donate.
+- Updated cache busting to `style.css?v=2.1.8` and body version to `2.1.8`.

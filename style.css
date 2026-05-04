@@ -1145,7 +1145,7 @@ body[data-version="2.0.2"] .gallery-hero {
 }
 
 
-/* v2.1.5 - tightened resources page: removed duplicate Discord preview, reduced spacing, optimized embeds */
+/* v2.1.8 - tightened resources page: removed duplicate Discord preview, reduced spacing, optimized embeds */
 .compact-resource-links {
   margin-bottom: 18px;
 }
@@ -1240,7 +1240,7 @@ body[data-version="2.0.2"] .gallery-hero {
 }
 
 
-/* v2.1.5 - Resources page cleanup: tighter spacing and optimized embeds */
+/* v2.1.8 - Resources page cleanup: tighter spacing and optimized embeds */
 .resources-page-main {
   padding-top: 18px;
   padding-bottom: 24px;
@@ -1343,5 +1343,86 @@ body[data-version="2.0.2"] .gallery-hero {
 
   .external-site-frame {
     height: 230px;
+  }
+}
+
+
+/* === v2.1.8 homepage conversion, AEO, and speed polish === */
+.navbar a[aria-current="page"] {
+  outline: 2px solid rgba(255,255,255,.28);
+  box-shadow: 5px 5px #000, 0 0 0 3px rgba(255,153,0,.18);
+}
+.discord-primary-cta {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.14), 6px 6px #000;
+}
+.secondary-action {
+  opacity: .92;
+}
+.community-proof-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  font-family: Arial, sans-serif;
+}
+.community-proof-strip span {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(255,153,0,.55);
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  color: #f3f3f3;
+  font-size: .9rem;
+  line-height: 1.2;
+  text-shadow: 1px 1px #000;
+}
+.action-card--primary,
+.action-card--watch {
+  background: linear-gradient(135deg, rgba(255,153,0,.20), rgba(255,51,0,.08)), rgba(0,0,0,.74);
+}
+.action-card--primary {
+  border-color: #ffd166;
+  box-shadow: 0 0 0 2px rgba(255,153,0,.18), 5px 5px #000;
+}
+.action-card--primary strong::after {
+  content: "  FIRST STOP";
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: #ff9900;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: .62rem;
+  vertical-align: middle;
+  text-shadow: none;
+}
+.faq-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
+}
+.twitch-embed,
+.responsive-video,
+.external-site-frame,
+.discord-sidebar,
+.merch-feature,
+.traffic-entry-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 520px;
+}
+@media (min-width: 900px) {
+  .action-card--primary {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 700px) {
+  .community-proof-strip {
+    justify-content: center;
+  }
+  .discord-primary-cta {
+    width: 100%;
+    text-align: center;
   }
 }
