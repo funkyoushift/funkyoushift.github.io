@@ -125,3 +125,28 @@
 - Updated homepage hero/merch images to use smaller responsive WebP assets.
 - Added mobile-first v3 CSS overrides for cleaner above-the-fold layout, tighter sections, better tap targets, and less mobile clutter.
 - Updated cache busting and body data versions to `3.0.0`.
+
+
+## v3.0.1 - Human copy/resource embed cleanup - 2026-05-03
+- Confirmed the Twitch embed was intentionally removed from the homepage for mobile speed; kept Twitch available through the Watch page and direct Twitch buttons.
+- Rewrote robotic/AEO-sounding visitor copy on the homepage, Watch page, Resources page, and selected Quick Answer sections into a more natural FunkYouSHiFT voice.
+- Removed broken external site iframes from the Resources page, including Lootlemon, and replaced them with clean direct-link resource cards.
+- Kept YouTube embeds because those render correctly and are appropriate for watch/build video content.
+- Updated cache busting and body data version to `3.0.1`.
+
+## v3.1.0 - Homepage human rewrite + lazy Twitch - 2026-05-03
+- Rewrote the homepage visible copy in a more natural FunkYouSHiFT voice instead of generic landing-page/AEO phrasing.
+- Added the Twitch experience back to the homepage as a click-to-load player so the heavy Twitch iframe does not load during initial page render.
+- Kept direct Watch page and Twitch links below the lazy player.
+- Updated homepage FAQ text and matching FAQPage schema.
+- Updated CSS cache busting and body data version to `3.1.0`.
+
+
+## v3.1.0 - Full human tone + SEO pass - 2026-05-03
+- Actually edited the site files instead of providing copy/paste instructions.
+- Reworked visible copy across Home, Discord, Watch, Merch, Donate, Giveaway, Gallery, Resources, Modding, Trading, and Build Videos.
+- Kept the tone direct, creator/community-focused, and less corporate while preserving search-friendly Borderlands terms.
+- Updated page titles and meta descriptions for stronger click-through language.
+- Kept the homepage click-to-load Twitch player so Twitch is present without loading during initial mobile render.
+- Kept Lootlemon as a direct link because it blocks iframe embedding.
+- Bumped cache busting/body versions to `3.1.0`.

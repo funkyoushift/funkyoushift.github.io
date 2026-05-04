@@ -1,7 +1,7 @@
 # PROJECT_NOTES_FUNKYOUSHIFT
 
 ## Current version
-v3.0.0 — Mobile homepage hard optimize (2026-05-03)
+v3.0.1 — Human copy/resource embed cleanup (2026-05-03)
 
 ## Workflow rules
 - Treat this like the Subtronics site workflow: make real files, do not only provide advice.
@@ -93,3 +93,11 @@ v3.0.0 — Mobile homepage hard optimize (2026-05-03)
 - Added smaller WebP derivatives for homepage hero/watch/merch artwork.
 - Updated homepage mobile CSS for cleaner above-the-fold layout, tighter routing cards, and better tap targets.
 - Updated cache busting to `style.css?v=3.0.0`.
+
+
+## v3.0.1 - Human copy/resource embed cleanup - 2026-05-03
+- Confirmed the Twitch embed was intentionally removed from the homepage for mobile speed; kept Twitch available through the Watch page and direct Twitch buttons.
+- Rewrote robotic/AEO-sounding visitor copy on the homepage, Watch page, Resources page, and selected Quick Answer sections into a more natural FunkYouSHiFT voice.
+- Removed broken external site iframes from the Resources page, including Lootlemon, and replaced them with clean direct-link resource cards.
+- Kept YouTube embeds because those render correctly and are appropriate for watch/build video content.
+- Updated cache busting and body data version to `3.0.1`.

@@ -1,6 +1,6 @@
 # FunkYouSHiFT Project Reference
 
-_Last updated: 2026-05-03 — v3.0.0 mobile homepage hard optimize_
+_Last updated: 2026-05-03 — v3.1.0 full human tone + SEO pass_
 
 ## Working rules for future edits
 - Work from the actual site files in the ZIP/project. Do not guess the file structure, page names, image paths, or current implementation.
@@ -105,3 +105,27 @@ Home, Watch, Discord, Merch, Resources, Giveaway, Gallery, Donate
 - Updated homepage merch preview images to smaller WebP files.
 - Added v3 mobile CSS overrides for cleaner above-the-fold layout, tighter cards, better tap targets, and reduced visual clutter.
 - Updated cache busting to `style.css?v=3.0.0` and body data version to `3.0.0`.
+
+
+## v3.0.1 - Human copy/resource embed cleanup - 2026-05-03
+- Confirmed the Twitch embed was intentionally removed from the homepage for mobile speed; kept Twitch available through the Watch page and direct Twitch buttons.
+- Rewrote robotic/AEO-sounding visitor copy on the homepage, Watch page, Resources page, and selected Quick Answer sections into a more natural FunkYouSHiFT voice.
+- Removed broken external site iframes from the Resources page, including Lootlemon, and replaced them with clean direct-link resource cards.
+- Kept YouTube embeds because those render correctly and are appropriate for watch/build video content.
+- Updated cache busting and body data version to `3.0.1`.
+
+
+## v3.1.0 - Homepage human rewrite + lazy Twitch - 2026-05-03
+- Homepage visible copy was rewritten to sound more like Funk: direct, casual, helpful, and less corporate.
+- Twitch was added back to the homepage using a click-to-load `twitch-lite` component. The Twitch iframe is not requested until a visitor taps the preview.
+- This preserves the Twitch embed experience without letting Twitch hurt initial mobile PageSpeed.
+- Lootlemon remains a direct resource link only because it refuses iframe embedding.
+- CSS cache busting and body data version updated to `3.1.0`.
+
+
+## v3.1.0 - Full human tone + SEO pass
+- Future work should continue editing actual files directly, not handing back paste-in snippets.
+- The full visible-site tone is now more natural: direct, casual, gamer/community-native, and less template-like.
+- SEO terms are still present naturally: Borderlands, Discord, trading, modded gear, giveaways, merch, builds, resources, Lootlemon, MentalMars, BL4Hunt.
+- Homepage keeps the lazy Twitch player: no Twitch iframe request until the visitor taps the preview.
+- External resource sites that block iframes should remain button/link cards, not embeds.
