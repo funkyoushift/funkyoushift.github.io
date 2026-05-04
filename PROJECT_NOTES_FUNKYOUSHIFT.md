@@ -1,7 +1,7 @@
 # PROJECT_NOTES_FUNKYOUSHIFT
 
 ## Current version
-v3.2.0 — Phase 2 growth build (2026-05-03)
+v3.2.3 — Readability / anti-blur polish (2026-05-03)
 
 ## Workflow rules
 - Treat this like the Subtronics site workflow: make real files, do not only provide advice.
@@ -109,3 +109,25 @@ v3.2.0 — Phase 2 growth build (2026-05-03)
 - Updated page titles and meta descriptions across all pages to use a consistent `| FunkYouSHiFT` style while preserving CTR-focused search language.
 - Updated sitemap.xml, llms.txt, redirects, internal links, schema WebPage metadata, cache busting, and body version to `3.2.0`.
 - Local internal link audit passed after changes; no missing local `.html`, image, CSS, or slideshow targets found.
+
+## v3.2.1 - Gallery auto-fix system - 2026-05-03
+- Replaced the manually hardcoded Community Slideshow card list with `gallery-manifest.js`, generated from the actual files inside `/slideshow/`.
+- Gallery cards now render from the manifest and include an image error handler so missing slideshow files remove their card instead of showing broken browser image icons.
+- Added a no-JS fallback for the first gallery images so the page is not empty if JavaScript is disabled.
+- Changed generic "Slide 22" style labels to cleaner "Stream Moment" labels.
+- Added a small homepage About spacing polish rule while keeping the existing copy and layout intact.
+- Updated cache busting/body version to `3.2.1`.
+
+
+## v3.2.3 - Readability / anti-blur polish - 2026-05-03
+- Changed the sitewide default body font from the display-style Bangers font to a normal system sans-serif stack for regular text.
+- Kept Bangers on headings, nav, buttons, card titles, and brand/CTA elements so the site still feels like FunkYouSHiFT.
+- Removed text shadows from normal paragraph/card copy because they made desktop text look soft and blurry.
+- Added font smoothing/readability overrides and tightened homepage About copy spacing.
+- Updated cache busting/body version to `3.2.3`.
+
+
+## Current mobile layout note - v3.2.3
+Homepage hero must stay single-column on screens under 760px. Do not allow the desktop two-column grid to control mobile hero text, buttons, or proof badges. Twitch remains click-to-load only.
+
+- Mobile hero polish: brand image now sits between headline and copy on phones; headline sizing capped to prevent horizontal overflow.

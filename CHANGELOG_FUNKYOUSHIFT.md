@@ -158,3 +158,25 @@
 - Updated page titles and meta descriptions across all pages to use a consistent `| FunkYouSHiFT` style while preserving CTR-focused search language.
 - Updated sitemap.xml, llms.txt, redirects, internal links, schema WebPage metadata, cache busting, and body version to `3.2.0`.
 - Local internal link audit passed after changes; no missing local `.html`, image, CSS, or slideshow targets found.
+
+## v3.2.1 — Gallery Auto-Fix System
+- Rebuilt the gallery slideshow section so it renders from `gallery-manifest.js` instead of hardcoded repeated slide cards.
+- Generated the manifest from the actual `/slideshow/` files included in the ZIP.
+- Added image error handling to remove missing/broken gallery cards from the page automatically.
+- Added a no-JavaScript fallback gallery subset.
+- Polished homepage About spacing.
+- Updated CSS cache busting/body versions to `3.2.1`.
+
+
+## v3.2.3 - Readability / anti-blur polish - 2026-05-03
+- Fixed blurry-looking body text by using a normal sans-serif font for paragraphs and small copy.
+- Preserved the Bangers brand font for headings, buttons, nav, and card titles.
+- Removed paragraph text shadows and refreshed cache busting to 3.2.3.
+
+
+## v3.2.3 - Final Mobile Polish Pass
+- Fixed homepage hero layout on mobile so the text no longer squeezes into a skinny column.
+- Forced true mobile stack: headline, image, text, buttons, proof badges.
+- Tightened mobile button widths, badge layout, section width, and overflow handling.
+
+- Mobile hero polish: brand image now sits between headline and copy on phones; headline sizing capped to prevent horizontal overflow.

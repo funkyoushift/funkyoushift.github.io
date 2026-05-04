@@ -17,3 +17,8 @@ Upload the contents of this ZIP to the site root, replacing existing files.
 
 ## v3.2.0 deploy notes
 Upload the full ZIP contents. Submit/inspect sitemap at https://www.funkyoushift.com/sitemap.xml in Search Console. Use the www property and keep `.html` page URLs consistent with sitemap/canonicals.
+
+
+## v3.2.1 deploy notes
+- Deploy `gallery-manifest.js` with the site root.
+- Keep the `/slideshow/` folder included; the gallery uses that manifest and hides any missing image cards automatically.

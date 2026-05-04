@@ -137,3 +137,10 @@ Home, Watch, Discord, Merch, Resources, Giveaway, Gallery, Donate
 - Updated page titles and meta descriptions across all pages to use a consistent `| FunkYouSHiFT` style while preserving CTR-focused search language.
 - Updated sitemap.xml, llms.txt, redirects, internal links, schema WebPage metadata, cache busting, and body version to `3.2.0`.
 - Local internal link audit passed after changes; no missing local `.html`, image, CSS, or slideshow targets found.
+
+
+## v3.2.1 - Gallery auto-fix system - 2026-05-03
+- Gallery slideshow now renders from `gallery-manifest.js`, generated from the actual `/slideshow/` files.
+- Missing gallery images remove their own cards instead of showing broken image icons.
+- Added no-JS fallback for the first slideshow images.
+- Updated cache busting/body versions to `3.2.1`.
