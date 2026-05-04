@@ -1,7 +1,7 @@
 # PROJECT_NOTES_FUNKYOUSHIFT
 
 ## Current version
-v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
+v3.0.0 — Mobile homepage hard optimize (2026-05-03)
 
 ## Workflow rules
 - Treat this like the Subtronics site workflow: make real files, do not only provide advice.
@@ -84,3 +84,12 @@ v2.1.0 — SEO traffic pages + resource hub (2026-05-03)
 - Optimized JPG assets and refreshed image width/height attributes to reduce file weight and layout shift.
 - Rebuilt sitemap.xml with video sitemap data and current priority order: Home, Discord, Watch, Resources, Merch, supporting Borderlands pages, Giveaway, Gallery, Donate.
 - Updated cache busting to `style.css?v=2.1.8` and body version to `2.1.8`.
+
+
+## v3.0.0 - Mobile homepage hard optimize
+- Added `PROJECT_REFERENCE_FUNKYOUSHIFT.md` as the consolidated rules/change reference.
+- Kept the existing canonical/www strategy and actual file structure.
+- Removed the heavy Twitch iframe from the homepage and routed viewers to the dedicated Watch page instead.
+- Added smaller WebP derivatives for homepage hero/watch/merch artwork.
+- Updated homepage mobile CSS for cleaner above-the-fold layout, tighter routing cards, and better tap targets.
+- Updated cache busting to `style.css?v=3.0.0`.

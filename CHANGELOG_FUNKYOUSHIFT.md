@@ -116,3 +116,12 @@
 - Fixed a duplicate nested @media line in style.css.
 - Updated cache busting to style.css?v=2.1.9 and body data-version to 2.1.9.
 - Updated sitemap lastmod values.
+
+## v3.0.0 - Mobile homepage hard optimize - 2026-05-03
+- Created `PROJECT_REFERENCE_FUNKYOUSHIFT.md` as the readable consolidated source of rules, goals, page notes, and version history.
+- Removed homepage reliance on the external Google Font request to reduce render-blocking work.
+- Replaced the heavy homepage Twitch iframe with a lightweight watch card linking to `video.html` and Twitch.
+- Added smaller WebP image derivatives for homepage hero, watch, and merch artwork.
+- Updated homepage hero/merch images to use smaller responsive WebP assets.
+- Added mobile-first v3 CSS overrides for cleaner above-the-fold layout, tighter sections, better tap targets, and less mobile clutter.
+- Updated cache busting and body data versions to `3.0.0`.

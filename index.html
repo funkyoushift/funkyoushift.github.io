@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><link href="https://player.twitch.tv" rel="preconnect"/><link href="https://i.ytimg.com" rel="preconnect"/><link href="https://www.youtube.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>FunkYouSHiFT | Borderlands Discord, Content, Merch &amp; Giveaways</title>
@@ -13,9 +13,9 @@
 <meta content="https://www.funkyoushift.com/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<link href="style.css?v=2.1.9" rel="stylesheet"/>
+<link href="style.css?v=3.0.0" rel="stylesheet"/>
 <link href="images/favicon.ico" rel="icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet"/>
+
 
 <meta content="index, follow" name="robots"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -90,7 +90,7 @@
     }
   ]
 }</script></head>
-<body data-version="2.1.9">
+<body data-version="3.0.0">
 <nav aria-label="Main navigation" class="navbar">
 <button aria-expanded="false" aria-label="Toggle navigation menu" class="navbar-toggle" type="button">Menu</button>
 <a aria-current="page" href="index.html">Home</a>
@@ -110,11 +110,15 @@
 <p class="hero-lead">Join the Discord, watch the content, enter giveaways, follow the socials, or grab merch without digging through five different links.</p>
 <div aria-label="Primary actions" class="hero-actions">
 <a class="big-button primary-action discord-primary-cta" href="https://discord.gg/ttwl-bl3-trading" rel="noopener" target="_blank">Join the Discord</a>
-<a class="big-button secondary-action" href="video.html" target="">Watch the Content</a>
+<a class="big-button secondary-action" href="video.html">Watch the Content</a>
 </div><div aria-label="Community highlights" class="community-proof-strip"><span>4,000+ member community</span><span>Modded gear + trading help</span><span>Giveaways, clips, and live chaos</span></div>
 </div>
 <div aria-label="FunkYouSHiFT brand artwork" class="hero-brand-card">
-<img alt="Team FunkYouSHiFT artwork with lightning" decoding="async" fetchpriority="high" height="1200" loading="eager" src="images/team-funkyoushift-people-2026.jpg" width="1200"/>
+<picture>
+<source media="(max-width: 760px)" srcset="images/team-funkyoushift-people-2026-480.webp" type="image/webp"/>
+<source media="(max-width: 1100px)" srcset="images/team-funkyoushift-people-2026-768.webp" type="image/webp"/>
+<img alt="Team FunkYouSHiFT artwork with lightning" decoding="async" height="768" loading="eager" src="images/team-funkyoushift-people-2026-768.webp" width="768"/>
+</picture>
 </div>
 </div>
 </header>
@@ -140,8 +144,8 @@
 </div>
 </section>
 <section class="about home-about"><h2>About FunkYouSHiFT</h2><p>I’m Funk. I stream Borderlands, run the Discord, do giveaways, mess with modded gear, and try to keep the community helpful without making it boring.</p><p>This home page is the shortcut. The other pages go deeper depending on what you came here for.</p></section>
-<section aria-labelledby="watch-title" class="watch-section" id="watch"><h2 id="watch-title">Watch FunkYouSHiFT</h2><p class="section-intro">The stream lives here too. If Twitch is being weird, use the Twitch link below the player.</p><div class="twitch-embed"><div class="twitch-embed__frame"><iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://player.twitch.tv/?channel=funkyoushift&amp;parent=www.funkyoushift.com&amp;parent=funkyoushift.com&amp;muted=true&amp;autoplay=true" title="FunkYouSHiFT Twitch Player"></iframe></div><p class="twitch-embed__fallback">If the player doesn’t load, <a href="https://www.twitch.tv/funkyoushift" rel="noopener" target="_blank">watch on Twitch</a>.</p></div></section>
-<section aria-labelledby="merch-title" class="merch-feature"><div class="merch-feature-copy"><h2 id="merch-title">Want the merch?</h2><p>Quick preview here. The merch page has the actual item previews and store links.</p><a class="big-button" href="merch.html">See the Merch</a></div><div class="merch-feature-art"><a aria-label="View FunkYouSHiFT merch" class="merch-art-link" href="merch.html"><img alt="FunkYouSHiFT FU logo" decoding="async" height="900" loading="lazy" src="images/fu-logo-2026.webp" type="image/webp" width="900"/></a><a aria-label="View FunkYouSHiFT merch" class="merch-art-link" href="merch.html"><img alt="Team FunkYouSHiFT merch-style artwork" decoding="async" height="1200" loading="lazy" src="images/team-funkyoushift-bots-2026.jpg" width="1200"/></a></div></section>
+<section aria-labelledby="watch-title" class="watch-section lightweight-watch" id="watch"><div class="watch-copy"><h2 id="watch-title">Watch FunkYouSHiFT</h2><p class="section-intro">The homepage stays fast now. Jump to the dedicated watch page or open Twitch when you want the live player.</p><div class="hero-actions watch-actions"><a class="big-button primary-action" href="video.html">Open Watch Page</a><a class="big-button secondary-action" href="https://www.twitch.tv/funkyoushift" rel="noopener" target="_blank">Watch on Twitch</a></div></div><a class="watch-poster-card" href="video.html" aria-label="Open FunkYouSHiFT watch page"><picture><source media="(max-width: 760px)" srcset="images/team-funkyoushift-bots-2026-480.webp" type="image/webp"/><img alt="FunkYouSHiFT watch page artwork" decoding="async" height="768" loading="lazy" src="images/team-funkyoushift-bots-2026-768.webp" width="768"/></picture></a></section>
+<section aria-labelledby="merch-title" class="merch-feature"><div class="merch-feature-copy"><h2 id="merch-title">Want the merch?</h2><p>Quick preview here. The merch page has the actual item previews and store links.</p><a class="big-button" href="merch.html">See the Merch</a></div><div class="merch-feature-art"><a aria-label="View FunkYouSHiFT merch" class="merch-art-link" href="merch.html"><img alt="FunkYouSHiFT FU logo" decoding="async" height="480" loading="lazy" src="images/fu-logo-2026-480.webp" width="480"/></a><a aria-label="View FunkYouSHiFT merch" class="merch-art-link" href="merch.html"><img alt="Team FunkYouSHiFT merch-style artwork" decoding="async" height="480" loading="lazy" src="images/team-funkyoushift-bots-2026-480.webp" width="480"/></a></div></section>
 <section aria-labelledby="social-title" class="quick-links social-hub" id="socials"><h2 id="social-title">Follow / Support / Hang Out</h2><div class="links-grid social-hub-grid"><a href="https://www.twitch.tv/funkyoushift" rel="noopener" target="_blank">Twitch</a><a href="https://www.youtube.com/@funkyoushift" rel="noopener" target="_blank">YouTube</a><a href="https://www.facebook.com/funkyoushift" rel="noopener" target="_blank">Facebook</a><a href="https://x.com/funkyoushift" rel="noopener" target="_blank">X</a><a href="https://discord.gg/ttwl-bl3-trading" rel="noopener" target="_blank">Discord</a><a href="https://throne.com/funkyoushift" rel="noopener" target="_blank">Throne Wishlist</a></div></section>
 <section class="traffic-content faq-section"><h2>Quick answers</h2><details><summary>What is FunkYouSHiFT?</summary><p>FunkYouSHiFT is a Borderlands creator and community hub for Discord, videos, giveaways, merch, socials, and community resources.</p></details><details><summary>Where should new visitors start?</summary><p>Most people should start with the Discord or Watch pages. Discord is for community and help; Watch is for videos and stream content.</p></details><details><summary>Is this a business contact site?</summary><p>No. The site is built to help people join the community, watch content, follow socials, shop merch, and find Borderlands resources.</p></details></section></main>
 <footer aria-label="FunkYouSHiFT links" class="social-links">

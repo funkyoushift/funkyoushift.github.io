@@ -1625,3 +1625,249 @@ body[data-version="2.0.2"] .gallery-hero {
     transition-duration: .001ms !important;
   }
 }
+
+/* === FunkYouSHiFT v3.0.0 mobile homepage hard optimize ===
+   Goals: faster first paint, lighter homepage, cleaner mobile routing, no heavy Twitch iframe on the homepage,
+   and stronger above-the-fold conversion without adding a separate m. subdomain. */
+:root {
+  --funk-orange: #ff9900;
+  --funk-red: #ff3300;
+  --funk-yellow: #ffd166;
+  --funk-panel: rgba(0,0,0,.72);
+}
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', Arial, sans-serif;
+  background-color: #0b0b0b;
+  background-image: radial-gradient(circle at top, rgba(255,153,0,.14), transparent 26rem), url('images/grunge.png');
+  background-size: auto, 360px 360px;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.48));
+  z-index: -1;
+}
+.navbar {
+  padding: .72rem;
+  gap: .62rem;
+  background: rgba(9,9,9,.96);
+  backdrop-filter: blur(8px);
+}
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a {
+  min-height: 44px;
+}
+.home-hero {
+  padding-top: 34px;
+  padding-bottom: 16px;
+}
+.hero-inner {
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+  gap: 20px;
+}
+.hero-copy h1,
+header.hero h1 {
+  letter-spacing: .02em;
+}
+.hero-lead,
+.section-intro,
+.action-card p,
+.traffic-card span,
+.resource-card span,
+.home-about p,
+.merch-feature p,
+.faq-section p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero-brand-card {
+  padding: 8px;
+  contain: layout paint;
+}
+.hero-brand-card img,
+.hero-brand-card picture,
+.watch-poster-card img,
+.watch-poster-card picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.intent-router {
+  margin-top: 18px;
+}
+.action-card,
+.traffic-card,
+.resource-card {
+  contain: layout paint;
+}
+.lightweight-watch {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+  gap: 22px;
+  align-items: center;
+  text-align: left;
+}
+.lightweight-watch .section-intro {
+  margin-left: 0;
+}
+.watch-actions {
+  margin-top: 14px;
+}
+.watch-poster-card {
+  display: block;
+  padding: 8px;
+  border: 2px solid var(--funk-orange);
+  border-radius: 12px;
+  background: rgba(0,0,0,.65);
+  box-shadow: 4px 4px #000;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.watch-poster-card img {
+  border-radius: 8px;
+}
+@media (max-width: 760px) {
+  body {
+    background-image: linear-gradient(180deg, rgba(255,153,0,.10), rgba(0,0,0,0) 280px), url('images/grunge.png');
+    background-size: auto, 260px 260px;
+  }
+  .navbar {
+    padding: .5rem;
+  }
+  .navbar-toggle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', Arial, sans-serif;
+    font-size: 1.18rem;
+    padding: .62rem .85rem;
+  }
+  .home-hero,
+  header.hero.home-hero {
+    padding: 16px 10px 8px;
+  }
+  .hero-inner {
+    width: 100%;
+    gap: 12px;
+  }
+  .hero-copy {
+    text-align: center;
+  }
+  .hero-copy h1,
+  header.hero h1 {
+    font-size: clamp(2.3rem, 13vw, 3.7rem);
+    margin: .04em 0 .12em;
+    padding: .15rem .25rem;
+  }
+  .eyebrow {
+    margin-bottom: 6px;
+  }
+  .hero-lead,
+  .section-intro,
+  header.hero p {
+    font-size: .95rem !important;
+    line-height: 1.36;
+  }
+  .hero-actions {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 8px;
+  }
+  .discord-primary-cta {
+    transform: none;
+  }
+  .community-proof-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .community-proof-strip span {
+    justify-content: center;
+  }
+  .hero-brand-card {
+    max-width: 220px;
+    padding: 6px;
+  }
+  .hero-brand-card img {
+    max-height: 220px;
+  }
+  main,
+  main.resources-page-main {
+    padding-top: 8px;
+  }
+  section,
+  .gallery-grid,
+  .compact-resource-intro,
+  .compact-embed-section {
+    margin: 12px auto;
+    padding: 15px 10px;
+  }
+  .intent-router {
+    margin-top: 10px;
+  }
+  .action-card,
+  .traffic-card,
+  .resource-card {
+    text-align: left;
+    padding: 13px 12px;
+  }
+  .action-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 10px;
+    align-items: start;
+  }
+  .action-card span {
+    grid-row: span 2;
+    font-size: 1.45rem;
+  }
+  .action-card strong,
+  .traffic-card strong,
+  .resource-card strong {
+    font-size: 1.2rem;
+  }
+  .action-card p {
+    font-size: .9rem;
+  }
+  .traffic-entry-section,
+  .home-about,
+  .merch-feature,
+  .faq-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 360px;
+  }
+  .lightweight-watch {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .lightweight-watch .section-intro {
+    margin-left: auto;
+  }
+  .watch-poster-card {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .merch-feature {
+    gap: 14px;
+  }
+  .merch-feature-art {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .merch-feature-art img:first-child {
+    max-width: none;
+  }
+  .social-hub-grid {
+    gap: 10px;
+  }
+  footer.social-links {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+}

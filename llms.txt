@@ -26,3 +26,7 @@ FunkYouSHiFT is a Borderlands creator/community hub for Discord, trading, modded
 
 ## Site direction
 The site should route visitors quickly to Discord, merch, content, socials, and helpful Borderlands resource pages. Tone should stay direct, helpful, and FunkYouSHiFT-branded rather than corporate.
+
+
+Project reference: /PROJECT_REFERENCE_FUNKYOUSHIFT.md
+Current deploy version: v3.0.0 mobile homepage hard optimize.
