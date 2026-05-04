@@ -197,3 +197,16 @@
 - Rebuilt sitemap.xml with the modding authority page, Discord page, modded weapons page, and builds page prioritized before lower-value support pages.
 - Confirmed canonical strategy remains consistent: homepage canonical is https://www.funkyoushift.com/ and content pages use https://www.funkyoushift.com/page-name.html.
 - Updated cache busting/body version to v3.3.1.
+
+
+## v3.3.2 Resource Expansion
+- Added requested Borderlands mod databases, editors, trainers, GenieBot tutorial/community link, Maxroll planner, and build creator resources.
+- Added safety wording around third-party trainers/executable downloads and clarified third-party ownership.
+- Updated Resources and Builds metadata/schema while keeping canonical `.html` structure and internal linking intact.
+
+
+## v3.3.3 Creator Integration Patch
+- Converted YouTube creator videos to click-to-load embeds so YouTube does not load on initial page load.
+- Converted Maxroll BL4 planner to click-to-load iframe attempt with direct fallback.
+- Expanded creator SEO/resource mentions for Moxsy, Ki11er Six, Joltzdude139, LazyData, Dantics, and RestAssured.
+- Kept third-party creator/resource language clear: links are references, not FunkYouSHiFT-owned content.

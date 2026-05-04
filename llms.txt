@@ -34,3 +34,16 @@ Borderlands Discord, Borderlands 3 Discord, Borderlands 4 Discord, Borderlands t
 - Modded weapons support page: https://www.funkyoushift.com/borderlands-modded-weapons.html
 - Builds support page: https://www.funkyoushift.com/borderlands-builds.html
 - These pages are now linked globally from the nav/footer and from an internal guide cluster on every page.
+
+## v3.3.2 resource expansion
+- Added BL-SDK mod databases for Oak2, Oak, Willow2, and Willow1.
+- Added BL4 Editor, Save Editor, Fling BL3 Trainer, and Fling BL4 Trainer resource links with third-party tool warnings.
+- Added GenieBot tutorial and GenieBot/GZO Discord link as third-party community resources.
+- Added Maxroll Borderlands 4 planner and creator links for Moxsy, Ki11er Six, Joltzdude139, and LazyData.
+
+
+## v3.3.3 Creator Integration Patch
+- Converted YouTube creator videos to click-to-load embeds so YouTube does not load on initial page load.
+- Converted Maxroll BL4 planner to click-to-load iframe attempt with direct fallback.
+- Expanded creator SEO/resource mentions for Moxsy, Ki11er Six, Joltzdude139, LazyData, Dantics, and RestAssured.
+- Kept third-party creator/resource language clear: links are references, not FunkYouSHiFT-owned content.

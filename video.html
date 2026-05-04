@@ -14,7 +14,7 @@
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="index, follow" name="robots"/>
-<link href="style.css?v=3.3.1" rel="stylesheet"/>
+<link href="style.css?v=3.3.3" rel="stylesheet"/>
 <link href="images/favicon.ico" rel="icon"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -137,7 +137,7 @@
     }
   ]
 }</script></head>
-<body data-version="3.3.1">
+<body data-version="3.3.3">
 <nav aria-label="Main navigation" class="navbar"><button aria-expanded="false" aria-label="Toggle navigation menu" class="navbar-toggle" type="button">Menu</button>
 <a href="index.html">Home</a>
 <a aria-current="page" href="video.html">Watch</a>
@@ -159,17 +159,19 @@
 <main>
 <section class="traffic-content resource-embed-section compact-embed-section">
 <h2>Borderlands build videos</h2>
-<p>Useful build videos and creator links while the FunkYouSHiFT video side keeps growing.</p>
-<div class="embed-grid video-embed-grid">
-<article class="resource-embed-card video-resource-card">
+<p>Useful build videos and creator links while the FunkYouSHiFT video side keeps growing. YouTube loads only when you tap a video.</p>
+<div class="embed-grid video-embed-grid creator-video-grid">
+<article class="resource-embed-card video-resource-card creator-video-card">
 <h3>Moxsy Borderlands build video</h3>
-<div class="responsive-video resource-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/v4NiUPkHha0" title="Moxsy Borderlands build video"></iframe></div>
-<a class="embed-fallback" href="https://www.youtube.com/watch?v=v4NiUPkHha0" rel="noopener" target="_blank">Open on YouTube</a>
+<p>High-damage builds, gear synergy, and mechanic breakdowns.</p>
+<div class="creator-card-actions"><button class="button-link" type="button" onclick="loadCreatorVideo(this, 'v4NiUPkHha0')">Load video</button><a class="embed-fallback" href="https://www.youtube.com/watch?v=v4NiUPkHha0" rel="noopener" target="_blank">Open on YouTube</a></div>
+<div class="lazy-video-holder" aria-live="polite"></div>
 </article>
-<article class="resource-embed-card video-resource-card">
+<article class="resource-embed-card video-resource-card creator-video-card">
 <h3>Ki11er Six Borderlands build video</h3>
-<div class="responsive-video resource-video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KXvrmwZSeGQ" title="Ki11er Six Borderlands build video"></iframe></div>
-<a class="embed-fallback" href="https://www.youtube.com/watch?v=KXvrmwZSeGQ" rel="noopener" target="_blank">Open on YouTube</a>
+<p>Farming, gameplay, build guides, and long-running Borderlands content.</p>
+<div class="creator-card-actions"><button class="button-link" type="button" onclick="loadCreatorVideo(this, 'KXvrmwZSeGQ')">Load video</button><a class="embed-fallback" href="https://www.youtube.com/watch?v=KXvrmwZSeGQ" rel="noopener" target="_blank">Open on YouTube</a></div>
+<div class="lazy-video-holder" aria-live="polite"></div>
 </article>
 </div>
 </section>
@@ -209,6 +211,17 @@
 <a href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">Merch</a>
 <a href="https://throne.com/funkyoushift" rel="noopener" target="_blank">Throne</a>
 </footer>
+
+<script>
+function loadCreatorVideo(button, videoId) {
+  var card = button.closest('.creator-video-card, .video-resource-card');
+  if (!card || !videoId) return;
+  var holder = card.querySelector('.lazy-video-holder');
+  if (!holder) return;
+  holder.innerHTML = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" title="Borderlands build video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  card.classList.add('video-loaded');
+}
+</script>
 <script>
 (function () {
   var toggles = document.querySelectorAll('.navbar-toggle');
