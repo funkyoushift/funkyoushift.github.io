@@ -1,32 +1,24 @@
 # FunkYouSHiFT
 
 Official site: https://www.funkyoushift.com/
+Preferred canonical domain: https://www.funkyoushift.com/
+Current version: v3.2.0
 
-FunkYouSHiFT is a Borderlands creator/community hub for Discord, trading, modded gear discussion, giveaways, embedded content, merch, and useful Borderlands resources.
+FunkYouSHiFT is a Borderlands creator and Discord community hub. The site routes visitors to Discord, streams, videos, giveaways, merch, and useful Borderlands resources.
 
-## Important pages
-- Home: https://www.funkyoushift.com/
-- Discord/community: https://www.funkyoushift.com/discord.html
-- Video/watch page: https://www.funkyoushift.com/video.html
-- Borderlands modding help: https://www.funkyoushift.com/borderlands-modding.html
-- Borderlands trading help: https://www.funkyoushift.com/borderlands-trading.html
-- Borderlands resources: https://www.funkyoushift.com/borderlands-resources.html
-- Borderlands build video resources: https://www.funkyoushift.com/borderlands-build-videos.html
-- Merch: https://www.funkyoushift.com/merch.html
-- Gallery: https://www.funkyoushift.com/gallery.html
-- Giveaways: https://www.funkyoushift.com/giveaway.html
-- Donate/support: https://www.funkyoushift.com/donate.html
+Important pages:
+- https://www.funkyoushift.com/ — homepage and main routing hub
+- https://www.funkyoushift.com/borderlands-discord.html — Borderlands Discord server page for BL3/BL4, trading, modded gear, builds, and help
+- https://www.funkyoushift.com/discord.html — direct community conversion page
+- https://www.funkyoushift.com/borderlands-modded-weapons.html — modded weapons and modded gear help page
+- https://www.funkyoushift.com/borderlands-modding.html — Borderlands modding and modded item help
+- https://www.funkyoushift.com/borderlands-trading.html — Borderlands trading, loot, and gear help
+- https://www.funkyoushift.com/borderlands-builds.html — Borderlands builds and build help
+- https://www.funkyoushift.com/borderlands-build-videos.html — curated build video resources
+- https://www.funkyoushift.com/borderlands-resources.html — Lootlemon, MentalMars, BL4Hunt, videos, and resource links
+- https://www.funkyoushift.com/video.html — streams, clips, and watch content
+- https://www.funkyoushift.com/merch.html — FunkYouSHiFT merch through Streamlabs
+- https://www.funkyoushift.com/giveaway.html — giveaway information
 
-## External resources referenced
-- Lootlemon: https://www.lootlemon.com/
-- BL4Hunt: https://www.bl4hunt.com/
-- Twitch: https://www.twitch.tv/funkyoushift
-- YouTube: https://www.youtube.com/@funkyoushift
-- Streamlabs merch: https://streamlabs.com/funkyoushift/merch
-
-## Site direction
-The site should route visitors quickly to Discord, merch, content, socials, and helpful Borderlands resource pages. Tone should stay direct, helpful, and FunkYouSHiFT-branded rather than corporate.
-
-
-Project reference: /PROJECT_REFERENCE_FUNKYOUSHIFT.md
-Current deploy version: v3.0.0 mobile homepage hard optimize.
+Primary topics:
+Borderlands Discord, Borderlands 3 Discord, Borderlands 4 Discord, Borderlands trading Discord, Borderlands modding, Borderlands modded weapons, modded gear, Borderlands builds, giveaways, streams, Twitch, YouTube, Lootlemon, MentalMars, BL4Hunt.

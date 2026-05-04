@@ -150,3 +150,11 @@
 - Kept the homepage click-to-load Twitch player so Twitch is present without loading during initial mobile render.
 - Kept Lootlemon as a direct link because it blocks iframe embedding.
 - Bumped cache busting/body versions to `3.1.0`.
+
+## v3.2.0 - Phase 2 growth build - 2026-05-03
+- Added dedicated SEO/AEO pages for the current Search Console opportunity: `borderlands-discord.html`, `borderlands-modded-weapons.html`, and `borderlands-builds.html`.
+- Updated homepage title/description and added a visible Borderlands Discord entry section targeting Borderlands Discord, BL3/BL4 Discord, modded weapons, and builds.
+- Kept canonical strategy consistent: preferred domain is `https://www.funkyoushift.com/`; homepage canonical is `/`; internal content pages use `.html` canonicals.
+- Updated page titles and meta descriptions across all pages to use a consistent `| FunkYouSHiFT` style while preserving CTR-focused search language.
+- Updated sitemap.xml, llms.txt, redirects, internal links, schema WebPage metadata, cache busting, and body version to `3.2.0`.
+- Local internal link audit passed after changes; no missing local `.html`, image, CSS, or slideshow targets found.

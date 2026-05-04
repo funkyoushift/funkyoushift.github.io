@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://www.funkyoushift.com/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.funkyoushift.com/discord.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://www.funkyoushift.com/video.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.92</priority>
+  <url><loc>https://www.funkyoushift.com/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-discord.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.98</priority></url>
+  <url><loc>https://www.funkyoushift.com/discord.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.96</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-modded-weapons.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.94</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-modding.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-trading.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-builds.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://www.funkyoushift.com/borderlands-resources.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://www.funkyoushift.com/video.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.82</priority>
     <video:video><video:thumbnail_loc>https://i.ytimg.com/vi/v4NiUPkHha0/hqdefault.jpg</video:thumbnail_loc><video:title>Moxsy Borderlands Build Video</video:title><video:description>Embedded Borderlands build video shared as a useful community resource for players looking for stronger builds.</video:description><video:player_loc allow_embed="yes">https://www.youtube.com/embed/v4NiUPkHha0</video:player_loc></video:video>
     <video:video><video:thumbnail_loc>https://i.ytimg.com/vi/KXvrmwZSeGQ/hqdefault.jpg</video:thumbnail_loc><video:title>Ki11er Six Borderlands Build Video</video:title><video:description>Embedded Borderlands build video shared as a useful community resource for players looking for stronger builds.</video:description><video:player_loc allow_embed="yes">https://www.youtube.com/embed/KXvrmwZSeGQ</video:player_loc></video:video>
   </url>
-  <url><loc>https://www.funkyoushift.com/merch.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.funkyoushift.com/borderlands-resources.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.86</priority></url>
   <url><loc>https://www.funkyoushift.com/borderlands-build-videos.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://www.funkyoushift.com/borderlands-modding.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://www.funkyoushift.com/borderlands-trading.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://www.funkyoushift.com/giveaway.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.funkyoushift.com/gallery.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.62</priority></url>
-  <url><loc>https://www.funkyoushift.com/donate.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.50</priority></url>
+  <url><loc>https://www.funkyoushift.com/merch.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://www.funkyoushift.com/giveaway.html</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.68</priority></url>
+  <url><loc>https://www.funkyoushift.com/gallery.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.funkyoushift.com/donate.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.45</priority></url>
 </urlset>

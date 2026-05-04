@@ -129,3 +129,11 @@ Home, Watch, Discord, Merch, Resources, Giveaway, Gallery, Donate
 - SEO terms are still present naturally: Borderlands, Discord, trading, modded gear, giveaways, merch, builds, resources, Lootlemon, MentalMars, BL4Hunt.
 - Homepage keeps the lazy Twitch player: no Twitch iframe request until the visitor taps the preview.
 - External resource sites that block iframes should remain button/link cards, not embeds.
+
+## v3.2.0 - Phase 2 growth build - 2026-05-03
+- Added dedicated SEO/AEO pages for the current Search Console opportunity: `borderlands-discord.html`, `borderlands-modded-weapons.html`, and `borderlands-builds.html`.
+- Updated homepage title/description and added a visible Borderlands Discord entry section targeting Borderlands Discord, BL3/BL4 Discord, modded weapons, and builds.
+- Kept canonical strategy consistent: preferred domain is `https://www.funkyoushift.com/`; homepage canonical is `/`; internal content pages use `.html` canonicals.
+- Updated page titles and meta descriptions across all pages to use a consistent `| FunkYouSHiFT` style while preserving CTR-focused search language.
+- Updated sitemap.xml, llms.txt, redirects, internal links, schema WebPage metadata, cache busting, and body version to `3.2.0`.
+- Local internal link audit passed after changes; no missing local `.html`, image, CSS, or slideshow targets found.
