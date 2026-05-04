@@ -1,3 +1,9 @@
+
+## v3.3.6 Discord Landing Link Update
+- Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.
+- Preserved third-party GenieBot/GZO Discord link separately.
+- Bumped cache/version to 3.3.6.
+
 # FunkYouSHiFT Project Reference
 
 _Last updated: 2026-05-04 — v3.3.0 modding authority build_

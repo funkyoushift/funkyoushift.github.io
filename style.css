@@ -2554,3 +2554,118 @@ span,
   .compact-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
   .compact-actions .big-button { min-width: 0; padding-left: .75rem; padding-right: .75rem; }
 }
+
+
+/* v3.3.6 landing router system */
+.landing-router {
+  width: min(1120px, calc(100% - 32px));
+  margin: 28px auto 34px;
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(20,20,28,.92), rgba(40,25,55,.86));
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+}
+
+.landing-router h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1;
+}
+
+.landing-router .section-intro {
+  max-width: 780px;
+  margin: 0 0 18px;
+}
+
+.landing-router-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.landing-router-card {
+  display: block;
+  min-height: 145px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.landing-router-card:hover,
+.landing-router-card:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,209,102,.55);
+}
+
+.landing-router-card strong {
+  display: block;
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+}
+
+.landing-router-card p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.mobile-sticky-discord {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .landing-router {
+    width: min(100% - 22px, 560px);
+    margin: 18px auto 24px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .landing-router-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .landing-router-card {
+    min-height: auto;
+    padding: 15px 16px;
+  }
+
+  .landing-router-card strong {
+    font-size: 1.05rem;
+  }
+
+  .mobile-sticky-discord {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  .mobile-sticky-discord a {
+    display: block;
+    width: min(420px, 100%);
+    margin: 0 auto;
+    padding: 13px 18px;
+    border-radius: 999px;
+    background: #ffd166;
+    color: #151019;
+    text-align: center;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 14px 38px rgba(0,0,0,.36);
+    pointer-events: auto;
+  }
+
+  body {
+    padding-bottom: 78px;
+  }
+}

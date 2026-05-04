@@ -1,3 +1,9 @@
+
+## v3.3.6 Discord Landing Link Update
+- Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.
+- Preserved third-party GenieBot/GZO Discord link separately.
+- Bumped cache/version to 3.3.6.
+
 # CHANGELOG_FUNKYOUSHIFT
 
 ## v2.0.0 - 2026-05-03
@@ -218,3 +224,10 @@
 - Moved the homepage toward a hub model: Home routes traffic, Modding explains, Resources holds tools, Discord converts.
 - Kept lazy Twitch click-to-load behavior.
 - Kept global footer/internal links to the new SEO pages for crawl flow.
+
+
+## v3.3.6 Landing Router System
+- Added fast-decision router sections to Borderlands landing pages, Resources, Watch, and Discord pages.
+- Added mobile-only sticky Discord CTA to reduce friction for search visitors.
+- Kept Resources as the toolbox and Modding as the SEO landing page.
+- Bumped cache/version to 3.3.6.
