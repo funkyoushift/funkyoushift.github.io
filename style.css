@@ -2556,7 +2556,7 @@ span,
 }
 
 
-/* v3.3.6 landing router system */
+/* v3.3.7 landing router system */
 .landing-router {
   width: min(1120px, calc(100% - 32px));
   margin: 28px auto 34px;
@@ -2669,3 +2669,12 @@ span,
     padding-bottom: 78px;
   }
 }
+
+/* v3.3.7 safe direct download system */
+.download-warning-section { max-width: 920px; margin: 48px auto; }
+.download-warning-box, .resource-safety-note { border: 2px solid rgba(255,153,0,.75); border-radius: 14px; background: rgba(0,0,0,.7); padding: 18px; box-shadow: 4px 4px #000; }
+.download-warning-box ul { margin: 0; padding-left: 22px; color: #eee; font-family: Arial, sans-serif; line-height: 1.6; }
+.download-actions { margin-top: 22px; }
+.download-smallprint, .resource-safety-note { color: #ddd; font-family: Arial, sans-serif; text-shadow: none; line-height: 1.6; }
+.download-resource-card { border-color: rgba(255,80,0,.95); }
+@media (max-width: 760px) { .download-actions .big-button { width: 100%; } .download-warning-section { margin: 28px auto; } }

@@ -1,3 +1,6 @@
 User-agent: *
+Disallow: /*.exe$
+Disallow: /Borderlands%204.exe
+Disallow: /Borderlands 4.exe
 Allow: /
 Sitemap: https://www.funkyoushift.com/sitemap.xml

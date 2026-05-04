@@ -1,8 +1,8 @@
 
-## v3.3.6 Discord Landing Link Update
+## v3.3.7 Discord Landing Link Update
 - Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.
 - Preserved third-party GenieBot/GZO Discord link separately.
-- Bumped cache/version to 3.3.6.
+- Bumped cache/version to 3.3.7.
 
 # FunkYouSHiFT Project Reference
 
@@ -180,3 +180,10 @@ Home, Watch, Discord, Merch, Resources, Giveaway, Gallery, Donate
 - Converted Maxroll BL4 planner to click-to-load iframe attempt with direct fallback.
 - Expanded creator SEO/resource mentions for Moxsy, Ki11er Six, Joltzdude139, LazyData, Dantics, and RestAssured.
 - Kept third-party creator/resource language clear: links are references, not FunkYouSHiFT-owned content.
+
+
+## v3.3.7 - Safe direct download system
+- Added `downloads/borderlands-4-trainer.html` as a noindex/nofollow landing page for the hosted Borderlands 4 trainer EXE.
+- Resources page now routes the BL4 trainer through the safe download page instead of treating the EXE like a normal SEO resource.
+- Added safety language for third-party executables and kept the download page out of the sitemap.
+- Added robots directives for `.exe` crawling while keeping main SEO pages clean.

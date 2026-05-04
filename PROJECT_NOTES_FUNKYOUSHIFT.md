@@ -1,8 +1,8 @@
 
-## v3.3.6 Discord Landing Link Update
+## v3.3.7 Discord Landing Link Update
 - Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.
 - Preserved third-party GenieBot/GZO Discord link separately.
-- Bumped cache/version to 3.3.6.
+- Bumped cache/version to 3.3.7.
 
 # PROJECT_NOTES_FUNKYOUSHIFT
 
@@ -177,8 +177,15 @@ Homepage hero must stay single-column on screens under 760px. Do not allow the d
 - Kept global footer/internal links to the new SEO pages for crawl flow.
 
 
-## v3.3.6 Landing Router System
+## v3.3.7 Landing Router System
 - Added fast-decision router sections to Borderlands landing pages, Resources, Watch, and Discord pages.
 - Added mobile-only sticky Discord CTA to reduce friction for search visitors.
 - Kept Resources as the toolbox and Modding as the SEO landing page.
-- Bumped cache/version to 3.3.6.
+- Bumped cache/version to 3.3.7.
+
+
+## v3.3.7 - Safe direct download system
+- Added `downloads/borderlands-4-trainer.html` as a noindex/nofollow landing page for the hosted Borderlands 4 trainer EXE.
+- Resources page now routes the BL4 trainer through the safe download page instead of treating the EXE like a normal SEO resource.
+- Added safety language for third-party executables and kept the download page out of the sitemap.
+- Added robots directives for `.exe` crawling while keeping main SEO pages clean.
