@@ -1426,3 +1426,202 @@ body[data-version="2.0.2"] .gallery-hero {
     text-align: center;
   }
 }
+
+
+/* === FunkYouSHiFT v2.1.9 mobile UX + PageSpeed polish ===
+   Source: merged the useful mobile-menu idea from the uploaded friend index, but kept the current live v2.1.8 structure/schema/canonicals.
+   Goal: stop mobile from opening with eight oversized nav blocks, tighten vertical spacing, and keep embeds/gallery usable without cropping. */
+.navbar-toggle {
+  display: none;
+  appearance: none;
+  border: 2px solid rgba(255,153,0,.95);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff9900, #ff3300);
+  color: #000;
+  font-family: 'Bangers', cursive;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: .72rem 1rem;
+  box-shadow: 3px 3px #000;
+  cursor: pointer;
+}
+.navbar-toggle::before {
+  content: "☰ ";
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+@media (max-width: 760px) {
+  body {
+    background-size: 900px auto;
+    background-attachment: scroll;
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .45rem;
+    padding: .55rem .6rem;
+    border-bottom-width: 2px;
+  }
+  .navbar-toggle {
+    display: block;
+    width: 100%;
+  }
+  .navbar:not(.navbar--open) a {
+    display: none;
+  }
+  .navbar.navbar--open a {
+    display: block;
+  }
+  .navbar a {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: .58rem .8rem;
+    font-size: 1.04rem;
+    border-radius: 7px;
+    box-shadow: 2px 2px #000;
+  }
+  header.hero,
+  .page-hero,
+  .home-hero {
+    padding: 24px 12px 14px;
+  }
+  .hero-inner {
+    gap: 16px;
+  }
+  .hero-copy h1,
+  header.hero h1 {
+    font-size: clamp(2.55rem, 14vw, 4.15rem);
+    line-height: .88;
+    margin: .08em 0 .18em;
+    padding: .25rem .5rem;
+  }
+  .eyebrow {
+    font-size: .84rem !important;
+    padding: 6px 9px;
+  }
+  .hero-lead,
+  .section-intro,
+  header.hero p {
+    font-size: .98rem !important;
+    line-height: 1.42;
+  }
+  .hero-actions {
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .big-button,
+  header.hero a,
+  .links-grid a {
+    padding: 14px 16px;
+    font-size: 1.2rem;
+    box-shadow: 3px 3px #000;
+  }
+  .community-proof-strip {
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .community-proof-strip span {
+    font-size: .78rem;
+    padding: 5px 8px;
+  }
+  main,
+  main.resources-page-main {
+    padding: 14px 8px 20px;
+  }
+  section,
+  .compact-resource-intro,
+  .compact-embed-section,
+  .gallery-grid {
+    margin: 16px auto;
+    padding: 18px 12px;
+    border-radius: 8px;
+  }
+  section h2 {
+    font-size: 1.65rem;
+    line-height: 1;
+    margin-bottom: .7rem;
+  }
+  .action-grid,
+  .traffic-card-grid,
+  .resource-grid,
+  .embed-grid,
+  .site-embed-grid,
+  .gallery-card-grid,
+  .gallery-card-grid-small {
+    gap: 12px;
+  }
+  .action-card,
+  .traffic-card,
+  .resource-card,
+  .resource-embed-card,
+  .gallery-card {
+    padding: 14px 12px;
+    box-shadow: 3px 3px #000;
+  }
+  .action-card span {
+    font-size: 1.55rem;
+  }
+  .action-card strong,
+  .traffic-card strong,
+  .resource-card strong {
+    font-size: 1.28rem;
+  }
+  .action-card p,
+  .traffic-card span,
+  .resource-card span,
+  .traffic-content p,
+  .faq-section p {
+    font-size: .94rem;
+    line-height: 1.42;
+  }
+  .hero-brand-card {
+    max-width: 300px;
+    padding: 8px;
+    box-shadow: 4px 4px #000;
+  }
+  .hero-brand-card img {
+    max-height: 300px;
+  }
+  .twitch-embed {
+    margin-top: 12px;
+  }
+  .external-site-frame {
+    height: 210px;
+  }
+  .discord-sidebar iframe {
+    height: 360px;
+  }
+  .gallery-card img,
+  .gallery-card-grid-small .gallery-card img,
+  .slideshow-card-grid .gallery-card img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+  .social-links {
+    gap: .6rem;
+  }
+  .social-links a {
+    font-size: 1.05rem;
+    padding: .55rem .9rem;
+  }
+}
+@media (min-width: 761px) {
+  .navbar a {
+    min-width: 88px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+  }
+}

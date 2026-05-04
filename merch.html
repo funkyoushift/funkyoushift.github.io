@@ -13,7 +13,7 @@
 <meta content="https://www.funkyoushift.com/merch.html" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<link href="style.css?v=2.1.8" rel="stylesheet"/>
+<link href="style.css?v=2.1.9" rel="stylesheet"/>
 <link href="images/favicon.ico" rel="icon"/>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet"/>
 
@@ -121,8 +121,9 @@
     }
   ]
 }</script></head>
-<body data-version="2.1.8">
+<body data-version="2.1.9">
 <nav aria-label="Main navigation" class="navbar">
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="navbar-toggle" type="button">Menu</button>
 <a href="index.html">Home</a>
 <a href="video.html">Watch</a>
 <a href="discord.html">Discord</a>
@@ -150,5 +151,18 @@
 <a href="borderlands-resources.html">Resources</a>
 <a href="https://throne.com/funkyoushift" rel="noopener" target="_blank">Throne</a>
 </footer>
+
+<script>
+(function () {
+  var toggles = document.querySelectorAll('.navbar-toggle');
+  toggles.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var navbar = button.closest('.navbar');
+      var isOpen = navbar.classList.toggle('navbar--open');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+})();
+</script>
 </body>
 </html>

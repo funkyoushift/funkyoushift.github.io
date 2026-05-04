@@ -106,3 +106,13 @@
 - Optimized JPG assets and refreshed image width/height attributes to reduce file weight and layout shift.
 - Rebuilt sitemap.xml with video sitemap data and current priority order: Home, Discord, Watch, Resources, Merch, supporting Borderlands pages, Giveaway, Gallery, Donate.
 - Updated cache busting to `style.css?v=2.1.8` and body version to `2.1.8`.
+
+
+## v2.1.9 - Mobile UX + speed polish
+- Compared uploaded friend-optimized index.html against the current package. Kept the current v2.1.8 SEO/AEO/schema/canonical structure and used the useful mobile menu idea globally.
+- Added a mobile-only collapsed navigation button to every HTML page so phones no longer open with eight full orange nav buttons.
+- Tightened mobile hero, card, section, gallery, resource, footer, and embed spacing.
+- Preserved full gallery/slideshow image display with object-fit: contain so tall/narrow images are not cropped.
+- Fixed a duplicate nested @media line in style.css.
+- Updated cache busting to style.css?v=2.1.9 and body data-version to 2.1.9.
+- Updated sitemap lastmod values.
