@@ -276,3 +276,9 @@
 - Grouped BL4 tools, mod databases/references, original trainer pages, databases/guides, and creator links.
 - Added creator/tool credit language and kept third-party download safety wording.
 - Kept one resources page instead of splitting by game title.
+
+
+## v4.0.2 - human-facing copy audit
+- Rechecked visible site copy for placeholder/dev-note language.
+- Rewrote resources, landing pages, redirect stubs, footer notes, and download page wording to read for players.
+- Bumped cache/version to 4.0.2.

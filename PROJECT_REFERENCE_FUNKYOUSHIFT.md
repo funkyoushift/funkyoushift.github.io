@@ -33,3 +33,7 @@ These are redirect/noindex compatibility pages and are not in the sitemap.
 
 ## v4.0.1 Resources page rule
 Resources stays as one curated toolbox page. Do not split by game unless Search Console shows demand for a specific game query. Use groups: Core BL4 tools, Mod databases/references, Databases/guides/original sources, and Build creators.
+
+
+## Public copy rule
+All visible copy must read like it is written to a Borderlands player. Do not use internal phrases like 'for SEO', 'this page is designed to', 'cleaner toolbox', 'merged into a cleaner page', or other implementation-note wording in public-facing sections.
