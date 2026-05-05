@@ -282,3 +282,17 @@
 - Rechecked visible site copy for placeholder/dev-note language.
 - Rewrote resources, landing pages, redirect stubs, footer notes, and download page wording to read for players.
 - Bumped cache/version to 4.0.2.
+
+
+## 4.0.3 - Media page restoration
+- Restored live gallery rendering from gallery-manifest.js.
+- Restored merch preview cards and Streamlabs CTAs.
+- Restored richer Watch page with lazy Twitch loader.
+- Restored creator thumbnail cards on Builds while keeping v4 clean structure.
+- Audited visible copy for dev-note language and kept giveaway hidden from nav for now.
+
+
+## v4.0.4 - Restore Throne wishlist embed
+- Restored the embedded Throne wishlist on the Support/Donate page.
+- Kept direct Throne fallback button for browsers that block embeds.
+- Bumped cache/version to 4.0.4.
