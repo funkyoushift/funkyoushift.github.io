@@ -258,3 +258,14 @@
 - Removed remaining blurry paint-heavy text effects from nav/buttons/headers.
 - Tightened desktop nav/button rendering without changing header/footer link structure.
 - Bumped cache/version to 3.3.10.
+
+
+## v4.0.0 - Clean Structure Rebuild
+- Consolidated scattered SEO pages into a cleaner user-first structure.
+- Home is now a short router instead of a long content stack.
+- Modding is the main authority landing page for modding, modded gear, and tools.
+- Builds owns planner/creator content.
+- Resources is the toolbox only.
+- Discord owns community/trading/help conversion.
+- Redirected duplicate pages instead of keeping duplicate content in sitemap.
+- Rebuilt typography/CSS for readability and mobile flow.

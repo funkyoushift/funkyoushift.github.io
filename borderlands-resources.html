@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><link href="https://player.twitch.tv" rel="preconnect"/><link href="https://i.ytimg.com" rel="preconnect"/><link href="https://www.youtube.com" rel="preconnect"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Borderlands Modding Resources, Build Tools &amp; Discord Help | FunkYouSHiFT</title>
-<meta content="Borderlands modding resources for BL1, BL2, BL3 and BL4: SDK mod databases, save editors, trainers, build planners, creator links, GenieBot tutorial, and Discord help." name="description"/>
-<link href="https://www.funkyoushift.com/borderlands-resources.html" rel="canonical"/>
-<meta content="Borderlands Modding Resources, Build Tools &amp; Discord Help | FunkYouSHiFT" property="og:title"/>
-<meta content="Borderlands modding resources for BL1, BL2, BL3 and BL4: SDK mod databases, save editors, trainers, build planners, creator links, GenieBot tutorial, and Discord help." property="og:description"/>
-<meta content="https://www.funkyoushift.com/images/team-funkyoushift-people-2026.jpg" property="og:image"/>
-<meta content="https://www.funkyoushift.com/borderlands-resources.html" property="og:url"/>
-<meta content="website" property="og:type"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="style.css?v=3.3.10" rel="stylesheet"/>
-<link href="images/favicon.ico" rel="icon"/>
-<meta content="index, follow" name="robots"/><script type="application/ld+json">{
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borderlands Resources | Mod Databases, Save Editors, Trainers &amp; Build Tools</title>
+<meta name="description" content="Borderlands resources for modding, modded weapons, save editors, trainers, GenieBot, Maxroll planner, creator links, and Discord help.">
+<link rel="canonical" href="https://www.funkyoushift.com/borderlands-resources.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Borderlands Resources | Mod Databases, Save Editors, Trainers &amp; Build Tools">
+<meta property="og:description" content="Borderlands resources for modding, modded weapons, save editors, trainers, GenieBot, Maxroll planner, creator links, and Discord help.">
+<meta property="og:image" content="https://www.funkyoushift.com/images/team-funkyoushift-people-2026.jpg">
+<meta property="og:url" content="https://www.funkyoushift.com/borderlands-resources.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="images/team-funkyoushift-people-2026-768.webp" imagesrcset="images/team-funkyoushift-people-2026-480.webp 480w, images/team-funkyoushift-people-2026-768.webp 768w" imagesizes="(max-width: 760px) 92vw, 360px">
+<link rel="stylesheet" href="style.css?v=4.0.0">
+<link rel="icon" href="images/favicon.ico">
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -23,7 +24,7 @@
       "@id": "https://www.funkyoushift.com/#website",
       "name": "FunkYouSHiFT",
       "url": "https://www.funkyoushift.com/",
-      "description": "Official home base for FunkYouSHiFT Borderlands content, Discord community, videos, merch, giveaways, resources, and socials."
+      "description": "Borderlands community hub for modding help, builds, resources, videos, merch, giveaways, and Discord."
     },
     {
       "@type": "Person",
@@ -40,14 +41,14 @@
         "https://streamlabs.com/funkyoushift/merch",
         "https://throne.com/funkyoushift"
       ],
-      "description": "FunkYouSHiFT streams Borderlands, runs an active community, shares giveaways, curates useful resources, and creates merch for the community."
+      "description": "FunkYouSHiFT streams Borderlands and runs a community for trading, modding help, builds, giveaways, and resources."
     },
     {
       "@type": "WebPage",
       "@id": "https://www.funkyoushift.com/borderlands-resources.html#webpage",
       "url": "https://www.funkyoushift.com/borderlands-resources.html",
-      "name": "Borderlands Modding Resources, Build Tools & Discord Help | FunkYouSHiFT",
-      "description": "Borderlands modding resources for BL1, BL2, BL3 and BL4: SDK mod databases, save editors, trainers, build planners, creator links, GenieBot tutorial, and Discord help.",
+      "name": "Borderlands Resources | Mod Databases, Save Editors, Trainers & Build Tools",
+      "description": "Borderlands resources for modding, modded weapons, save editors, trainers, GenieBot, Maxroll planner, creator links, and Discord help.",
       "isPartOf": {
         "@id": "https://www.funkyoushift.com/#website"
       },
@@ -57,345 +58,97 @@
       "primaryImageOfPage": "https://www.funkyoushift.com/images/team-funkyoushift-people-2026.jpg"
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.funkyoushift.com/borderlands-resources.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.funkyoushift.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Borderlands Resources",
-          "item": "https://www.funkyoushift.com/borderlands-resources.html"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.funkyoushift.com/borderlands-resources.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Are these tools made by FunkYouSHiFT?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. These are third-party and community resources. Use their instructions, follow their rules, and ask in Discord if you need help understanding what you are looking at."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can trainers or save editors get me in trouble?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "They can create problems if you use them carelessly. Keep trainer use to solo/offline or private play, scan downloads, and do not use tools to ruin public games."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why are some resources buttons instead of embeds?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some tools block iframe embeds or are too heavy for mobile. Buttons keep the page fast and avoid broken boxes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where do I go if I still need help?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Join the Discord and ask. Someone can usually point you in the right direction faster than guessing alone."
-          }
-        }
-      ]
-    },
-    {
       "@type": "ItemList",
       "@id": "https://www.funkyoushift.com/borderlands-resources.html#resources",
-      "name": "Borderlands Modding Resources and Build Tools",
+      "name": "Borderlands modding resources",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "MentalMars Borderlands 4 Hub",
-          "url": "https://mentalmars.com/borderlands-4/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Lootlemon",
-          "url": "https://www.lootlemon.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "BL4Hunt",
-          "url": "https://www.bl4hunt.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "name": "BL-SDK Oak2 Mod Database",
           "url": "https://bl-sdk.github.io/oak2-mod-db/"
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 2,
           "name": "BL-SDK Oak Mod Database",
           "url": "https://bl-sdk.github.io/oak-mod-db/"
         },
         {
           "@type": "ListItem",
-          "position": 6,
-          "name": "Apple's Borderlands Cheats",
+          "position": 3,
+          "name": "Apple’s Borderlands Cheats",
           "url": "https://bl-sdk.github.io/willow2-mod-db/mods/apples-borderlands-cheats/"
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 4,
           "name": "BL-SDK Willow1 Mod Database",
           "url": "https://bl-sdk.github.io/willow1-mod-db/"
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 5,
           "name": "BL4 Editor",
           "url": "https://bl4editor.com/"
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 6,
           "name": "Save Editor",
           "url": "https://save-editor.be/"
         },
         {
           "@type": "ListItem",
-          "position": 10,
-          "name": "Borderlands 3 Trainer",
-          "url": "https://flingtrainer.com/trainer/borderlands-3-trainer-1768400688/"
+          "position": 7,
+          "name": "Borderlands 4 Trainer Download",
+          "url": "https://www.funkyoushift.com/downloads/borderlands-4-trainer.html"
         },
         {
           "@type": "ListItem",
-          "position": 11,
-          "name": "Borderlands 4 Trainer",
-          "url": "https://www.funkyoushift.com/downloads/borderlands-4-trainer.html",
-          "description": "Direct download page for a third-party Borderlands 4 trainer executable. Noindex download page with safety notes."
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "GenieBot Tutorial",
-          "url": "https://youtu.be/1VXYRb4t2cw"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "GenieBot / GZO Discord",
-          "url": "https://discord.gg/Nd2pCJVHv6"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
+          "position": 8,
           "name": "Maxroll Borderlands 4 Planner",
           "url": "https://maxroll.gg/borderlands-4/planner"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "Moxsy",
-          "url": "https://www.youtube.com/moxsy"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "Ki11er Six",
-          "url": "https://www.youtube.com/ki11ersix"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "Joltzdude139",
-          "url": "https://www.youtube.com/joltzdude139"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "LazyData",
-          "url": "https://www.youtube.com/@LazyData"
         }
       ]
     }
   ]
-}</script></head>
-<body data-version="3.3.10">
-<nav aria-label="Main navigation" class="navbar"><button aria-expanded="false" aria-label="Toggle navigation menu" class="navbar-toggle" type="button">Menu</button>
-<a aria-current="page" href="index.html">Home</a>
-<a href="video.html">Watch</a>
-<a href="discord.html">Discord</a>
+}</script>
+</head>
+<body data-version="4.0.0">
+
+<nav class="navbar" aria-label="Main navigation">
+<button class="navbar-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu">☰ Menu</button>
+<a href="index.html">Home</a>
 <a href="borderlands-modding.html">Modding</a>
-<a href="borderlands-modded-weapons.html">Weapons</a>
 <a href="borderlands-builds.html">Builds</a>
-<a href="borderlands-resources.html">Resources</a>
+<a href="borderlands-resources.html" aria-current="page">Resources</a>
+<a href="borderlands-discord.html">Discord</a>
+<a href="video.html">Watch</a>
 <a href="merch.html">Merch</a>
-<a href="giveaway.html">Giveaway</a>
 <a href="gallery.html">Gallery</a>
 <a href="donate.html">Donate</a>
 </nav>
-<header class="hero page-hero traffic-hero">
-<p class="eyebrow">Borderlands resources • tools that help</p>
-<h1>Borderlands Modding Resources</h1>
-<p class="hero-lead">Mod databases, save editors, trainers, build planners, creator links, and Discord help in one place.</p>
-</header>
-<main class="resources-page-main">
-<section aria-labelledby="router-borderlands-resources-html" class="landing-router"><h2 id="router-borderlands-resources-html">What resource do you need?</h2><p class="section-intro">This is the toolbox. If you are not sure what any of this means yet, start with the modding guide first.</p><div class="landing-router-grid"><a class="landing-router-card" href="borderlands-modding.html"><strong>Start With Modding</strong><p>New to Borderlands modding? Read the simple guide before downloading anything.</p></a><a class="landing-router-card" href="borderlands-builds.html"><strong>Plan a Build</strong><p>Use planners and creator videos to figure out what you are trying to build.</p></a><a class="landing-router-card" href="borderlands-discord.html"><strong>Ask the Discord</strong><p>Stuck, confused, or trying to find gear? Ask in the community.</p></a></div></section><section class="traffic-content resources-intro compact-resource-intro">
-<h2>Useful tools without the scavenger hunt</h2>
-<p>If you are looking for Borderlands modding, modded weapons, save editing, trainers, builds, or item tools, start here and use the Discord when you need help.</p>
-<div class="quick-action-row resource-jump-row"><a class="button-link" href="#mod-databases">Mod databases</a><a class="button-link" href="#editors-trainers">Editors &amp; trainers</a><a class="button-link" href="#geniebot">GenieBot tutorial</a><a class="button-link" href="#build-planners">Build planners</a><a class="button-link" href="#resource-sites">Resource sites</a></div>
-</section>
-<section class="traffic-content resource-embed-section compact-embed-section" id="build-videos">
-<h2>Build videos</h2>
-<p>These creator videos give players a solid place to start without loading YouTube embeds until someone actually taps them.</p>
-<div class="embed-grid video-embed-grid creator-video-grid">
-<article class="resource-embed-card video-resource-card creator-video-card">
-<h3>Moxsy Borderlands build video</h3>
-<p>High-damage builds, gear synergy, and mechanic breakdowns.</p>
-<div class="creator-card-actions"><button class="button-link" onclick="loadCreatorVideo(this, 'v4NiUPkHha0')" type="button">Load video</button><a class="embed-fallback" href="https://www.youtube.com/moxsy" rel="noopener" target="_blank">Open Moxsy</a></div>
-<div aria-live="polite" class="lazy-video-holder"></div>
-</article>
-<article class="resource-embed-card video-resource-card creator-video-card">
-<h3>Ki11er Six Borderlands build video</h3>
-<p>Farming, gameplay, build guides, and long-running Borderlands content.</p>
-<div class="creator-card-actions"><button class="button-link" onclick="loadCreatorVideo(this, 'KXvrmwZSeGQ')" type="button">Load video</button><a class="embed-fallback" href="https://www.youtube.com/@Ki11ersix" rel="noopener" target="_blank">Open Ki11er Six</a></div>
-<div aria-live="polite" class="lazy-video-holder"></div>
-</article>
-</div>
-</section>
-<section class="traffic-content resource-embed-section compact-embed-section" id="mod-databases">
-<h2>Mod databases</h2>
-<p>These are community mod database links for different Borderlands generations. Use them as reference points, read the instructions on each project, and ask in Discord if you are not sure what applies to your game.</p>
-<div class="embed-grid site-embed-grid compact-site-embed-grid">
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>BL-SDK Oak2 Mod Database</h3><p>Borderlands 4 / Oak2 mod database reference.</p><a class="embed-fallback" href="https://bl-sdk.github.io/oak2-mod-db/" rel="noopener" target="_blank">Open Oak2 Mod DB</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>BL-SDK Oak Mod Database</h3><p>Borderlands 3 / Oak mod database reference.</p><a class="embed-fallback" href="https://bl-sdk.github.io/oak-mod-db/" rel="noopener" target="_blank">Open Oak Mod DB</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Apple's Borderlands Cheats</h3><p>Willow2 / Borderlands 2 cheat mod reference from the BL-SDK mod database.</p><a class="embed-fallback" href="https://bl-sdk.github.io/willow2-mod-db/mods/apples-borderlands-cheats/" rel="noopener" target="_blank">Open Willow2 Cheat Mod</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>BL-SDK Willow1 Mod Database</h3><p>Borderlands 1 / Willow1 mod database reference.</p><a class="embed-fallback" href="https://bl-sdk.github.io/willow1-mod-db/" rel="noopener" target="_blank">Open Willow1 Mod DB</a></article>
-</div>
-</section>
-<section class="traffic-content resource-embed-section compact-embed-section" id="editors-trainers">
-<h2>Save editors, item tools, and trainers</h2>
-<p>These are third-party tools. Download carefully, use them at your own risk, and keep trainer use to solo/offline or private play where it belongs. Do not use tools to ruin public games.</p>
-<div class="embed-grid site-embed-grid compact-site-embed-grid">
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>BL4 Editor</h3><p>Borderlands 4 editor/resource link for players looking into BL4 item or save editing.</p><a class="embed-fallback" href="https://bl4editor.com/" rel="noopener" target="_blank">Open BL4 Editor</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Save Editor</h3><p>Browser-based save editor resource.</p><a class="embed-fallback" href="https://save-editor.be/" rel="noopener" target="_blank">Open Save Editor</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Borderlands 3 Trainer</h3><p>Fling Trainer resource for Borderlands 3. This involves an executable download, so scan files and use common sense.</p><a class="embed-fallback" href="https://flingtrainer.com/trainer/borderlands-3-trainer-1768400688/" rel="noopener" target="_blank">Open BL3 Trainer</a></article>
-<article class="site-resource-card resource-embed-card download-resource-card resource-link-card"><h3>Borderlands 4 Trainer</h3><p>Direct download page for the hosted Borderlands 4 trainer EXE. Third-party tool: scan it first, use at your own risk, and keep it out of online play.</p><a class="embed-fallback" href="downloads/borderlands-4-trainer.html" rel="nofollow">Open Direct Download Page</a></article>
-</div>
-</section><p class="resource-safety-note">Trainer and editor links can involve executable files or third-party tools. Scan downloads, read the original source, and use them at your own risk.</p>
-<section class="traffic-content resource-embed-section compact-embed-section" id="geniebot">
-<h2>GenieBot item spawning tutorial</h2>
-<p>GenieBot is a separate community tool, not a FunkYouSHiFT bot. It is being updated by Mattmab and GZO staff, and their support team handles their rules and help. The big reason people care: it works through Discord, so Xbox, PlayStation, PC, and other players can use it without needing a PC setup.</p>
-<p>Use it for things like creating/spawning items, leveling, SDU boosts, and whatever new features they add. Be respectful in their server and follow their rules.</p>
-<div class="embed-grid site-embed-grid compact-site-embed-grid">
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>GenieBot Tutorial Video</h3><p>Tutorial video for using the bot mentioned in the Discord announcement.</p><a class="embed-fallback" href="https://youtu.be/1VXYRb4t2cw" rel="noopener" target="_blank">Watch Tutorial</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>GenieBot / GZO Discord</h3><p>Join their server for the bot itself, support, rules, and updates.</p><a class="embed-fallback" href="https://discord.gg/Nd2pCJVHv6" rel="noopener" target="_blank">Open GenieBot Discord</a></article>
-</div>
-</section>
-<section class="traffic-content resource-embed-section compact-embed-section" id="build-planners">
-<h2>Build planners and creators</h2>
-<p>Use planners and creator breakdowns to test ideas, then bring your setup into the FunkYouSHiFT Discord if you want help dialing it in.</p>
-<div class="embed-grid site-embed-grid compact-site-embed-grid">
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Maxroll Borderlands 4 Planner</h3><p>Plan Borderlands 4 builds, skills, gear ideas, and theorycraft setups.</p><a class="embed-fallback" href="https://maxroll.gg/borderlands-4/planner" rel="noopener" target="_blank">Open Maxroll Planner</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Moxsy</h3><p>High-damage build breakdowns and mechanic explanations.</p><a class="embed-fallback" href="https://www.youtube.com/moxsy" rel="noopener" target="_blank">Open Moxsy</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Ki11er Six</h3><p>Borderlands gameplay, farming, builds, and long-running community content.</p><a class="embed-fallback" href="https://www.youtube.com/ki11ersix" rel="noopener" target="_blank">Open Ki11er Six</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Joltzdude139</h3><p>Borderlands content, challenge runs, game knowledge, and build-adjacent guides.</p><a class="embed-fallback" href="https://www.youtube.com/joltzdude139" rel="noopener" target="_blank">Open Joltzdude139</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>LazyData</h3><p>Build videos and Borderlands theorycrafting resources.</p><a class="embed-fallback" href="https://www.youtube.com/@LazyData" rel="noopener" target="_blank">Open LazyData</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>Dantics</h3><p>Borderlands news, guides, mechanics, and build-focused coverage.</p><a class="embed-fallback" href="https://www.youtube.com/@Dantics" rel="noopener" target="_blank">Open Dantics</a></article>
-<article class="resource-embed-card site-resource-card resource-link-card"><h3>RestAssured</h3><p>Borderlands build testing, endgame setups, and theorycrafting.</p><a class="embed-fallback" href="https://www.youtube.com/@RestAssured" rel="noopener" target="_blank">Open RestAssured</a></article>
-</div>
-</section>
-<section class="traffic-content resource-embed-section compact-embed-section" id="resource-sites">
-<h2>Resource sites</h2>
-<p>Some sites block embeds, so this section uses clean buttons instead of broken preview boxes.</p>
-<div class="embed-grid site-embed-grid compact-site-embed-grid">
-<article class="resource-embed-card site-resource-card resource-link-card">
-<h3>MentalMars Borderlands 4 Hub</h3>
-<p>News, guides, gear info, and Borderlands 4 updates from MentalMars.</p>
-<a class="embed-fallback" href="https://mentalmars.com/borderlands-4/" rel="noopener" target="_blank">Open MentalMars</a>
-</article>
-<article class="resource-embed-card site-resource-card resource-link-card">
-<h3>Lootlemon</h3>
-<p>Use Lootlemon for item cards, drops, parts, and quick gear lookups.</p>
-<a class="embed-fallback" href="https://www.lootlemon.com/" rel="noopener" target="_blank">Open Lootlemon</a>
-</article>
-<article class="resource-embed-card site-resource-card resource-link-card">
-<h3>BL4Hunt</h3>
-<p>A community resource for tracking Borderlands 4 info and loot-hunting tools.</p>
-<a class="embed-fallback" href="https://www.bl4hunt.com/" rel="noopener" target="_blank">Open BL4Hunt</a>
-</article>
-</div>
-</section>
-<section class="traffic-content"><h2>Popular Borderlands searches</h2><div class="traffic-card-grid"><a class="traffic-card" href="borderlands-discord.html"><strong>Borderlands Discord</strong><span>BL3 and BL4 trading, help, giveaways, and community.</span></a><a class="traffic-card" href="borderlands-modded-weapons.html"><strong>Modded weapons</strong><span>Find out where to ask and what info to include.</span></a><a class="traffic-card" href="borderlands-builds.html"><strong>Build help</strong><span>Build videos, resources, and Discord discussion.</span></a></div></section><section class="traffic-content faq-section"><h2>Quick answers</h2>
-<details><summary>Are these tools made by FunkYouSHiFT?</summary><p>No. These are third-party and community resources. Use their instructions, follow their rules, and ask in Discord if you need help understanding what you are looking at.</p></details>
-<details><summary>Can trainers or save editors get me in trouble?</summary><p>They can create problems if you use them carelessly. Keep trainer use to solo/offline or private play, scan downloads, and do not use tools to ruin public games.</p></details>
-<details><summary>Why are some resources buttons instead of embeds?</summary><p>Some tools block iframe embeds or are too heavy for mobile. Buttons keep the page fast and avoid broken boxes.</p></details>
-<details><summary>Where do I go if I still need help?</summary><p>Join the Discord and ask. Someone can usually point you in the right direction faster than guessing alone.</p></details></section>
-<section aria-labelledby="internal-links-title" class="internal-link-cluster">
-<div class="section-heading">
-<h2 id="internal-links-title">More Borderlands help</h2>
-<p class="section-intro">Modding, modded weapons, builds, and Discord help are connected so Google and real people can find the right page fast.</p>
-</div>
-<div class="traffic-card-grid internal-link-grid">
-<a class="traffic-card" href="borderlands-modding.html"><strong>Borderlands Modding Guide</strong><span>Start here for BL3 and BL4 modding basics, tools, safe resources, and Discord help.</span></a>
-<a class="traffic-card" href="borderlands-modded-weapons.html"><strong>Modded Weapons &amp; Gear</strong><span>Learn how modded weapons work, what to ask for, and where to get help faster.</span></a>
-<a class="traffic-card" href="borderlands-builds.html"><strong>Borderlands Builds</strong><span>Build videos, community setup ideas, and help when your character needs more damage.</span></a>
-<a class="traffic-card" href="borderlands-discord.html"><strong>Borderlands Discord</strong><span>Jump into the community for trading, modded gear help, giveaways, and active players.</span></a>
-</div>
-</section>
+<header class="hero"><div class="hero-inner"><div class="hero-copy"><p class="kicker">Resources • tools • downloads</p><h1>Borderlands Resources</h1><p class="lead">The toolbox: mod databases, editors, trainers, build planners, GenieBot, creator links, and trusted references.</p><div class="hero-actions"><a class="button primary" href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" target="_blank" rel="noopener">Join Discord</a><a class="button secondary" href="borderlands-modding.html">Read Modding Guide</a></div></div></div></header><main><section class="router"><h2>Start here</h2><div class="card-grid"><a class="card" href="borderlands-modding.html"><strong>New to modding?</strong><span>Read the guide before downloading tools.</span></a><a class="card" href="borderlands-builds.html"><strong>Need a build?</strong><span>Use the planner and creator links.</span></a><a class="card" href="borderlands-discord.html"><strong>Need help now?</strong><span>Ask in Discord with your game and platform.</span></a></div></section>
+<section class="notice"><h2>Read before using downloads</h2><p>Some tools are third-party downloads or external communities. They are listed because players ask for them, not because FunkYouSHiFT created or maintains them. Scan files, keep save backups, and follow the rules of each tool or Discord.</p></section>
+<section><h2>Tools and links</h2><div class="resource-grid"><a class="resource-card" href="https://bl-sdk.github.io/oak2-mod-db/" target="_blank" rel="noopener nofollow"><strong>BL-SDK Oak2 Mod Database</strong><span>Borderlands 4 / Oak2 mod database reference.</span><em>Open</em></a><a class="resource-card" href="https://bl-sdk.github.io/oak-mod-db/" target="_blank" rel="noopener nofollow"><strong>BL-SDK Oak Mod Database</strong><span>Borderlands 3 / Oak mod database reference.</span><em>Open</em></a><a class="resource-card" href="https://bl-sdk.github.io/willow2-mod-db/mods/apples-borderlands-cheats/" target="_blank" rel="noopener nofollow"><strong>Apple’s Borderlands Cheats</strong><span>Willow2 / Borderlands 2 cheat mod reference.</span><em>Open</em></a><a class="resource-card" href="https://bl-sdk.github.io/willow1-mod-db/" target="_blank" rel="noopener nofollow"><strong>BL-SDK Willow1 Mod Database</strong><span>Borderlands 1 / Willow1 mod database reference.</span><em>Open</em></a><a class="resource-card" href="https://bl4editor.com/" target="_blank" rel="noopener nofollow"><strong>BL4 Editor</strong><span>Borderlands 4 editor tool. Read the site instructions before using.</span><em>Open</em></a><a class="resource-card" href="https://save-editor.be/" target="_blank" rel="noopener nofollow"><strong>Save Editor</strong><span>Save editor resource. Use carefully and keep backups.</span><em>Open</em></a><a class="resource-card" href="downloads/borderlands-4-trainer.html" rel="nofollow"><strong>Borderlands 4 Trainer (.exe)</strong><span>Safe download landing page for the BL4 trainer hosted here.</span><em>Open</em></a><a class="resource-card" href="https://flingtrainer.com/trainer/borderlands-3-trainer-1768400688/" target="_blank" rel="noopener nofollow"><strong>FlingTrainer BL3 Trainer</strong><span>Original Borderlands 3 trainer page.</span><em>Open</em></a><a class="resource-card" href="https://flingtrainer.com/trainer/borderlands-4-trainer/" target="_blank" rel="noopener nofollow"><strong>FlingTrainer BL4 Trainer</strong><span>Original Borderlands 4 trainer page.</span><em>Open</em></a><a class="resource-card" href="https://youtu.be/1VXYRb4t2cw" target="_blank" rel="noopener nofollow"><strong>GenieBot Tutorial</strong><span>Video tutorial for the Discord bot used to create/spawn items and boost levels/SDU.</span><em>Open</em></a><a class="resource-card" href="https://discord.gg/Nd2pCJVHv6" target="_blank" rel="noopener nofollow"><strong>GenieBot / GZO Discord</strong><span>Third-party Discord. Be respectful and follow their rules; it is not our bot.</span><em>Open</em></a><a class="resource-card" href="https://maxroll.gg/borderlands-4/planner" target="_blank" rel="noopener nofollow"><strong>Maxroll BL4 Planner</strong><span>Plan Borderlands 4 builds and skill trees.</span><em>Open</em></a><a class="resource-card" href="https://www.lootlemon.com/" target="_blank" rel="noopener nofollow"><strong>Lootlemon</strong><span>Gear database and item reference.</span><em>Open</em></a><a class="resource-card" href="https://mentalmars.com/" target="_blank" rel="noopener nofollow"><strong>MentalMars</strong><span>Borderlands guides, news, and gear info.</span><em>Open</em></a><a class="resource-card" href="https://bl4hunt.com/" target="_blank" rel="noopener nofollow"><strong>BL4Hunt</strong><span>Community resource for Borderlands 4 tracking/hunting.</span><em>Open</em></a></div></section>
+<section><h2>Creator resources</h2><p>Creators are listed here because players already search for their builds and guides. Use their videos to get ideas, then bring questions into Discord.</p><div class="resource-grid small"><a class="resource-card" href="https://www.youtube.com/@Moxsy" target="_blank" rel="noopener nofollow"><strong>Moxsy</strong><span>High-damage builds and endgame setups.</span></a><a class="resource-card" href="https://www.youtube.com/@Ki11erSix" target="_blank" rel="noopener nofollow"><strong>Ki11er Six</strong><span>Farming, gameplay, updates, and build guides.</span></a><a class="resource-card" href="https://www.youtube.com/@Joltzdude139" target="_blank" rel="noopener nofollow"><strong>Joltzdude139</strong><span>Borderlands gameplay, farming, and builds.</span></a><a class="resource-card" href="https://www.youtube.com/@LazyData" target="_blank" rel="noopener nofollow"><strong>LazyData</strong><span>Builds, testing, and mechanics.</span></a></div></section>
 </main>
-<footer aria-label="FunkYouSHiFT links" class="social-links"><a href="https://www.twitch.tv/funkyoushift" rel="noopener" target="_blank">Twitch</a>
-<a href="https://www.youtube.com/@funkyoushift" rel="noopener" target="_blank">YouTube</a>
-<a href="https://x.com/funkyoushift" rel="noopener" target="_blank">X</a>
-<a href="https://www.facebook.com/funkyoushift" rel="noopener" target="_blank">Facebook</a>
-<a href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Discord</a>
-<a href="borderlands-discord.html">Borderlands Discord</a>
-<a href="borderlands-modding.html">Modding Guide</a>
-<a href="borderlands-modded-weapons.html">Modded Weapons</a>
-<a href="borderlands-builds.html">Builds</a>
-<a href="borderlands-resources.html">Resources</a>
-<a href="https://streamlabs.com/funkyoushift/merch" rel="noopener" target="_blank">Merch</a>
-<a href="https://throne.com/funkyoushift" rel="noopener" target="_blank">Throne</a>
+
+<footer class="site-footer" aria-label="FunkYouSHiFT footer links">
+  <div class="footer-grid">
+    <a href="borderlands-modding.html">Modding Guide</a>
+    <a href="borderlands-builds.html">Builds</a>
+    <a href="borderlands-resources.html">Resources</a>
+    <a href="borderlands-discord.html">Discord</a>
+    <a href="video.html">Watch</a>
+    <a href="merch.html">Merch</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Support</a>
+  </div>
+  <p>FunkYouSHiFT is a community hub. Third-party tools and links belong to their creators. Read the rules wherever you go.</p>
 </footer>
-<script>
-function loadCreatorVideo(button, videoId) {
-  var card = button.closest('.creator-video-card, .video-resource-card');
-  if (!card || !videoId) return;
-  var holder = card.querySelector('.lazy-video-holder');
-  if (!holder) return;
-  holder.innerHTML = '<iframe width="100%" height="400" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" title="Borderlands build video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
-  card.classList.add('video-loaded');
-}
-function loadMaxrollPlanner(button) {
-  var section = button.closest('.planner-section');
-  if (!section) return;
-  var holder = section.querySelector('.planner-frame-holder');
-  if (!holder) return;
-  holder.innerHTML = '<iframe src="https://maxroll.gg/borderlands-4/planner" title="Maxroll Borderlands 4 Planner" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe>';
-  section.classList.add('planner-loaded');
-}
-</script>
-<script>
-(function () {
-  var toggles = document.querySelectorAll('.navbar-toggle');
-  toggles.forEach(function (button) {
-    button.addEventListener('click', function () {
-      var navbar = button.closest('.navbar');
-      var isOpen = navbar.classList.toggle('navbar--open');
-      button.setAttribute('aria-expanded', String(isOpen));
-    });
-  });
-})();
-</script>
-<div aria-label="Quick Discord link" class="mobile-sticky-discord"><a href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Join the Discord</a></div></body>
+<a class="sticky-discord" href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" target="_blank" rel="noopener">Join the Discord</a>
+<script src="site.js?v=4.0.0" defer></script>
+</body>
 </html>

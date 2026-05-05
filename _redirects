@@ -4,7 +4,12 @@ https://funkyoushift.com/* https://www.funkyoushift.com/:splat 301!
 /index.html / 301!
 
 /borderlands-discord /borderlands-discord.html 301!
-/borderlands-modded-weapons /borderlands-modded-weapons.html 301!
-/borderlands-builds /borderlands-builds.html 301!
-/discord /discord.html 301!
+/discord /borderlands-discord.html 301!
+/discord.html /borderlands-discord.html 301!
 /resources /borderlands-resources.html 301!
+/borderlands-modded-weapons /borderlands-modding.html 301!
+/borderlands-modded-weapons.html /borderlands-modding.html 301!
+/borderlands-trading /borderlands-discord.html 301!
+/borderlands-trading.html /borderlands-discord.html 301!
+/borderlands-build-videos /borderlands-builds.html 301!
+/borderlands-build-videos.html /borderlands-builds.html 301!
