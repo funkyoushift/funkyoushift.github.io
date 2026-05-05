@@ -269,3 +269,10 @@
 - Discord owns community/trading/help conversion.
 - Redirected duplicate pages instead of keeping duplicate content in sitemap.
 - Rebuilt typography/CSS for readability and mobile flow.
+
+
+## v4.0.1 - Resources clarity rebuild
+- Rebuilt Resources as one clean toolbox page instead of a flat link dump.
+- Grouped BL4 tools, mod databases/references, original trainer pages, databases/guides, and creator links.
+- Added creator/tool credit language and kept third-party download safety wording.
+- Kept one resources page instead of splitting by game title.

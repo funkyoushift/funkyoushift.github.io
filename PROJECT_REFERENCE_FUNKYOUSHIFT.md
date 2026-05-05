@@ -29,3 +29,7 @@ These are redirect/noindex compatibility pages and are not in the sitemap.
 - Homepage stays short on mobile.
 - Resources should remain a toolbox, not another explanation page.
 - Modding explains. Resources links. Discord converts. Builds helps.
+
+
+## v4.0.1 Resources page rule
+Resources stays as one curated toolbox page. Do not split by game unless Search Console shows demand for a specific game query. Use groups: Core BL4 tools, Mod databases/references, Databases/guides/original sources, and Build creators.

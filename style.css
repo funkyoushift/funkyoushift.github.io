@@ -67,3 +67,8 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
   .card,.feature-card,.resource-card,.creator-card { min-height:auto; text-align:left; }
   .sticky-discord { display:block; }
 }
+
+/* v4.0.1 resources clarity */
+.resource-category .section-lead { margin-left:auto; margin-right:auto; }
+.resource-card.featured { border-color:rgba(255,153,0,.95); background:rgba(255,153,0,.08); }
+.resource-category[id] { scroll-margin-top:92px; }
