@@ -2678,3 +2678,219 @@ span,
 .download-smallprint, .resource-safety-note { color: #ddd; font-family: Arial, sans-serif; text-shadow: none; line-height: 1.6; }
 .download-resource-card { border-color: rgba(255,80,0,.95); }
 @media (max-width: 760px) { .download-actions .big-button { width: 100%; } .download-warning-section { margin: 28px auto; } }
+
+/* v3.3.8 visual readability polish
+   Nav buttons, titles, and headers were too hard to read in the heavy display font.
+   Use a crisp system-heavy font for UI/headings, remove outline shadows, and keep the orange/black brand feel with color and weight instead. */
+:root {
+  --ui-heading-font: "Arial Black", Arial, Helvetica, sans-serif;
+}
+
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a,
+.hero-actions a,
+button,
+summary,
+h1,
+h2,
+h3,
+h4,
+section h2,
+.landing-router h2,
+.landing-router-card strong,
+.action-card strong,
+.traffic-card strong,
+.resource-card strong,
+.gallery-card h3,
+.merch-card strong,
+.eyebrow {
+  font-family: var(--ui-heading-font) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em !important;
+  text-shadow: none !important;
+  text-rendering: geometricPrecision;
+}
+
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a,
+.hero-actions a,
+button {
+  color: #111 !important;
+  line-height: 1.12 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+section h2,
+.landing-router h2 {
+  line-height: 1.08 !important;
+}
+
+header.hero h1,
+.hero-copy h1 {
+  color: #ff9900 !important;
+  filter: drop-shadow(0 3px 0 rgba(0,0,0,.85));
+}
+
+section h2,
+.landing-router h2,
+.download-warning-box h2,
+.resource-embed-card h3,
+.creator-card strong {
+  color: #ffae19 !important;
+}
+
+.download-actions .big-button,
+.download-page .big-button,
+a.big-button {
+  text-align: center;
+}
+
+.download-warning-box ul {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .navbar-toggle {
+    font-size: 1.25rem !important;
+    letter-spacing: 0 !important;
+  }
+
+  .navbar a,
+  .big-button,
+  .links-grid a {
+    font-size: clamp(1rem, 5.5vw, 1.45rem) !important;
+    line-height: 1.12 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  header.hero h1,
+  .hero-copy h1 {
+    font-size: clamp(2.65rem, 15vw, 4.1rem) !important;
+    letter-spacing: -0.06em !important;
+  }
+
+  section h2,
+  .landing-router h2 {
+    font-size: clamp(1.55rem, 8vw, 2.2rem) !important;
+  }
+}
+
+
+
+/* === v3.3.9 global header/footer + heading readability consistency === */
+/* These selectors cover the examples the user flagged: nav buttons, section/page headings, and CTA buttons. */
+:root { --ui-heading-font: Arial, Helvetica, sans-serif; }
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a,
+.hero-actions a,
+button,
+summary,
+h1,
+h2,
+h3,
+h4,
+section h2,
+.landing-router h2,
+.landing-router-card strong,
+.action-card strong,
+.traffic-card strong,
+.resource-card strong,
+.gallery-card h3,
+.merch-card strong,
+.eyebrow {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.015em !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  filter: none !important;
+  text-rendering: optimizeLegibility;
+}
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a,
+.hero-actions a,
+button { color: #111 !important; line-height: 1.15 !important; }
+header.hero h1,
+.hero-copy h1,
+section h2,
+.landing-router h2,
+.download-warning-box h2,
+.resource-embed-card h3,
+.creator-card strong { color: #ffae19 !important; }
+.download-warning-box ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 1.3rem;
+}
+.social-links { width: 100%; }
+
+
+/* === v3.3.10 desktop performance recovery + readable chrome ===
+   Restore desktop PageSpeed after the readability/download changes by prioritizing the LCP image, reducing paint-heavy effects, and keeping the heavy brand font away from long nav/button text. */
+:root { color-scheme: dark; }
+.navbar a,
+.navbar-toggle,
+.big-button,
+.links-grid a {
+  font-family: Arial Black, Impact, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 900;
+  letter-spacing: .01em;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+section h2,
+section h3,
+.download-page h1,
+.download-page h2,
+.resource-card strong,
+.action-card strong,
+.traffic-card strong,
+.router-card strong,
+.landing-router strong {
+  font-family: Arial Black, Impact, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+header.hero h1 {
+  text-shadow: 2px 2px 0 #000;
+}
+.hero-brand-card img {
+  content-visibility: auto;
+}
+@media (min-width: 761px) {
+  .home-hero {
+    padding-top: 52px;
+  }
+  .hero-brand-card img {
+    max-width: 320px;
+  }
+  .navbar a {
+    padding: .72rem 1.25rem;
+    font-size: 1.12rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

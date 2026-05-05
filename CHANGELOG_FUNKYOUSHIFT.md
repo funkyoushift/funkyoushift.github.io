@@ -238,3 +238,23 @@
 - Resources page now routes the BL4 trainer through the safe download page instead of treating the EXE like a normal SEO resource.
 - Added safety language for third-party executables and kept the download page out of the sitemap.
 - Added robots directives for `.exe` crawling while keeping main SEO pages clean.
+
+## v3.3.8 - Visual readability polish
+- Replaced the hard-to-read display font on nav buttons, page titles, headings, card labels, and large CTA buttons with a crisp heavy system font.
+- Removed heavy text shadows/outlined heading effects that made orange and white heading text look blurry.
+- Kept the orange/black FunkYouSHiFT styling through color, weight, layout, and gradients instead of relying on blurry display text.
+- Updated cache busting/body version to 3.3.8.
+
+
+## v3.3.9 - Header/Footer + Readability Verification
+- Standardized header/nav and footer links across all HTML pages, including the safe download page.
+- Bumped all stylesheet cache versions and body data-version values to 3.3.9.
+- Applied final global readability rules to nav buttons, titles, section headers, and CTA buttons.
+- Verified internal links/assets after update.
+
+
+## v3.3.10 - Desktop Performance Recovery
+- Added homepage LCP image preload and fetch priority.
+- Removed remaining blurry paint-heavy text effects from nav/buttons/headers.
+- Tightened desktop nav/button rendering without changing header/footer link structure.
+- Bumped cache/version to 3.3.10.
