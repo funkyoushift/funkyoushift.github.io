@@ -302,3 +302,11 @@
 - Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
 - Kept creator links external and nofollow.
 - Bumped cache/version to 4.0.5.
+
+
+## 4.0.6 - Hunt / Charity System
+- Added a compact Hunt / charity event panel to the homepage.
+- Added a fuller Hunt / St. Jude PLAY LIVE explanation section to the Support page.
+- Linked to the official St. Jude PLAY LIVE information and campaign hub.
+- Kept fundraiser details routed through Discord until a specific fundraiser URL is provided.
+- Bumped cache/version to 4.0.6.

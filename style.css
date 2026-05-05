@@ -101,3 +101,13 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
 .throne-frame { max-width:980px; margin:18px auto 0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#050505; }
 .throne-frame iframe { display:block; width:100%; min-height:650px; border:0; background:#050505; }
 @media (max-width:820px){ .throne-frame iframe { min-height:560px; } }
+
+
+/* v4.0.6 Hunt / charity event panels */
+.charity-panel { max-width:1100px; margin:32px auto; padding:28px; border:1px solid rgba(255,153,0,.45); border-radius:18px; background:rgba(0,0,0,.62); box-shadow:0 14px 34px rgba(0,0,0,.28); }
+.charity-panel h2 { margin-top:0; }
+.charity-panel .mini-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+.charity-panel-full { text-align:center; }
+.card-grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); margin:20px 0; text-align:left; }
+.centered-actions { justify-content:center; }
+@media (max-width:760px){ .charity-panel { margin:22px 14px; padding:20px; } .charity-panel .mini-grid,.card-grid.three { grid-template-columns:1fr; } .centered-actions { align-items:stretch; } }

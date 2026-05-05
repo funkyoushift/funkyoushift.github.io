@@ -17,3 +17,5 @@ Merged/redirected pages:
 
 Discord: https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084
 Version: 4.0.0
+
+- The Donate/Support page includes The Hunt and charity event information, with links to St. Jude PLAY LIVE and Discord for updates.
