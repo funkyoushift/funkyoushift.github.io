@@ -209,3 +209,9 @@ Homepage hero must stay single-column on screens under 760px. Do not allow the d
 - Removed remaining blurry paint-heavy text effects from nav/buttons/headers.
 - Tightened desktop nav/button rendering without changing header/footer link structure.
 - Bumped cache/version to 3.3.10.
+
+
+## v4.0.5
+- Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
+- Kept creator links external and nofollow.
+- Bumped cache/version to 4.0.5.

@@ -296,3 +296,9 @@
 - Restored the embedded Throne wishlist on the Support/Donate page.
 - Kept direct Throne fallback button for browsers that block embeds.
 - Bumped cache/version to 4.0.4.
+
+
+## v4.0.5
+- Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
+- Kept creator links external and nofollow.
+- Bumped cache/version to 4.0.5.

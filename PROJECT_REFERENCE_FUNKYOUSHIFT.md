@@ -37,3 +37,9 @@ Resources stays as one curated toolbox page. Do not split by game unless Search 
 
 ## Public copy rule
 All visible copy must read like it is written to a Borderlands player. Do not use internal phrases like 'for SEO', 'this page is designed to', 'cleaner toolbox', 'merged into a cleaner page', or other implementation-note wording in public-facing sections.
+
+
+## v4.0.5
+- Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
+- Kept creator links external and nofollow.
+- Bumped cache/version to 4.0.5.
