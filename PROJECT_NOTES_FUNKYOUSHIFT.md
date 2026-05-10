@@ -215,3 +215,10 @@ Homepage hero must stay single-column on screens under 760px. Do not allow the d
 - Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
 - Kept creator links external and nofollow.
 - Bumped cache/version to 4.0.5.
+
+
+## v4.0.7 - Hosted trainer path verification
+- Confirmed `downloads/Borderlands 4.exe` is included in the site package.
+- Updated the safe download page button to `/downloads/Borderlands%204.exe`.
+- Kept the download page noindex/nofollow and out of sitemap.
+- Updated robots.txt to block `.exe` crawling while allowing the HTML safety page to be crawled for noindex.

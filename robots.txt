@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /*.exe$
-Disallow: /downloads/
+Disallow: /downloads/*.exe$
+Allow: /downloads/borderlands-4-trainer.html
 Allow: /
 Sitemap: https://www.funkyoushift.com/sitemap.xml

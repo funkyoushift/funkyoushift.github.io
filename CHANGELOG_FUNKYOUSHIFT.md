@@ -310,3 +310,10 @@
 - Linked to the official St. Jude PLAY LIVE information and campaign hub.
 - Kept fundraiser details routed through Discord until a specific fundraiser URL is provided.
 - Bumped cache/version to 4.0.6.
+
+
+## v4.0.7 - Hosted trainer path verification
+- Confirmed `downloads/Borderlands 4.exe` is included in the site package.
+- Updated the safe download page button to `/downloads/Borderlands%204.exe`.
+- Kept the download page noindex/nofollow and out of sitemap.
+- Updated robots.txt to block `.exe` crawling while allowing the HTML safety page to be crawled for noindex.
