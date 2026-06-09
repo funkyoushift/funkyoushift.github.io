@@ -364,3 +364,11 @@
 - Swapped gallery full-size art links to optimized WebP assets.
 - Kept the direct trainer executable in downloads, but reduced the package size so the ZIP stays under GitHub Desktop’s 100MB warning.
 - Note: deploy by extracting the ZIP and committing the site files, not by committing the ZIP itself.
+
+## v4.0.14 - Homepage image mapping and gallery cleanup
+- Removed the four-image story strip from the homepage so the homepage stays focused as a quick launcher.
+- Moved extra real/community images into the Gallery page.
+- Updated the Get Modded Gear button image to use the in-game legendary loot screenshot.
+- Updated the Giveaways button image to use the real smiling giveaway winner screenshot.
+- Kept Builds on the stylized skill-tree tile for now until a real Borderlands skill tree screenshot is provided.
+- Added optimized gallery WebP versions of the new community images.

@@ -256,3 +256,6 @@ User feedback from the live preview: homepage had duplicate links, button images
 - Swapped gallery full-size art links to optimized WebP assets.
 - Kept the direct trainer executable in downloads, but reduced the package size so the ZIP stays under GitHub Desktop’s 100MB warning.
 - Note: deploy by extracting the ZIP and committing the site files, not by committing the ZIP itself.
+
+## v4.0.14 notes
+Homepage image direction: keep action buttons literal and obvious. Community/funny/story images belong on Gallery, not directly below the homepage launcher. Builds should use a real in-game Borderlands skill tree screenshot when available; current tile remains a stylized skill-tree placeholder until that screenshot is provided.
