@@ -325,3 +325,19 @@
 - Moved long resource lists into collapsible drawers to reduce visible text clutter while keeping the content available.
 - Added responsive CSS for large visual buttons, embed panels, and simplified resource drawers.
 - Added generic `.external-embed-loader` support in `site.js`.
+
+
+## v4.0.9 - Visual merch/home overhaul
+- Added new Team FunkYouSHiFT artwork with the updated member lineup.
+- Replaced old Team artwork references with the new brand art for OG/social previews and hero imagery.
+- Rebuilt the homepage into a short, button-first launcher for Twitch viewers.
+- Rebuilt the merch page as a visual storefront with uploaded mockups and Streamlabs product links.
+- Added new art previews to the gallery.
+- Continued the reduced-copy, big-button, imagery-heavy design direction.
+
+
+## v4.0.10 - Delayed GZO auto-embed
+- Updated the Resources page so the main GZO Editor Hub automatically loads after a short delay instead of requiring the visitor to press a button.
+- Kept the manual reload button and original-site fallback button for browsers that block embeds.
+- Left Azalea's Modding Center as click-to-load so the page does not load multiple external tools at once.
+

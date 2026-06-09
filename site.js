@@ -36,14 +36,24 @@
     });
   }
 
+  function loadExternalEmbed(btn){
+    var target=document.getElementById(btn.dataset.embedTarget);
+    if(!target){return;}
+    var src=btn.dataset.embedSrc;
+    var title=btn.dataset.embedTitle || 'Embedded community tool';
+    target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" loading="lazy" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
+    btn.textContent=btn.dataset.loadedText || 'Reload embedded tool';
+  }
+
   document.querySelectorAll('.external-embed-loader').forEach(function(btn){
     btn.addEventListener('click',function(){
-      var target=document.getElementById(btn.dataset.embedTarget);
-      if(!target){return;}
-      var src=btn.dataset.embedSrc;
-      var title=btn.dataset.embedTitle || 'Embedded community tool';
-      target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" loading="lazy" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
-      btn.textContent='Reload embedded tool';
+      loadExternalEmbed(btn);
     });
+    if(btn.dataset.autoEmbed === 'true'){
+      var delay=parseInt(btn.dataset.autoEmbedDelay || '1800',10);
+      window.setTimeout(function(){
+        loadExternalEmbed(btn);
+      }, isNaN(delay) ? 1800 : delay);
+    }
   });
 })();

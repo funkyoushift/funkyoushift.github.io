@@ -225,3 +225,16 @@ Homepage hero must stay single-column on screens under 760px. Do not allow the d
 
 ## Design direction note - June 2026
 The site should move toward a simpler, more visual, less wordy hub layout. Most visitors are Twitch viewers, not readers. Preserve resources and SEO/content depth, but hide long text behind buttons, drawers, cards, and clear visual routes. The user likes the simple, button-forward style of `borderlands.be` / `save-editor.be/GZO/`.
+
+
+## v4.0.9 - Visual merch/home overhaul
+- Added new Team FunkYouSHiFT artwork with the updated member lineup.
+- Replaced old Team artwork references with the new brand art for OG/social previews and hero imagery.
+- Rebuilt the homepage into a short, button-first launcher for Twitch viewers.
+- Rebuilt the merch page as a visual storefront with uploaded mockups and Streamlabs product links.
+- Added new art previews to the gallery.
+- Continued the reduced-copy, big-button, imagery-heavy design direction.
+
+### v4.0.10 delayed embed note
+The main GZO Editor Hub on `borderlands-resources.html` should auto-load after page load using a short timer. This keeps the Twitch-viewer-friendly experience of seeing the hub without a click, while still delaying the external iframe enough to protect the initial page load. AMC remains manually loaded.
+
