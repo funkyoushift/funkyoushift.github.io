@@ -317,3 +317,11 @@
 - Updated the safe download page button to `/downloads/Borderlands%204.exe`.
 - Kept the download page noindex/nofollow and out of sitemap.
 - Updated robots.txt to block `.exe` crawling while allowing the HTML safety page to be crawled for noindex.
+
+## v4.0.8 - Resources page simplified
+- Reworked `borderlands-resources.html` into a large-button resource hub for Twitch-viewer-friendly navigation.
+- Added click-to-load embedded GZO Editor Hub (`https://save-editor.be/GZO/`) with original-site fallback.
+- Added click-to-load embedded Azalea's Modding Center (`https://save-editor.be/GZO/AMC.html`) with original-site fallback.
+- Moved long resource lists into collapsible drawers to reduce visible text clutter while keeping the content available.
+- Added responsive CSS for large visual buttons, embed panels, and simplified resource drawers.
+- Added generic `.external-embed-loader` support in `site.js`.

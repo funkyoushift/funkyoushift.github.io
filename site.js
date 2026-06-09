@@ -35,4 +35,15 @@
       card.appendChild(img); card.appendChild(title); card.appendChild(label); grid.appendChild(card);
     });
   }
+
+  document.querySelectorAll('.external-embed-loader').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var target=document.getElementById(btn.dataset.embedTarget);
+      if(!target){return;}
+      var src=btn.dataset.embedSrc;
+      var title=btn.dataset.embedTitle || 'Embedded community tool';
+      target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" loading="lazy" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
+      btn.textContent='Reload embedded tool';
+    });
+  });
 })();

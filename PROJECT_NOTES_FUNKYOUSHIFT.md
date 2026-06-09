@@ -222,3 +222,6 @@ Homepage hero must stay single-column on screens under 760px. Do not allow the d
 - Updated the safe download page button to `/downloads/Borderlands%204.exe`.
 - Kept the download page noindex/nofollow and out of sitemap.
 - Updated robots.txt to block `.exe` crawling while allowing the HTML safety page to be crawled for noindex.
+
+## Design direction note - June 2026
+The site should move toward a simpler, more visual, less wordy hub layout. Most visitors are Twitch viewers, not readers. Preserve resources and SEO/content depth, but hide long text behind buttons, drawers, cards, and clear visual routes. The user likes the simple, button-forward style of `borderlands.be` / `save-editor.be/GZO/`.
