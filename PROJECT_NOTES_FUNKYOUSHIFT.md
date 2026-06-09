@@ -1,3 +1,17 @@
+## v4.0.23 Tools / SEO decision
+- Keep the nav label as **Tools** because it is clearer for Twitch viewers than Resources.
+- Keep the canonical file as `/borderlands-resources.html` for continuity, but route intuitive aliases like `/tools`, `/save-editors`, `/modding-tools`, and `/sdk-mods` to it.
+- Treat `/borderlands-modding.html` as the SEO explainer/funnel page, not the actual tool interface. It should send visitors to Tools and Discord.
+- Treat Tools as a franchise-wide hub, not BL4-only. Primary search targets: Borderlands save editor, BL4 save editor, Borderlands item editor, Borderlands SDK mods, Borderlands mod tools, Borderlands save locations, and Borderlands mod database.
+- Added BL-SDK Oak2 Mod Database as click-to-load embed because SDK mods are now a major PC modding path alongside save editors.
+- Added a Featured Community SDK Mods placeholder for files the user will provide later; require mod name, game, description, file, version, creator/credit, install notes, warnings, and download permission before hosting/mirroring.
+
+## v4.0.22 Tools naming decision
+- The page file remains `borderlands-resources.html` for existing links and SEO continuity, but the public-facing navigation should say Tools instead of Resources.
+- Visitor intent is clearer with Tools / Editors / Save Editors than Resources. Twitch viewers are unlikely to click Resources when they want the embedded GZO hub or modding center.
+- `borderlands-modding.html` should stay as the SEO explainer/landing page, then aggressively route users to Tools and Discord.
+- Added short redirects `/tools`, `/editors`, `/save-editors`, `/modding-tools`, and `/borderlands-tools` to point at the Tools page.
+
 
 ## v3.3.7 Discord Landing Link Update
 - Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.

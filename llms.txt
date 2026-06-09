@@ -19,3 +19,7 @@ Discord: https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764
 Version: 4.0.0
 
 - The Donate/Support page includes The Hunt and charity event information, with links to St. Jude PLAY LIVE and Discord for updates.
+## Tools hub update v4.0.23
+- The visitor-facing Tools page is `/borderlands-resources.html` with aliases `/tools`, `/save-editors`, `/modding-tools`, `/sdk-mods`, and related redirects.
+- Tools is a franchise-wide Borderlands hub, not BL4-only: save editors, item editors, SDK mods, mod databases, guides, save locations, trainers, planners, and Discord help.
+- `/borderlands-modding.html` remains the SEO explainer and should funnel users to Tools and Discord.

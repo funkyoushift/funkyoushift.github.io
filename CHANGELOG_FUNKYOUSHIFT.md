@@ -1,3 +1,18 @@
+## v4.0.23 - Franchise Tools + SDK mod hub
+- Reframed `borderlands-resources.html` as a broader Borderlands franchise Tools hub instead of BL4-only resources.
+- Updated SEO title, meta description, Open Graph copy, and JSON-LD to target save editors, item editors, SDK mods, mod databases, save locations, trainers, planners, and Discord help.
+- Added a click-to-load BL-SDK Oak2 Mod Database embed panel after the auto-loading GZO editor hub.
+- Added a placeholder Featured Community SDK Mods section for tomorrow's unlisted SDK mod files, with clear requirements for file, game, version, creator credit, permission, and install notes.
+- Kept Azalea's Modding Center as a click-to-load guide/save-location embed.
+- Added redirects for `/sdk-mods`, `/pc-mods`, `/borderlands-sdk-mods`, `/borderlands-save-editors`, `/borderlands-editor`, and `/item-editor`.
+- Updated sitemap lastmod/priority and cache version to 4.0.23.
+
+## v4.0.22 - Resources renamed to Tools for visitor clarity
+- Kept `borderlands-resources.html` as the canonical/SEO URL but changed visible navigation from Resources to Tools.
+- Added intuitive redirects for `/tools`, `/editors`, `/save-editors`, `/modding-tools`, and `/borderlands-tools`.
+- Repositioned the Modding page as an SEO/plain-English guide that funnels visitors to the Tools page for embeds, editors, trainers, and planners.
+- Updated cache references to 4.0.22.
+
 
 ## v4.0.19 - Giveaway Tile Exact Winner Photo
 - Updated the homepage Giveaways card to use the exact winner/hat photo provided by the user.
