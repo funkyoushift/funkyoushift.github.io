@@ -1,4 +1,10 @@
 
+## v4.0.15 - Hero readability fix
+- Reduced the homepage title scale on desktop so “FUNKYOUSHIFT” no longer slides behind the hero image.
+- Added layered/z-index protection and wider spacing between the title and hero art.
+- Bumped cache version to 4.0.15.
+
+
 ## v3.3.7 Discord Landing Link Update
 - Replaced expired Discord invite URL with the active Discord server landing page URL across all site CTAs, footers, schema sameAs entries, sticky mobile CTAs, and internal landing pages.
 - Preserved third-party GenieBot/GZO Discord link separately.
