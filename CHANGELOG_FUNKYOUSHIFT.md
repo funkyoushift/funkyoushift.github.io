@@ -1,3 +1,10 @@
+# v4.0.18 - Merch link/image audit fix
+
+- Rebuilt the merch card mapping based on the live Streamlabs audit.
+- Changed merch cards so labels/images match the actual product destinations instead of the previous shifted order.
+- Removed the struck/copyright-risk hat product from the visible lineup.
+- Updated cache version to 4.0.18.
+
 ## v4.0.16 - Homepage tile cache-bust fix
 - Renamed homepage tile image assets with a v16 suffix so browsers/CDN do not keep showing old cached button images.
 - Updated CSS image references to the versioned tile files.
