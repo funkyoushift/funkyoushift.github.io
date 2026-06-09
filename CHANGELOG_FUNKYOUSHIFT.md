@@ -407,3 +407,9 @@
 ## v4.0.20 - Giveaway tile position fix
 - Re-cropped the Giveaways homepage tile from the real winner/hat photo so the hat logo and face sit lower and more centered inside the card.
 - Updated homepage asset cache references to 4.0.20.
+
+
+## v4.0.21 - Resources embed space cleanup
+- Widened the Resources page on desktop so the embedded GZO editor hub uses more available screen space.
+- Reduced padding around resource embed panels and increased iframe height for better visibility.
+- Bumped resource page cache references to 4.0.21.

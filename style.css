@@ -351,3 +351,67 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
     font-size:clamp(2.7rem, 13vw, 4.8rem);
   }
 }
+
+
+/* v4.0.21 resources page: give embeds more desktop room */
+.resources-page main {
+  width:min(1720px,98vw);
+  padding-top:10px;
+}
+.resources-page .hero {
+  padding-bottom:14px;
+}
+.resources-page .hero-inner {
+  max-width:min(1560px,98vw);
+}
+.resources-page section {
+  margin:18px auto;
+}
+.resources-page .quick-picks,
+.resources-page .compact-notice {
+  max-width:1180px;
+}
+.resources-page .tool-launch {
+  grid-template-columns:minmax(220px,300px) minmax(0,1fr);
+  gap:16px;
+  padding:18px;
+  max-width:100%;
+}
+.resources-page .tool-launch-copy {
+  top:86px;
+}
+.resources-page .tool-launch-copy h2 {
+  font-size:clamp(1.35rem,2vw,2rem);
+}
+.resources-page .tool-launch-copy p {
+  font-size:.98rem;
+}
+.resources-page .tool-launch-copy .hero-actions {
+  gap:10px;
+}
+.resources-page .tool-launch-copy .button {
+  width:100%;
+  min-height:46px;
+  padding:.75rem .9rem;
+}
+.resources-page .external-embed-frame {
+  border-style:solid;
+  min-height:clamp(740px,82vh,980px);
+}
+.resources-page .external-embed-frame iframe {
+  height:clamp(740px,82vh,980px);
+  min-height:0;
+}
+.resources-page #amc-frame,
+.resources-page #amc-frame iframe {
+  min-height:720px;
+  height:720px;
+}
+@media (max-width:900px){
+  .resources-page main { width:min(94vw,720px); }
+  .resources-page .tool-launch { grid-template-columns:1fr; padding:16px; }
+  .resources-page .external-embed-frame,
+  .resources-page .external-embed-frame iframe,
+  .resources-page #amc-frame,
+  .resources-page #amc-frame iframe { min-height:640px; height:640px; }
+}
