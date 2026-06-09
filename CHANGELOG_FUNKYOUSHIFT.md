@@ -1,3 +1,8 @@
+
+## v4.0.19 - Giveaway Tile Exact Winner Photo
+- Updated the homepage Giveaways card to use the exact winner/hat photo provided by the user.
+- Updated cache references so the new giveaway tile is forced instead of older cached tile art.
+
 # v4.0.18 - Merch link/image audit fix
 
 - Rebuilt the merch card mapping based on the live Streamlabs audit.
