@@ -41,7 +41,9 @@
     if(!target){return;}
     var src=btn.dataset.embedSrc;
     var title=btn.dataset.embedTitle || 'Embedded community tool';
-    target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" loading="lazy" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
+    target.classList.add('is-loaded');
+    target.classList.remove('external-embed-frame--pending');
+    target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
     btn.textContent=btn.dataset.loadedText || 'Reload embedded tool';
   }
 
@@ -51,9 +53,9 @@
     });
     if(btn.dataset.autoEmbed === 'true'){
       var delay=parseInt(btn.dataset.autoEmbedDelay || '1800',10);
-      window.setTimeout(function(){
-        loadExternalEmbed(btn);
-      }, isNaN(delay) ? 1800 : delay);
+      var startAuto=function(){ window.setTimeout(function(){ loadExternalEmbed(btn); }, isNaN(delay) ? 1800 : delay); };
+      if(document.readyState === 'complete'){ startAuto(); }
+      else { window.addEventListener('load', startAuto, { once:true }); }
     }
   });
 })();

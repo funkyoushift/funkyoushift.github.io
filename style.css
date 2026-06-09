@@ -182,3 +182,41 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
 .merch-card-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
 @media (max-width:980px){ .image-button-grid,.merch-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .merch-feature-row { grid-template-columns:1fr; } }
 @media (max-width:620px){ .image-button-grid,.merch-card-grid,.visual-strip { grid-template-columns:1fr; } .image-button{ min-height:190px; } .section-heading-row{ flex-direction:column; align-items:stretch; } }
+
+/* v4.0.11 UX cleanup: remove duplicate link feel, make cards tell the story, improve delayed embeds */
+.story-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:0; background:transparent; border:0; box-shadow:none; }
+.story-strip img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:18px; border:1px solid var(--line); background:#050505; box-shadow:0 12px 28px rgba(0,0,0,.35); }
+.charity-panel--simple { text-align:center; }
+.charity-panel--simple p { max-width:720px; margin-left:auto; margin-right:auto; }
+
+.home-launch .image-button:nth-child(1){ background-position:center 42%; }
+.home-launch .image-button:nth-child(2){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/team-funkyoushift-bots-2026-768.webp'); background-position:center; }
+.home-launch .image-button:nth-child(3){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/funkyoushift-logo-portrait-768.webp'); background-position:center; }
+.home-launch .image-button:nth-child(4){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/twitch-cover.jpg'); background-position:center; }
+.home-launch .image-button:nth-child(5){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/merch-new-logo-hoodie.webp'); background-position:center; }
+.home-launch .image-button:nth-child(6){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/merch-fu-mug.webp'); background-position:center; }
+.home-launch .image-button:nth-child(7){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/panels.jpg'); background-position:center; }
+.home-launch .image-button:nth-child(8){ background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.88)),url('images/funkyoushift-framed-chaos-768.webp'); background-position:center; }
+
+.big-button-card { justify-content:flex-end; min-height:180px; background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/funkyoushift-framed-chaos-768.webp') center/cover; text-shadow:0 3px 10px #000; }
+.big-button-card:nth-child(1){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/funkyoushift-logo-portrait-768.webp'); }
+.big-button-card:nth-child(2){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/funkyoushift-framed-chaos-768.webp'); }
+.big-button-card:nth-child(3){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/thumbnail.jpeg'); }
+.big-button-card:nth-child(4){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/panels.jpg'); }
+.big-button-card:nth-child(5){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/banner.jpeg'); }
+.big-button-card:nth-child(6){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/team-funkyoushift-new-768.webp'); }
+.big-button-card span { color:#fff; }
+.external-embed-frame--pending { display:flex; align-items:center; justify-content:center; min-height:180px; }
+.external-embed-frame--pending .embed-loading { margin:0; color:var(--orange); font-weight:1000; }
+.external-embed-frame.is-loaded { display:block; }
+.external-embed-frame.is-loaded .embed-loading { display:none; }
+.embed-fallback { margin:10px 14px 14px; font-size:.92rem; color:var(--muted); }
+
+.build-action-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:0; background:transparent; border:0; box-shadow:none; }
+.build-action-strip .image-button { min-height:220px; }
+.build-action-strip .image-button:nth-child(1){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/panels.jpg'); }
+.build-action-strip .image-button:nth-child(2){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/twitch-cover.jpg'); }
+.build-action-strip .image-button:nth-child(3){ background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.88)),url('images/team-funkyoushift-new-768.webp'); }
+.planner-section h2, #creators h2 { margin-bottom:.25rem; }
+
+@media (max-width:760px){ .story-strip,.build-action-strip{ grid-template-columns:1fr; } }

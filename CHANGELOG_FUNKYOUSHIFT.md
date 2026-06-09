@@ -341,3 +341,11 @@
 - Kept the manual reload button and original-site fallback button for browsers that block embeds.
 - Left Azalea's Modding Center as click-to-load so the page does not load multiple external tools at once.
 
+
+## v4.0.11 - Live preview cleanup
+- Removed duplicate-feeling homepage CTAs from the hero and converted the extra visual strip into non-link imagery.
+- Updated homepage button backgrounds so each action has a more distinct visual story.
+- Removed visible “auto-loads after page load” wording from the Resources panel.
+- Made the GZO auto-embed more reliable by loading after the window load event and removing lazy-loading from the inserted iframe.
+- Simplified the Builds page so the top area no longer repeats the lower planner/video/help sections.
+- Bumped CSS and JS cache versions to 4.0.11.

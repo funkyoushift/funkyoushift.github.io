@@ -238,3 +238,6 @@ The site should move toward a simpler, more visual, less wordy hub layout. Most 
 ### v4.0.10 delayed embed note
 The main GZO Editor Hub on `borderlands-resources.html` should auto-load after page load using a short timer. This keeps the Twitch-viewer-friendly experience of seeing the hub without a click, while still delaying the external iframe enough to protect the initial page load. AMC remains manually loaded.
 
+
+### v4.0.11 live preview cleanup
+User feedback from the live preview: homepage had duplicate links, button images needed to tell a clearer story, the GZO panel should not say “Auto-loads after page load,” the auto-load did not visibly work, and the Builds page top panel repeated the lower cards. This pass removes duplicate homepage CTAs, improves image variety, makes the GZO embed load after window load with a short delay, and simplifies Builds into Plan / Watch / Ask.
