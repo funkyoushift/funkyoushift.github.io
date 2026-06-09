@@ -384,3 +384,9 @@
 - Updated the Giveaways button image to use the real smiling giveaway winner screenshot.
 - Kept Builds on the stylized skill-tree tile for now until a real Borderlands skill tree screenshot is provided.
 - Added optimized gallery WebP versions of the new community images.
+
+
+## v4.0.17 - Hero + tile deploy safety fix
+- Added decisive homepage hero sizing so the FUNKYOUSHIFT title cannot slide behind the hero image on desktop.
+- Added v17 cache-busted homepage tile image filenames.
+- Forced homepage tile background rules to the intended images to avoid stale/older rules winning.
