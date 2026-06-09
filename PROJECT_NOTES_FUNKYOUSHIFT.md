@@ -241,3 +241,18 @@ The main GZO Editor Hub on `borderlands-resources.html` should auto-load after p
 
 ### v4.0.11 live preview cleanup
 User feedback from the live preview: homepage had duplicate links, button images needed to tell a clearer story, the GZO panel should not say “Auto-loads after page load,” the auto-load did not visibly work, and the Builds page top panel repeated the lower cards. This pass removes duplicate homepage CTAs, improves image variety, makes the GZO embed load after window load with a short delay, and simplifies Builds into Plan / Watch / Ask.
+
+
+## v4.0.13 - Homepage image storytelling pass
+- Added new user-provided Discord, Twitch/YouTube, stream screenshot, real hat, and community art assets.
+- Replaced generic homepage button backgrounds with purpose-built visual tiles for Discord, modded gear, save editors, watch, merch, giveaways, character builds, and gallery.
+- Corrected Builds visual direction to character builds / skill trees / loadouts instead of PC builds.
+- Expanded the homepage visual strip with real community/stream/hat imagery for more variety.
+- Kept the current color scheme while making button imagery tell the story faster for Twitch viewers.
+
+
+## v4.0.13 - Image optimization cleanup
+- Removed heavy duplicate PNG/MP4 slideshow originals that were not referenced by the live pages.
+- Swapped gallery full-size art links to optimized WebP assets.
+- Kept the direct trainer executable in downloads, but reduced the package size so the ZIP stays under GitHub Desktop’s 100MB warning.
+- Note: deploy by extracting the ZIP and committing the site files, not by committing the ZIP itself.
