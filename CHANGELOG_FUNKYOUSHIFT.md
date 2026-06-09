@@ -1,3 +1,9 @@
+## v4.0.16 - Homepage tile cache-bust fix
+- Renamed homepage tile image assets with a v16 suffix so browsers/CDN do not keep showing old cached button images.
+- Updated CSS image references to the versioned tile files.
+- Bumped page asset query versions to 4.0.16.
+- Added an extra desktop hero safety rule so the title and art stay in separate columns.
+
 
 ## v4.0.15 - Hero readability fix
 - Reduced the homepage title scale on desktop so “FUNKYOUSHIFT” no longer slides behind the hero image.

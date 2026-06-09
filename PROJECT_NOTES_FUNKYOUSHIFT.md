@@ -259,3 +259,6 @@ User feedback from the live preview: homepage had duplicate links, button images
 
 ## v4.0.14 notes
 Homepage image direction: keep action buttons literal and obvious. Community/funny/story images belong on Gallery, not directly below the homepage launcher. Builds should use a real in-game Borderlands skill tree screenshot when available; current tile remains a stylized skill-tree placeholder until that screenshot is provided.
+
+## v4.0.16 notes
+- Homepage tile images were cache-busted by renaming the actual image files, not just changing the CSS query string. This should prevent stale button imagery after deploy.

@@ -229,14 +229,14 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
   background-position:center;
   background-size:cover;
 }
-.image-button--discord{ --tile-bg:url('images/tile-discord.webp'); }
-.image-button--gear{ --tile-bg:url('images/tile-modded-gear.webp'); }
+.image-button--discord{ --tile-bg:url('images/tile-discord-v16.webp'); }
+.image-button--gear{ --tile-bg:url('images/tile-modded-gear-v16.webp'); }
 .image-button--editors{ --tile-bg:url('images/tile-save-editors.webp'); }
-.image-button--watch{ --tile-bg:url('images/tile-watch.webp'); }
-.image-button--merch{ --tile-bg:url('images/tile-merch.webp'); }
-.image-button--giveaway{ --tile-bg:url('images/tile-giveaway.webp'); }
-.image-button--builds{ --tile-bg:url('images/tile-character-builds.webp'); }
-.image-button--gallery{ --tile-bg:url('images/tile-gallery.webp'); }
+.image-button--watch{ --tile-bg:url('images/tile-watch-v16.webp'); }
+.image-button--merch{ --tile-bg:url('images/tile-merch-v16.webp'); }
+.image-button--giveaway{ --tile-bg:url('images/tile-giveaway-v16.webp'); }
+.image-button--builds{ --tile-bg:url('images/tile-character-builds-v16.webp'); }
+.image-button--gallery{ --tile-bg:url('images/tile-gallery-v16.webp'); }
 .story-strip { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .story-strip img { aspect-ratio:16/11; }
 @media (max-width:980px){ .story-strip { grid-template-columns:repeat(2,minmax(0,1fr)); } }
@@ -268,4 +268,11 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
 }
 @media (max-width: 760px) {
   .hero--home h1 { font-size:clamp(2.55rem,16vw,4.2rem); line-height:.9; }
+}
+
+/* v4.0.16 cache-busted homepage tiles and safer hero sizing */
+@media (min-width: 900px){
+  .hero--home .hero-copy{min-width:0; max-width:760px; position:relative; z-index:2;}
+  .hero--home .hero-art{position:relative; z-index:1; flex:0 1 360px;}
+  .hero--home h1{font-size:clamp(4.2rem, 8vw, 7rem); max-width:100%; overflow-wrap:normal;}
 }
