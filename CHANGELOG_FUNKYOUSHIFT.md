@@ -402,3 +402,8 @@
 - Added decisive homepage hero sizing so the FUNKYOUSHIFT title cannot slide behind the hero image on desktop.
 - Added v17 cache-busted homepage tile image filenames.
 - Forced homepage tile background rules to the intended images to avoid stale/older rules winning.
+
+
+## v4.0.20 - Giveaway tile position fix
+- Re-cropped the Giveaways homepage tile from the real winner/hat photo so the hat logo and face sit lower and more centered inside the card.
+- Updated homepage asset cache references to 4.0.20.
