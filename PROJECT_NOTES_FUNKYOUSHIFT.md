@@ -1,4 +1,4 @@
-## v4.0.23 Tools / SEO decision
+## v4.0.24 Tools / SEO decision
 - Keep the nav label as **Tools** because it is clearer for Twitch viewers than Resources.
 - Keep the canonical file as `/borderlands-resources.html` for continuity, but route intuitive aliases like `/tools`, `/save-editors`, `/modding-tools`, and `/sdk-mods` to it.
 - Treat `/borderlands-modding.html` as the SEO explainer/funnel page, not the actual tool interface. It should send visitors to Tools and Discord.
@@ -276,3 +276,10 @@ Homepage image direction: keep action buttons literal and obvious. Community/fun
 
 ## v4.0.16 notes
 - Homepage tile images were cache-busted by renaming the actual image files, not just changing the CSS query string. This should prevent stale button imagery after deploy.
+
+
+## v4.0.25 - Launcher audit notes
+- Do not put a big “What do you need?” panel on every page. The homepage is the main launcher and should keep that system.
+- Tools is the highest-utility page and should get visitors to embeds quickly. Use compact jump links instead of a tall visual panel there.
+- Discord and Modding can use small shortcut bars when routing is helpful, but avoid card grids that repeat the nav or the lower page content.
+- Build page remains focused on character builds / skill trees / creator videos. Replace the placeholder skill-tree tile with a real Borderlands skill tree screenshot when available.

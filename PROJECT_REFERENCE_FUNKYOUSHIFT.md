@@ -43,3 +43,7 @@ All visible copy must read like it is written to a Borderlands player. Do not us
 - Replaced FunkYouSHiFT-owned images on third-party creator cards with YouTube video thumbnails from the creators' own content.
 - Kept creator links external and nofollow.
 - Bumped cache/version to 4.0.5.
+
+
+## v4.0.25 - Launcher audit notes
+Homepage keeps the launcher. Tools/Discord/Modding use compact shortcut bars to reduce mobile scrolling and avoid repeated panels.

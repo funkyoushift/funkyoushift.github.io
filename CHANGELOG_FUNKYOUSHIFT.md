@@ -1,11 +1,21 @@
-## v4.0.23 - Franchise Tools + SDK mod hub
+## v4.0.25 - Page launcher audit + mobile speed-bump cleanup
+- Audited all public pages for redundant “What do you need?” / router panels before push.
+- Kept the homepage launcher because it is the primary visitor menu.
+- Removed the large Tools-page quick-pick panel so the GZO editor hub appears sooner, especially on mobile.
+- Added a compact Tools shortcut bar for Editors, SDK Mods, Community Mods, Guides, More Links, and Discord Help.
+- Replaced redundant Discord and Modding router card grids with slim shortcut bars.
+- Fixed the Watch hero duplicate Discord button by making the primary CTA open Twitch.
+- Fixed an obvious merch image mismatch where the black mug used the hat image in the merch feature/grid cards.
+- Updated sitemap lastmod and cache version to 4.0.25.
+
+## v4.0.24 - Franchise Tools + SDK mod hub
 - Reframed `borderlands-resources.html` as a broader Borderlands franchise Tools hub instead of BL4-only resources.
 - Updated SEO title, meta description, Open Graph copy, and JSON-LD to target save editors, item editors, SDK mods, mod databases, save locations, trainers, planners, and Discord help.
 - Added a click-to-load BL-SDK Oak2 Mod Database embed panel after the auto-loading GZO editor hub.
 - Added a placeholder Featured Community SDK Mods section for tomorrow's unlisted SDK mod files, with clear requirements for file, game, version, creator credit, permission, and install notes.
 - Kept Azalea's Modding Center as a click-to-load guide/save-location embed.
 - Added redirects for `/sdk-mods`, `/pc-mods`, `/borderlands-sdk-mods`, `/borderlands-save-editors`, `/borderlands-editor`, and `/item-editor`.
-- Updated sitemap lastmod/priority and cache version to 4.0.23.
+- Updated sitemap lastmod/priority and cache version to 4.0.24.
 
 ## v4.0.22 - Resources renamed to Tools for visitor clarity
 - Kept `borderlands-resources.html` as the canonical/SEO URL but changed visible navigation from Resources to Tools.
