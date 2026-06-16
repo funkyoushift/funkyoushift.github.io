@@ -1,3 +1,7 @@
+
+## Build Page Creator Link Note - v4.0.27
+The Ki11er Six card on the Builds page should link to the creator's YouTube channel, not a random or mismatched individual video.
+
 ## v4.0.24 Tools / SEO decision
 - Keep the nav label as **Tools** because it is clearer for Twitch viewers than Resources.
 - Keep the canonical file as `/borderlands-resources.html` for continuity, but route intuitive aliases like `/tools`, `/save-editors`, `/modding-tools`, and `/sdk-mods` to it.
@@ -278,8 +282,17 @@ Homepage image direction: keep action buttons literal and obvious. Community/fun
 - Homepage tile images were cache-busted by renaming the actual image files, not just changing the CSS query string. This should prevent stale button imagery after deploy.
 
 
-## v4.0.25 - Launcher audit notes
+## v4.0.27 - Launcher audit notes
 - Do not put a big “What do you need?” panel on every page. The homepage is the main launcher and should keep that system.
 - Tools is the highest-utility page and should get visitors to embeds quickly. Use compact jump links instead of a tall visual panel there.
 - Discord and Modding can use small shortcut bars when routing is helpful, but avoid card grids that repeat the nav or the lower page content.
 - Build page remains focused on character builds / skill trees / creator videos. Replace the placeholder skill-tree tile with a real Borderlands skill tree screenshot when available.
+
+## v4.0.27 - Ki11er Six build embed correction
+- Restored the Ki11er Six Builds card as an embedded Borderlands 4 build video instead of a channel-only link.
+- Uses the Ki11er Six Borderlands 4 WHIPLASH Amon Build Guide thumbnail and click-to-load YouTube embed.
+- Bumped cache version to 4.0.27.
+
+
+### Iframe tool behavior note
+The Tools page loads GZO, BL-SDK, and AMC as external iframes. Production embeds are intentionally not sandboxed by default because sandboxing can block file picker APIs, Blob downloads, popups, and cross-origin editor flows. The site now adds clearer fallback messaging and outside-frame buttons for important SDK GitHub/Discord links. If GZO save upload/download still fails in-frame, the likely fix is on the embedded editor side: use normal `<input type="file">` for uploads and Blob URL + `<a download>` for exports, or provide iframe-compatible fallbacks if the editor uses File System Access APIs.

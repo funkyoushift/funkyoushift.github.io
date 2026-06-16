@@ -43,7 +43,23 @@
     var title=btn.dataset.embedTitle || 'Embedded community tool';
     target.classList.add('is-loaded');
     target.classList.remove('external-embed-frame--pending');
-    target.innerHTML='<iframe title="'+title.replace(/"/g,'&quot;')+'" src="'+src+'" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="embed-fallback">If the tool does not load here, use the original-site button.</p>';
+    var safeTitle=title.replace(/"/g,'&quot;');
+    var iframe=document.createElement('iframe');
+    iframe.title=title;
+    iframe.src=src;
+    iframe.referrerPolicy='no-referrer-when-downgrade';
+    iframe.allow='clipboard-read; clipboard-write; fullscreen';
+    iframe.setAttribute('allowfullscreen','');
+    // Keep production embeds unsandboxed by default. A sandbox can block file picker,
+    // Blob downloads, popups, and other editor behavior unless the embedded tool is built for it.
+    // If a future tool needs sandbox testing, add data-embed-sandbox="..." to its button.
+    if(btn.dataset.embedSandbox){ iframe.setAttribute('sandbox', btn.dataset.embedSandbox); }
+    target.innerHTML='';
+    target.appendChild(iframe);
+    var fallback=document.createElement('p');
+    fallback.className='embed-fallback';
+    fallback.textContent='If uploads, downloads, Discord, or GitHub links do not work inside the embed, open the original site in a new tab.';
+    target.appendChild(fallback);
     btn.textContent=btn.dataset.loadedText || 'Reload embedded tool';
   }
 

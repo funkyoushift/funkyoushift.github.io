@@ -45,5 +45,5 @@ All visible copy must read like it is written to a Borderlands player. Do not us
 - Bumped cache/version to 4.0.5.
 
 
-## v4.0.25 - Launcher audit notes
+## v4.0.27 - Launcher audit notes
 Homepage keeps the launcher. Tools/Discord/Modding use compact shortcut bars to reduce mobile scrolling and avoid repeated panels.

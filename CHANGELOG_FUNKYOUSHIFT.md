@@ -1,4 +1,17 @@
-## v4.0.25 - Page launcher audit + mobile speed-bump cleanup
+
+## v4.0.28 - Iframe upload/download support pass
+- Updated external embed loader to create iframes with broader clipboard/fullscreen permissions and clearer fallback messaging.
+- Kept production embeds unsandboxed by default because sandboxing can break file pickers, Blob downloads, and editor popups.
+- Added GZO-specific note telling users to open the original site if file upload/download fails inside the embed.
+- Added outside-the-iframe SDK action buttons for latest GitHub release and SDK support Discord.
+- Bumped cache version to 4.0.28.
+
+
+## v4.0.27 - Ki11er Six Channel Link Fix
+- Corrected the Builds page Ki11er Six card so it opens the official Ki11er Six YouTube channel instead of loading a mismatched video.
+- Updated cache version references to 4.0.27.
+
+## v4.0.27 - Page launcher audit + mobile speed-bump cleanup
 - Audited all public pages for redundant “What do you need?” / router panels before push.
 - Kept the homepage launcher because it is the primary visitor menu.
 - Removed the large Tools-page quick-pick panel so the GZO editor hub appears sooner, especially on mobile.
@@ -6,7 +19,7 @@
 - Replaced redundant Discord and Modding router card grids with slim shortcut bars.
 - Fixed the Watch hero duplicate Discord button by making the primary CTA open Twitch.
 - Fixed an obvious merch image mismatch where the black mug used the hat image in the merch feature/grid cards.
-- Updated sitemap lastmod and cache version to 4.0.25.
+- Updated sitemap lastmod and cache version to 4.0.27.
 
 ## v4.0.24 - Franchise Tools + SDK mod hub
 - Reframed `borderlands-resources.html` as a broader Borderlands franchise Tools hub instead of BL4-only resources.
@@ -438,3 +451,8 @@
 - Widened the Resources page on desktop so the embedded GZO editor hub uses more available screen space.
 - Reduced padding around resource embed panels and increased iframe height for better visibility.
 - Bumped resource page cache references to 4.0.21.
+
+## v4.0.27 - Ki11er Six build embed correction
+- Restored the Ki11er Six Builds card as an embedded Borderlands 4 build video instead of a channel-only link.
+- Uses the Ki11er Six Borderlands 4 WHIPLASH Amon Build Guide thumbnail and click-to-load YouTube embed.
+- Bumped cache version to 4.0.27.
