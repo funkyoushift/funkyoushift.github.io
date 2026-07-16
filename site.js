@@ -25,17 +25,6 @@
       target.innerHTML='<iframe title="Borderlands creator video" width="100%" height="420" src="https://www.youtube.com/embed/'+id+'?autoplay=1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
     });
   });
-  if ((window.GALLERY_ITEMS || window.FUNK_GALLERY_IMAGES) && document.getElementById('gallery-grid')) {
-    var grid=document.getElementById('gallery-grid');
-    (window.GALLERY_ITEMS || window.FUNK_GALLERY_IMAGES).forEach(function(item){
-      var card=document.createElement('a'); card.className='gallery-card gallery-card--auto'; card.href=item.href||item.src; card.target='_blank'; card.rel='noopener';
-      var img=document.createElement('img'); img.loading='lazy'; img.decoding='async'; img.src=item.src; img.alt=item.alt||'FunkYouSHiFT gallery image';
-      img.onerror=function(){card.remove();};
-      var title=document.createElement('strong'); title.textContent=item.title||'Stream Moment'; var label=document.createElement('span'); label.textContent=item.label||'Community / stream memory';
-      card.appendChild(img); card.appendChild(title); card.appendChild(label); grid.appendChild(card);
-    });
-  }
-
   function loadExternalEmbed(btn){
     var target=document.getElementById(btn.dataset.embedTarget);
     if(!target){return;}
