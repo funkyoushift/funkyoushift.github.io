@@ -456,3 +456,12 @@
 - Restored the Ki11er Six Builds card as an embedded Borderlands 4 build video instead of a channel-only link.
 - Uses the Ki11er Six Borderlands 4 WHIPLASH Amon Build Guide thumbnail and click-to-load YouTube embed.
 - Bumped cache version to 4.0.27.
+# v4.1.0 - Site foundation cleanup
+
+- Removed the obsolete Borderlands 4 trainer page and FLiNG references.
+- Promoted Matt's SDK Boosting Tools as the first-party BL4 utility.
+- Replaced the generated duplicate gallery with a smaller curated gallery.
+- Fixed internal homepage and navigation links and added retired-URL redirect mappings.
+- Removed the stale one-off update script and gallery manifest.
+- Added automated HTML, metadata, JSON-LD, sitemap, and local-link validation.
+- Documented the Cloudflare redirect and analytics setup required by the GitHub Pages deployment.
