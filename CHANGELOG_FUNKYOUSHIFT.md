@@ -456,6 +456,12 @@
 - Restored the Ki11er Six Builds card as an embedded Borderlands 4 build video instead of a channel-only link.
 - Uses the Ki11er Six Borderlands 4 WHIPLASH Amon Build Guide thumbnail and click-to-load YouTube embed.
 - Bumped cache version to 4.0.27.
+# v4.1.1 - Gallery paused
+
+- Removed the Gallery from navigation, homepage actions, Watch recommendations, and the sitemap.
+- Replaced the public Gallery page with a noindex homepage redirect until real photos and accurate descriptions are available.
+- Kept the existing image assets untouched for a future rebuild.
+
 # v4.1.0 - Site foundation cleanup
 
 - Removed the obsolete Borderlands 4 trainer page and FLiNG references.
