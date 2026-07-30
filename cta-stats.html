@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CTA click stats (local) | FunkYouSHiFT</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="https://www.funkyoushift.com/" rel="canonical"/>
+<link href="style.css?v=4.1.4" rel="stylesheet"/>
+<link href="images/favicon.ico" rel="icon"/>
+</head>
+<body data-version="4.1.4">
+<main>
+<section>
+<p class="kicker">This browser only</p>
+<h1>CTA click stats</h1>
+<p class="lead">Counts stay in your browser’s localStorage. Useful for quick checks while you click around the site. For sitewide analytics, set <code>FUNK_GA_ID</code> in <code>site.js</code>.</p>
+<div class="hero-actions">
+<button class="button primary" id="refresh-stats" type="button">Refresh</button>
+<button class="button secondary" id="reset-stats" type="button">Reset counts</button>
+<a class="button secondary" href="/">Home</a>
+</div>
+<pre id="stats-box" style="margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.55);overflow:auto;text-align:left;"></pre>
+</section>
+</main>
+<script defer src="site.js?v=4.1.4"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function render(){
+    var counts = (window.FunkCTA && window.FunkCTA.report) ? window.FunkCTA.report() : {};
+    var keys = Object.keys(counts).sort();
+    if (!keys.length) {
+      document.getElementById('stats-box').textContent = 'No CTA clicks recorded in this browser yet.\nOpen Home, Watch, Discord, Tools, or Merch and click a few buttons, then refresh.';
+      return;
+    }
+    document.getElementById('stats-box').textContent = keys.map(function(k){ return k + ': ' + counts[k]; }).join('\n');
+  }
+  document.getElementById('refresh-stats').addEventListener('click', render);
+  document.getElementById('reset-stats').addEventListener('click', function(){
+    if (window.FunkCTA) window.FunkCTA.reset();
+    render();
+  });
+  render();
+});
+</script>
+</body>
+</html>
