@@ -1,6 +1,6 @@
 (function(){
   // Optional: set to your GA4 ID (G-XXXXXXXX) to send CTA events sitewide.
-  var FUNK_GA_ID = '';
+  var FUNK_GA_ID = 'G-10K2S7TC8E';
   var CTA_KEY = 'funk_cta_counts_v1';
 
   function loadCounts(){
