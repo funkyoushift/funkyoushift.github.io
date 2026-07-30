@@ -9,7 +9,7 @@
 <meta content="index, follow" name="robots"/>
 <meta content="Borderlands Save Editors &amp; SDK Mod Tools | MSBT, GZO &amp; More" property="og:title"/>
 <meta content="Open Borderlands save editors, item tools, Matt's SDK Boosting Tools (MSBT), SDK mod databases, and install guides in one hub." property="og:description"/>
-<meta content="https://www.funkyoushift.com/images/team-funkyoushift-new.jpg" property="og:image"/>
+<meta content="https://www.funkyoushift.com/images/tile-msbt-v21.webp" property="og:image"/>
 <meta content="https://www.funkyoushift.com/borderlands-resources.html" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -24,7 +24,7 @@
       "@id": "https://www.funkyoushift.com/#website",
       "name": "FunkYouSHiFT",
       "url": "https://www.funkyoushift.com/",
-      "description": "Borderlands community hub for modding help, builds, tools, videos, merch, giveaways, and Discord."
+      "description": "Borderlands modding hub for save editors, SDK tools, builds, Discord trading, and modded gear help."
     },
     {
       "@type": "Person",
@@ -41,7 +41,7 @@
         "https://streamlabs.com/funkyoushift/merch",
         "https://throne.com/funkyoushift"
       ],
-      "description": "FunkYouSHiFT streams Borderlands and runs a community for trading, modding help, builds, giveaways, and tools."
+      "description": "FunkYouSHiFT streams Borderlands and runs a community for trading, modding help, builds, charity events, giveaways, and resources."
     },
     {
       "@type": "WebPage",
@@ -55,7 +55,48 @@
       "about": {
         "@id": "https://www.funkyoushift.com/#funkyoushift"
       },
-      "primaryImageOfPage": "https://www.funkyoushift.com/images/team-funkyoushift-new.jpg"
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.funkyoushift.com/images/tile-msbt-v21.webp"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.funkyoushift.com/borderlands-resources.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.funkyoushift.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://www.funkyoushift.com/borderlands-resources.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.funkyoushift.com/borderlands-resources.html#msbt",
+      "name": "Matt's SDK Boosting Tools",
+      "alternateName": "MSBT",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows",
+      "softwareVersion": "1.2.0",
+      "url": "https://github.com/funkyoushift/MattsSDKBoostingTools",
+      "downloadUrl": "https://github.com/funkyoushift/MattsSDKBoostingTools/releases/latest",
+      "author": {
+        "@id": "https://www.funkyoushift.com/#funkyoushift"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Windows desktop app for Borderlands 4 boosting and item tools. Electron runs outside the game; a small SDK mod handles live actions over a bridge."
     },
     {
       "@type": "ItemList",
@@ -65,20 +106,20 @@
         {
           "@type": "ListItem",
           "position": 1,
+          "name": "Matt's SDK Boosting Tools (MSBT)",
+          "url": "https://github.com/funkyoushift/MattsSDKBoostingTools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "GZO Borderlands Editor Hub",
           "url": "https://save-editor.be/GZO/"
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "name": "BL4 SDK Mod Database",
           "url": "https://bl-sdk.github.io/oak2-mod-db/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Matt's SDK Boosting Tools",
-          "url": "https://github.com/funkyoushift/MattsSDKBoostingTools"
         },
         {
           "@type": "ListItem",

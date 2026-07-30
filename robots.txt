@@ -2,4 +2,9 @@ User-agent: *
 Disallow: /*.exe$
 Disallow: /downloads/*.exe$
 Allow: /
+
 Sitemap: https://www.funkyoushift.com/sitemap.xml
+
+# AI / LLM discovery brief
+# https://www.funkyoushift.com/llms.txt
+# https://www.funkyoushift.com/.well-known/llms.txt
