@@ -2,13 +2,13 @@
 
 Official site: https://www.funkyoushift.com/
 
-FunkYouSHiFT is a Borderlands community hub for Discord help, modding basics, builds, tools, resources, streams, giveaways, and merch.
+FunkYouSHiFT is a Borderlands modding hub for Discord help, save editors, SDK tools, builds, streams, giveaways, and merch.
 
 Primary pages:
-- https://www.funkyoushift.com/borderlands-modding.html — main modding guide and modded gear landing page
-- https://www.funkyoushift.com/borderlands-builds.html — builds, planner, creator resources, and Discord feedback
-- https://www.funkyoushift.com/borderlands-resources.html — toolbox with mod databases, editors, trainers, GenieBot, Maxroll, and creator links
-- https://www.funkyoushift.com/borderlands-discord.html — Discord community landing page
+- https://www.funkyoushift.com/borderlands-modding.html — modding guide for modded weapons, saves, and where to start
+- https://www.funkyoushift.com/borderlands-builds.html — BL4 planner, creator build videos, and Discord feedback
+- https://www.funkyoushift.com/borderlands-resources.html — save editors, MSBT, SDK mods, GZO, and install guides
+- https://www.funkyoushift.com/borderlands-discord.html — Borderlands Discord for trading, modded gear, and help
 
 Merged/redirected pages:
 - borderlands-modded-weapons.html redirects to borderlands-modding.html

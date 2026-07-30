@@ -620,3 +620,56 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
   .msbt-shot-grid { grid-template-columns:1fr; }
 }
 
+/* v4.1.2 watch platforms + merch store mockups */
+.platform-split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.platform-card {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  text-decoration:none;
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px 16px;
+  background:rgba(0,0,0,.58);
+  box-shadow:0 12px 28px rgba(0,0,0,.30);
+  min-height:140px;
+}
+.platform-card strong {
+  color:var(--orange);
+  font-size:1.45rem;
+  font-weight:1000;
+}
+.platform-card span { color:var(--muted); font-weight:800; }
+.platform-card em {
+  margin-top:auto;
+  font-style:normal;
+  font-weight:950;
+  color:#111;
+  background:linear-gradient(135deg,var(--orange),var(--red));
+  align-self:flex-start;
+  padding:.45rem .8rem;
+  border-radius:10px;
+}
+.platform-card--twitch { border-color:rgba(145,70,255,.45); }
+.platform-card--youtube { border-color:rgba(255,0,0,.35); }
+.platform-card:hover,.platform-card:focus-visible {
+  transform:translateY(-3px);
+  border-color:var(--orange);
+  outline:none;
+}
+.merch-feature-card img,.merch-card img {
+  background:#1c1c1c;
+}
+@media (max-width:760px){
+  .platform-split { grid-template-columns:1fr; }
+}
+
