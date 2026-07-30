@@ -669,6 +669,21 @@ summary { cursor:pointer; color:var(--orange); font-weight:900; }
 .merch-feature-card img,.merch-card img {
   background:#1c1c1c;
 }
+.merch-card--dual {
+  gap:12px;
+}
+.merch-card-dual-art {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.merch-card-dual-art img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  border-radius:12px;
+  background:#1c1c1c;
+}
 @media (max-width:760px){
   .platform-split { grid-template-columns:1fr; }
 }
