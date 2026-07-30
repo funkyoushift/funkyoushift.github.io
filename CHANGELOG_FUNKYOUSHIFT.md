@@ -1,4 +1,11 @@
 
+## v4.1.1 - MSBT v1.2.0 tools spotlight
+- Updated the Tools page Matt's SDK Boosting Tools section for the Electron app, oak2 v0.3 requirement, UVH/Copies/BL4 Codes highlights, and current v1.2.0 download path.
+- Added MSBT app screenshots on the Tools page.
+- Added a homepage MSBT launcher tile pointing at the Tools featured section.
+- Added `tools/index.html` so `/tools` works on GitHub Pages without relying on Cloudflare `_redirects`.
+- Bumped cache version to 4.1.1.
+
 ## v4.0.28 - Iframe upload/download support pass
 - Updated external embed loader to create iframes with broader clipboard/fullscreen permissions and clearer fallback messaging.
 - Kept production embeds unsandboxed by default because sandboxing can break file pickers, Blob downloads, and editor popups.
