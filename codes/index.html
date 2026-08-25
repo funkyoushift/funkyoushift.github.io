@@ -6,18 +6,24 @@
   <title>FunkYouBoostingTools · BL3 Codes</title>
   <meta name="description" content="Browse and submit Borderlands 3 item serials for FunkYouBoostingTools. Community collector on funkyoushift.com." />
   <link rel="canonical" href="https://www.funkyoushift.com/codes/" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="top">
-    <div>
-      <div class="brand">FunkYouBoostingTools</div>
-      <p class="sub">Borderlands 3 community codes · by FunkYouSHiFT</p>
+    <div class="brand-block">
+      <img class="brand-mark" src="logo.webp" alt="" width="40" height="40" onerror="this.style.display='none'" />
+      <div>
+        <div class="brand">FunkYouBoostingTools</div>
+        <p class="sub">Borderlands 3 community codes · by FunkYouSHiFT</p>
+      </div>
     </div>
     <nav class="nav">
       <a href="#browse" class="nav-link active" data-jump="browse">Browse</a>
       <a href="#submit" class="nav-link" data-jump="submit">Submit a code</a>
       <a id="downloadLink" class="nav-link" href="https://github.com/funkyoushift/FunkYouBoostingTools" rel="noopener" target="_blank">Download / Updates</a>
+      <a class="nav-link" href="https://github.com/funkyoushift/FunkYouBoostingTools/issues" rel="noopener" target="_blank">Support</a>
+      <a class="nav-link" href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Discord</a>
       <a class="nav-link" href="https://www.funkyoushift.com/" rel="noopener">Hub</a>
     </nav>
   </header>
@@ -58,7 +64,6 @@
             <option value="">All</option>
             <option value="lootlemon">Lootlemon</option>
             <option value="community">Community</option>
-            <option value="gzo">GZO</option>
           </select>
         </label>
       </div>
@@ -138,13 +143,26 @@
       <h2>About this collector</h2>
       <p>This is the FunkYouBoostingTools community codes desk for <strong>Borderlands 3</strong>, hosted on <a href="https://www.funkyoushift.com/">funkyoushift.com</a>. It is not a Borderlands 4 page and not save-editor.be. Downloads and updates live on <a href="https://github.com/funkyoushift/FunkYouBoostingTools">GitHub</a>. Seeded names and serials come from the public Lootlemon BL3 database. Cards use placeholders when there is no community screenshot.</p>
       <p>Owner review: <a href="review.html">review.html</a> on this domain. With the Cloudflare collector it uses the review key; without it, load <code>data/submissions.json</code> or a downloaded JSON. Locally you can also run <code>node review.js pending</code>. Approved rows go into <code>data/community.json</code>.</p>
-      <p class="meta">License: PolyForm Noncommercial · Author: FunkYouSHiFT</p>
+      <p class="meta">License: PolyForm Noncommercial · Maintained by FunkYouSHiFT</p>
     </section>
   </main>
 
+  <footer class="site-foot">
+    <img class="brand-mark" src="logo.webp" alt="" width="32" height="32" onerror="this.style.display='none'" />
+    <nav class="foot-links">
+      <a href="https://github.com/funkyoushift/FunkYouBoostingTools" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://github.com/funkyoushift/FunkYouBoostingTools/releases" rel="noopener" target="_blank">Downloads</a>
+      <a href="https://github.com/funkyoushift/FunkYouBoostingTools/issues" rel="noopener" target="_blank">Support</a>
+      <a href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Discord</a>
+      <a href="https://www.funkyoushift.com/codes/">Codes</a>
+      <a href="https://www.funkyoushift.com/">Website</a>
+    </nav>
+    <p class="meta">PolyForm Noncommercial · Maintained by FunkYouSHiFT. Downloads stay on GitHub, not this page.</p>
+  </footer>
+
   <div id="toast" hidden></div>
-  <script src="config.js"></script>
-  <script src="shared/fields.js"></script>
-  <script src="app.js"></script>
+  <script src="config.js?v=3"></script>
+  <script src="shared/fields.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

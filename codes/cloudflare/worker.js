@@ -76,7 +76,9 @@ async function githubFile(env, path) {
   if (res.status === 404) return { sha: null, data: { ok: true, count: 0, items: [] } };
   if (!res.ok) throw new Error(`GitHub read failed (${res.status})`);
   const meta = await res.json();
-  const text = atob(String(meta.content || "").replace(/\n/g, ""));
+  const binary = atob(String(meta.content || "").replace(/\n/g, ""));
+  const bytes = Uint8Array.from(binary, (ch) => ch.charCodeAt(0));
+  let text = new TextDecoder("utf-8").decode(bytes).replace(/^\uFEFF/, "");
   return { sha: meta.sha, data: JSON.parse(text || "{}") };
 }
 
@@ -118,6 +120,14 @@ export default {
     const url = new URL(req.url);
     const path = url.pathname.replace(/\/+$/, "") || "/";
     try {
+      if (req.method === "GET" && (path.endsWith("/api") || path.endsWith("/api/health"))) {
+        return json(200, {
+          ok: true,
+          service: "funkyoushift-bl3-codes",
+          submit: "https://www.funkyoushift.com/codes/api/submit",
+          configured: Boolean(env.GITHUB_TOKEN),
+        });
+      }
       if (req.method === "GET" && path.endsWith("/api/schema")) {
         return json(200, {
           $id: "funkyou.bl3.item-code-submission",
@@ -126,12 +136,23 @@ export default {
         });
       }
       if (req.method === "GET" && path.endsWith("/api/submissions")) {
+        if (!env.GITHUB_TOKEN) {
+          return json(503, { ok: false, error: "Collector is missing GITHUB_TOKEN." });
+        }
         if (!reviewOk(req, env)) return json(403, { ok: false, error: "Review key required." });
         const file = await githubFile(env, env.SUBMISSIONS_PATH);
         return json(200, file.data);
       }
       if (req.method === "POST" && path.endsWith("/api/submit")) {
-        const payload = await req.json();
+        if (!env.GITHUB_TOKEN) {
+          return json(503, { ok: false, error: "Collector is missing GITHUB_TOKEN." });
+        }
+        let payload = {};
+        try {
+          payload = await req.json();
+        } catch (err) {
+          return json(400, { ok: false, error: "JSON body required." });
+        }
         const checked = validate(payload);
         if (!checked.ok) return json(400, { ok: false, errors: checked.errors });
         const file = await githubFile(env, env.SUBMISSIONS_PATH);
@@ -155,8 +176,16 @@ export default {
         });
       }
       if (req.method === "POST" && path.endsWith("/api/review")) {
+        if (!env.GITHUB_TOKEN) {
+          return json(503, { ok: false, error: "Collector is missing GITHUB_TOKEN." });
+        }
         if (!reviewOk(req, env)) return json(403, { ok: false, error: "Review key required." });
-        const body = await req.json();
+        let body = {};
+        try {
+          body = await req.json();
+        } catch (err) {
+          return json(400, { ok: false, error: "JSON body required." });
+        }
         const id = trim(body && body.id);
         const action = trim(body && body.action);
         const pending = await githubFile(env, env.SUBMISSIONS_PATH);

@@ -115,8 +115,10 @@
       return;
     }
     grid.innerHTML = items.map((item) => {
-      const img = item.imageUrl || placeholder(item);
-      const source = item.source === "lootlemon" ? "Lootlemon" : item.source === "gzo" ? "GZO" : item.submitter || "Community";
+      const rawImg = String(item.imageUrl || "");
+      const blocked = /cdn\.discordapp\.com|media\.discordapp\.net/i.test(rawImg) || /^https?:\/\/cdn\.prod\.website-files\.com/i.test(rawImg);
+      const img = (!rawImg || blocked) ? placeholder(item) : rawImg;
+      const source = item.source === "lootlemon" ? "Lootlemon" : item.submitter || "Community";
       const more = item.url ? `<a class="more" href="${esc(item.url)}" target="_blank" rel="noopener">Lootlemon page</a>` : "";
       return `<article class="card${picked.has(item.id) ? " picked" : ""}" data-id="${esc(item.id)}">
         <div class="thumb">
@@ -236,6 +238,18 @@
     });
   }
 
+  async function readJsonResponse(res) {
+    const text = await res.text();
+    const type = res.headers.get("content-type") || "";
+    if (/json/i.test(type) || /^\s*[{[]/.test(text || "")) {
+      try { return JSON.parse(text); } catch (err) { /* fall through */ }
+    }
+    if (res.status === 405 || res.status === 404) {
+      return { ok: false, error: "Collector is not attached yet (GitHub Pages " + res.status + "). Use Download JSON instead." };
+    }
+    return { ok: false, error: "Submit failed (" + res.status + ")." };
+  }
+
   $("submitForm").addEventListener("submit", async (event) => {
     event.preventDefault();
     const payload = formPayload();
@@ -248,13 +262,13 @@
     $("submitBtn").disabled = true;
     $("formStatus").textContent = "Sending…";
     try {
-      payload.imageData = await readImage();
+      if (localHost) payload.imageData = await readImage();
       const res = await fetch(apiUrl("/api/submit"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = await res.json();
+      const data = await readJsonResponse(res);
       if (!res.ok || !data.ok) {
         showErrors(data.errors || []);
         throw new Error((data.errors && data.errors[0] && data.errors[0].message) || data.error || "Submit failed");
@@ -271,6 +285,10 @@
     }
   });
 
+  $("submitForm").addEventListener("reset", () => {
+    showErrors([]);
+  });
+
   $("exportJson").onclick = async () => {
     const payload = formPayload();
     const checked = F.validate(payload);
@@ -281,11 +299,13 @@
     } catch (err) {
       return toast(err.message, false);
     }
-    const blob = new Blob([JSON.stringify({ schema: "funkyou.bl3.item-code-submission", version: F.VERSION, item: checked.value }, null, 2)], { type: "application/json" });
+    const blob = new Blob([JSON.stringify({ schema: "funkyou.bl3.item-code-submission", version: F.VERSION, item: checked.value }, null, 2) + "\n"], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = `${checked.value.name.replace(/[^\w]+/g, "-") || "bl3-code"}.json`;
+    document.body.appendChild(a);
     a.click();
+    a.remove();
     URL.revokeObjectURL(a.href);
     toast("Downloaded JSON — send it to FunkYouSHiFT");
   };
@@ -330,7 +350,7 @@
       ]);
       const seedItems = seed.status === "fulfilled" ? seed.value.items || [] : [];
       const liveItems = community.status === "fulfilled" ? community.value.items || [] : [];
-      catalog = [...seedItems, ...liveItems];
+      catalog = [...seedItems, ...liveItems].filter((item) => item && item.source !== "gzo");
     }
     fillSelect("fCategory", unique(catalog.map((item) => item.category || F.categoryFor(item))));
     fillSelect("fType", unique(catalog.map((item) => item.type)));

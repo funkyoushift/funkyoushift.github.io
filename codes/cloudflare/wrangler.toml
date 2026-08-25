@@ -1,9 +1,12 @@
 name = "funkyoushift-bl3-codes"
 main = "worker.js"
 compatibility_date = "2026-08-24"
+workers_dev = true
 
-# After first deploy, attach a custom domain route in Cloudflare:
-#   www.funkyoushift.com/codes/api/*
+# GitHub Pages cannot POST. This Worker owns only the collector paths.
+[[routes]]
+pattern = "www.funkyoushift.com/codes/api/*"
+zone_name = "funkyoushift.com"
 
 [vars]
 GITHUB_OWNER = "funkyoushift"

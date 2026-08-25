@@ -7,6 +7,8 @@ Community serial browser + submit form for **Borderlands 3**.
 | Live codes + submissions | https://www.funkyoushift.com/codes/ |
 | Form POST | `POST https://www.funkyoushift.com/codes/api/submit` |
 | App download / updates | https://github.com/funkyoushift/FunkYouBoostingTools (Releases when they exist) |
+| Support | https://github.com/funkyoushift/FunkYouBoostingTools/issues |
+| Discord | https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084 |
 | Hub | https://www.funkyoushift.com/ |
 
 This folder is **not** the download host. The Electron app stays on GitHub.
@@ -66,6 +68,7 @@ Same field names as production.
 From this repo, copy `web/` public files into `funkyoushift.github.io/codes/`:
 
 - `index.html`, `styles.css`, `app.js`, `config.js`, `review.html`
+- `logo.webp`, `favicon.ico`
 - `shared/`, `schema/`, `data/codes.json`, `data/community.json`
 - empty `data/submissions.json`
 - `.nojekyll`
@@ -103,10 +106,12 @@ returns 404. Use **Download JSON instead** only as a backup.
 
 ## What’s left for FunkYouSHiFT
 
-1. Confirm GitHub Pages built `codes/` (purge CF cache if the old 404 sticks).
-2. Deploy the Worker + secrets + `/codes/api/*` route (form will then persist).
-3. Publish a FunkYouBoostingTools **Release** — Download / Updates will switch
-   from the repo page to `/releases` automatically.
-4. Optional: add the same form POST inside the Electron Items/Spawn pane.
+1. If Submit still 405s, attach the Worker route in Cloudflare → Workers →
+   `funkyoushift-bl3-codes` → Triggers: `www.funkyoushift.com/codes/api/*`
+2. Secrets (if not already set):
+   `npx wrangler secret put GITHUB_TOKEN`
+   `npx wrangler secret put REVIEW_KEY`
+   `GITHUB_TOKEN` needs `contents:write` on `funkyoushift.github.io` only.
+3. Optional later: FunkYouBoostingTools Items/Spawn can POST the same JSON.
 
 Do not put Discord tokens on this site. Do not host the `.exe` here.
