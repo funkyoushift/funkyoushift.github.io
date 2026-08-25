@@ -15,8 +15,9 @@
       "imageUrl": "",
       "category": "Other",
       "source": "community",
-      "status": "pending",
-      "submittedAt": "2026-08-25T04:17:00.219Z"
+      "status": "rejected",
+      "submittedAt": "2026-08-25T04:17:00.219Z",
+      "reviewedAt": "2026-08-25T04:21:11.402Z"
     },
     {
       "id": "sub-ab6157354c764194",
