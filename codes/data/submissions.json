@@ -1,5 +1,22 @@
-﻿{
+{
   "ok": true,
-  "count": 0,
-  "items": []
+  "count": 1,
+  "items": [
+    {
+      "id": "sub-0566a5108309475b",
+      "name": "Cursor test serial",
+      "serial": "BL3(ABCDEFGH)",
+      "type": "Other",
+      "rarity": "",
+      "manufacturer": "",
+      "notes": "fake test from collector deploy reject me",
+      "submitter": "collector-test",
+      "discord": "",
+      "imageUrl": "",
+      "category": "Other",
+      "source": "community",
+      "status": "pending",
+      "submittedAt": "2026-08-25T04:17:00.219Z"
+    }
+  ]
 }
