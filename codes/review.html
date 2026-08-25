@@ -9,6 +9,43 @@
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
     .serial { font-family: ui-monospace, Consolas, monospace; font-size: 12px; overflow-wrap: anywhere; }
+    .notice {
+      border: 1px solid var(--gold);
+      background: #2a1f10;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+    .notice.bad {
+      border-color: var(--bad);
+      background: #2a1212;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: end;
+      margin: 12px 0;
+    }
+    .toolbar label { margin: 0; min-width: 220px; }
+    .file-btn {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      background: #1a140c;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .file-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .file-btn input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -24,73 +61,23 @@
   <main>
     <section class="panel">
       <h1>Pending submissions</h1>
-      <p class="meta" id="meta">On the live site, paste the Cloudflare REVIEW_KEY. Localhost does not need one.</p>
-      <label>Review key
-        <input id="reviewKey" type="password" autocomplete="off" placeholder="local: leave blank" />
-      </label>
+      <p class="meta" id="meta">Checking the collector…</p>
+      <div id="notice" class="notice" hidden></div>
+      <div class="toolbar">
+        <label>Review key
+          <input id="reviewKey" type="password" autocomplete="off" placeholder="needed for the live queue" />
+        </label>
+        <button type="button" class="primary" id="loadLive">Load live queue</button>
+        <button type="button" id="loadSite">Load site JSON</button>
+        <label class="file-btn">Open downloaded JSON
+          <input id="localFile" type="file" accept="application/json,.json" />
+        </label>
+        <button type="button" id="downloadStore" hidden>Download reviewed JSON</button>
+      </div>
       <div id="box" class="hint">Loading…</div>
     </section>
   </main>
   <script src="config.js"></script>
-  <script>
-    const localHost = location.hostname === "127.0.0.1" || location.hostname === "localhost";
-    const apiBase = localHost ? "" : ((window.FUNK_CODES && window.FUNK_CODES.apiBase) || "https://www.funkyoushift.com/codes/api");
-    function headers() {
-      const key = document.getElementById("reviewKey").value.trim();
-      const out = { "Content-Type": "application/json" };
-      if (key) out["X-Review-Key"] = key;
-      return out;
-    }
-    async function load() {
-      const box = document.getElementById("box");
-      const res = await fetch(listUrl(), {
-        cache: "no-store",
-        headers: headers(),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        box.textContent = data.error || "Cannot read the queue.";
-        return;
-      }
-      const pending = (data.items || []).filter((row) => row.status === "pending");
-      document.getElementById("meta").textContent = `${pending.length} pending · ${data.items.length} total`;
-      if (!pending.length) {
-        box.innerHTML = "<p>Queue is empty.</p>";
-        return;
-      }
-      box.innerHTML = `<table><thead><tr><th>Item</th><th>Serial</th><th>From</th><th></th></tr></thead><tbody>${
-        pending.map((row) => `<tr>
-          <td><strong>${esc(row.name)}</strong><br><span class="meta">${esc(row.type || "—")} · ${esc(row.rarity || "—")}</span></td>
-          <td class="serial">${esc(row.serial)}</td>
-          <td>${esc(row.submitter || "anon")}<br><span class="meta">${esc(row.discord || "")}</span></td>
-          <td>
-            <button type="button" class="primary" data-act="approve" data-id="${esc(row.id)}">Approve</button>
-            <button type="button" data-act="reject" data-id="${esc(row.id)}">Reject</button>
-          </td>
-        </tr>`).join("")
-      }</tbody></table>`;
-    }
-    function esc(value) {
-      return String(value || "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
-    }
-    function reviewUrl() {
-      return localHost ? "/api/review" : `${apiBase}/review`;
-    }
-    function listUrl() {
-      return localHost ? "/api/submissions" : `${apiBase}/submissions`;
-    }
-    document.getElementById("box").addEventListener("click", async (event) => {
-      const btn = event.target.closest("[data-act]");
-      if (!btn) return;
-      await fetch(reviewUrl(), {
-        method: "POST",
-        headers: headers(),
-        body: JSON.stringify({ id: btn.dataset.id, action: btn.dataset.act }),
-      });
-      load();
-    });
-    document.getElementById("reviewKey").addEventListener("change", load);
-    load();
-  </script>
+  <script src="review-page.js?v=2"></script>
 </body>
 </html>
