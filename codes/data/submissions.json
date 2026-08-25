@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "count": 1,
+  "count": 2,
   "items": [
     {
       "id": "sub-0566a5108309475b",
@@ -17,6 +17,22 @@
       "source": "community",
       "status": "pending",
       "submittedAt": "2026-08-25T04:17:00.219Z"
+    },
+    {
+      "id": "sub-ab6157354c764194",
+      "name": "Second collector test",
+      "serial": "BL3(ABCDEFGH)",
+      "type": "",
+      "rarity": "",
+      "manufacturer": "",
+      "notes": "second fake test reject me",
+      "submitter": "collector-test",
+      "discord": "",
+      "imageUrl": "",
+      "category": "Other",
+      "source": "community",
+      "status": "pending",
+      "submittedAt": "2026-08-25T04:18:55.817Z"
     }
   ]
 }
