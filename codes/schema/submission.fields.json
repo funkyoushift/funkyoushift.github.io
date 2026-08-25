@@ -1,0 +1,32 @@
+{
+  "$id": "funkyou.bl3.item-code-submission",
+  "title": "FunkYouBoostingTools BL3 community code submission",
+  "version": 1,
+  "description": "Stable field names for the codes website and later Electron Items/Spawn form.",
+  "required": ["name", "serial"],
+  "fields": {
+    "name": { "type": "string", "required": true, "maxLength": 120 },
+    "serial": {
+      "type": "string",
+      "required": true,
+      "pattern": "^BL3\\([A-Za-z0-9+/=\\-_]{8,}\\)$",
+      "description": "BL3 serial, base64 inside BL3(...)"
+    },
+    "type": {
+      "type": "string",
+      "required": false,
+      "enum": ["AR", "Pistol", "Shotgun", "SMG", "Sniper", "Heavy", "Grenade", "Shield", "Class Mod", "Artifact", "Other"]
+    },
+    "rarity": {
+      "type": "string",
+      "required": false,
+      "enum": ["Common", "Uncommon", "Rare", "Epic", "Legendary"]
+    },
+    "manufacturer": { "type": "string", "required": false, "maxLength": 80 },
+    "notes": { "type": "string", "required": false, "maxLength": 2000 },
+    "submitter": { "type": "string", "required": false, "maxLength": 80, "description": "Display name" },
+    "discord": { "type": "string", "required": false, "maxLength": 80, "description": "Discord tag, not a token" },
+    "imageUrl": { "type": "string", "required": false, "maxLength": 500 }
+  },
+  "serverAdds": ["id", "submittedAt", "status", "source", "imageName", "category"]
+}

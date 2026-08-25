@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review queue · FunkYouBoostingTools</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .serial { font-family: ui-monospace, Consolas, monospace; font-size: 12px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="brand">FunkYouBoostingTools</div>
+      <p class="sub">Review queue · pending → data/community.json on funkyoushift.com</p>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="./">Back to browser</a>
+    </nav>
+  </header>
+  <main>
+    <section class="panel">
+      <h1>Pending submissions</h1>
+      <p class="meta" id="meta">On the live site, paste the Cloudflare REVIEW_KEY. Localhost does not need one.</p>
+      <label>Review key
+        <input id="reviewKey" type="password" autocomplete="off" placeholder="local: leave blank" />
+      </label>
+      <div id="box" class="hint">Loading…</div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script>
+    const localHost = location.hostname === "127.0.0.1" || location.hostname === "localhost";
+    const apiBase = localHost ? "" : ((window.FUNK_CODES && window.FUNK_CODES.apiBase) || "https://www.funkyoushift.com/codes/api");
+    function headers() {
+      const key = document.getElementById("reviewKey").value.trim();
+      const out = { "Content-Type": "application/json" };
+      if (key) out["X-Review-Key"] = key;
+      return out;
+    }
+    async function load() {
+      const box = document.getElementById("box");
+      const res = await fetch(listUrl(), {
+        cache: "no-store",
+        headers: headers(),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        box.textContent = data.error || "Cannot read the queue.";
+        return;
+      }
+      const pending = (data.items || []).filter((row) => row.status === "pending");
+      document.getElementById("meta").textContent = `${pending.length} pending · ${data.items.length} total`;
+      if (!pending.length) {
+        box.innerHTML = "<p>Queue is empty.</p>";
+        return;
+      }
+      box.innerHTML = `<table><thead><tr><th>Item</th><th>Serial</th><th>From</th><th></th></tr></thead><tbody>${
+        pending.map((row) => `<tr>
+          <td><strong>${esc(row.name)}</strong><br><span class="meta">${esc(row.type || "—")} · ${esc(row.rarity || "—")}</span></td>
+          <td class="serial">${esc(row.serial)}</td>
+          <td>${esc(row.submitter || "anon")}<br><span class="meta">${esc(row.discord || "")}</span></td>
+          <td>
+            <button type="button" class="primary" data-act="approve" data-id="${esc(row.id)}">Approve</button>
+            <button type="button" data-act="reject" data-id="${esc(row.id)}">Reject</button>
+          </td>
+        </tr>`).join("")
+      }</tbody></table>`;
+    }
+    function esc(value) {
+      return String(value || "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+    }
+    function reviewUrl() {
+      return localHost ? "/api/review" : `${apiBase}/review`;
+    }
+    function listUrl() {
+      return localHost ? "/api/submissions" : `${apiBase}/submissions`;
+    }
+    document.getElementById("box").addEventListener("click", async (event) => {
+      const btn = event.target.closest("[data-act]");
+      if (!btn) return;
+      await fetch(reviewUrl(), {
+        method: "POST",
+        headers: headers(),
+        body: JSON.stringify({ id: btn.dataset.id, action: btn.dataset.act }),
+      });
+      load();
+    });
+    document.getElementById("reviewKey").addEventListener("change", load);
+    load();
+  </script>
+</body>
+</html>

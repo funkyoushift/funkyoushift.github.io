@@ -1,0 +1,15 @@
+name = "funkyoushift-bl3-codes"
+main = "worker.js"
+compatibility_date = "2026-08-24"
+
+# After first deploy, attach a custom domain route in Cloudflare:
+#   www.funkyoushift.com/codes/api/*
+
+[vars]
+GITHUB_OWNER = "funkyoushift"
+GITHUB_REPO = "funkyoushift.github.io"
+SUBMISSIONS_PATH = "codes/data/submissions.json"
+COMMUNITY_PATH = "codes/data/community.json"
+# Set secrets (not in this file):
+#   wrangler secret put GITHUB_TOKEN
+#   wrangler secret put REVIEW_KEY
