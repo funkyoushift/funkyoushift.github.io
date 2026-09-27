@@ -96,9 +96,10 @@ def local_target(page: str, reference: str) -> str | None:
         path = path[1:]
     else:
         path = posixpath.join(posixpath.dirname(page), path)
+    directory_reference = path.endswith("/")
     path = posixpath.normpath(path)
-    if path.endswith("/"):
-        path += "index.html"
+    if directory_reference:
+        path = posixpath.join(path, "index.html")
     return path
 
 
