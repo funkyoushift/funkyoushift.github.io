@@ -1,3 +1,11 @@
+# Current deployment
+
+The live site uses GitHub Pages from the main branch of funkyoushift/funkyoushift.github.io, proxied by Cloudflare. Validate changes with `python validate_site.py`, push reviewed commits, and verify the Pages build and live pages. The phone install page is served from the MattsSDKBoostingTools repository docs directory at its existing URL.
+
+The September 29 release update documents Borderlands 4 Modding Tools — Powered by Funk v2.21.0 and Android v1.4.3. Download links point to GitHub Releases; preserve the legacy URLs and filenames.
+
+## Historical deployment notes
+
 # FunkYouSHiFT v3.1.0 Full Human Tone + SEO Pass
 
 Upload the contents of this ZIP to the site root, replacing existing files.
