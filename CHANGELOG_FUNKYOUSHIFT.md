@@ -1,3 +1,7 @@
+## 2026-09-29 — Borderlands 4 Modding Tools v2.21.0
+
+Published the new product identity with Mattmab attribution, current Windows/Android download guidance, persistent Remote AFK instructions, and stable legacy download paths.
+
 
 ## v4.1.1 - MSBT v1.2.0 tools spotlight
 - Updated the Tools page Matt's SDK Boosting Tools section for the Electron app, oak2 v0.3 requirement, UVH/Copies/BL4 Codes highlights, and current v1.2.0 download path.

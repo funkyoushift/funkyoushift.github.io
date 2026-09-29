@@ -41,3 +41,5 @@ FunkYouSHiFT is an unofficial Borderlands community hub and streamer site. The s
 - `/tools`, `/save-editors`, `/modding-tools`, `/sdk-mods` → `/borderlands-resources.html`
 - `/discord` → `/borderlands-discord.html`
 - Older weapon/trading/build-video URLs redirect to the current Modding, Discord, or Builds pages
+
+Borderlands 4 Modding Tools — Powered by Funk: desktop/SDK v2.21.0 and Android v1.4.3. Original project by Mattmab. Remote AFK supports cellular/off-network control with persistent pairing; the PC and game must be running. Existing MSBT download filenames and URLs remain compatible. Release: https://github.com/funkyoushift/MattsSDKBoostingTools/releases/tag/v2.21.0
