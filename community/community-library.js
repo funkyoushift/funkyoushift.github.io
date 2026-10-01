@@ -19,7 +19,7 @@
       const response=await this.fetcher(ORIGIN+'/api/v1'+route,{credentials:'omit',redirect:'error',signal:AbortSignal.timeout(60000)});
       const reader=response.body?.getReader();if(!reader)throw new LibraryError('Empty library response.',response.status);
       const parts=[];let length=0;
-      try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>16*1024*1024+262144){await reader.cancel();throw new LibraryError('Library response is too large.',response.status);}parts.push(value);}}finally{reader.releaseLock();}
+      try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>16*1024*1024+2097152){await reader.cancel();throw new LibraryError('Library response is too large.',response.status);}parts.push(value);}}finally{reader.releaseLock();}
       let data;try{data=JSON.parse(await new Blob(parts).text());}catch{throw new LibraryError('Library returned invalid JSON.',response.status);}
       if(!response.ok||data.ok!==true)throw new LibraryError(data.message||'Library request failed.',response.status);
       return data;

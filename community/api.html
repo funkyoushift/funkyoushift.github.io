@@ -52,6 +52,7 @@ if page['folders']:
     result = library.get_folder(page['folders'][0]['id'])
     for item in result['folder']['items']:
         print(item['name'], item['folder'], item['serial'])</code></pre></section>
+<section><h2>Item titles and screenshots</h2><p>Folder responses include <code>item_details</code>, keyed by the SHA-256 hash of the complete, case-sensitive item code. Use the GZO <code>title</code> when present, otherwise keep the saved item name. Display <code>image_url</code> for the uploaded screenshot or exact-match GZO image. Keep <code>title_source</code> and <code>image_source</code> visible as credit. These optional details are separate from the original folder and its integrity digest.</p><p>Missing or conflicting matches stay blank. Imported image links can become unavailable if their source is withdrawn.</p></section>
 <section><h2>Integration rules</h2><ul>
 <li>Preserve serial case, duplicates, item order, names, and nested paths. Folder paths are labels; never use them as filesystem paths.</li>
 <li>Only approved collections are public. A private, missing, rejected, or withdrawn folder returns 404. Imported copies belong to the user and should not be silently overwritten.</li>

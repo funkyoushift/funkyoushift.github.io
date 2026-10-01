@@ -7,7 +7,7 @@ import urllib.request
 
 ENDPOINT = 'https://msbt-community-library.screename53.workers.dev'
 WEBSITE = 'https://www.funkyoushift.com/community/'
-MAX_BYTES = 16 * 1024 * 1024 + 262144
+MAX_BYTES = 16 * 1024 * 1024 + 2097152
 ID = re.compile(r'[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}', re.I)
 SERIAL = re.compile(r'@U[0-9A-Za-z!#$%&()*+\-;<=>?@^_`{/}~]+')
 
