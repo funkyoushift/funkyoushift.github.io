@@ -1,0 +1,3 @@
+# Keep the machine-readable discovery mirror in the published static site.
+include:
+  - .well-known
