@@ -6,6 +6,9 @@ FunkYouSHiFT is an unofficial Borderlands community hub and streamer site. The s
 
 ## Primary pages (start here)
 
+- https://www.funkyoushift.com/community/ — Borderlands 4 item codes and community library: approved shared gear collections, exact serials, folder previews, code copying, downloads; no account needed to browse
+- https://www.funkyoushift.com/community/api.html — Read-only BL4 community API for websites, apps, bots and SDK mods; JavaScript/Python clients and OpenAPI specification
+
 - https://www.funkyoushift.com/borderlands-discord.html — Borderlands Discord for BL3/BL4 trading, modded gear help, builds, and community support
 - https://www.funkyoushift.com/borderlands-modding.html — Plain-language Borderlands modding guide (modded weapons, saves, SDK mods, where to start)
 - https://www.funkyoushift.com/borderlands-resources.html — Tools hub: save editors, Borderlands 4 Modding Tools — Powered by Funk, SDK mod databases, guides
@@ -43,3 +46,12 @@ FunkYouSHiFT is an unofficial Borderlands community hub and streamer site. The s
 - Older weapon/trading/build-video URLs redirect to the current Modding, Discord, or Builds pages
 
 Borderlands 4 Modding Tools — Powered by Funk: desktop/SDK v2.21.0 and Android v1.4.3. Original project by Mattmab. Remote AFK supports cellular/off-network control with persistent pairing; the PC and game must be running. Existing MSBT download filenames and URLs remain compatible. Release: https://github.com/funkyoushift/MattsSDKBoostingTools/releases/tag/v2.21.0
+
+## Community library details
+
+- Item serials are encoded @U codes, not SHiFT reward redemption codes.
+- Search collection titles or creator names; available collections depend on approved community submissions.
+- The website previews and downloads folders; it does not edit saves or execute game actions.
+- Preserve serial case, duplicate entries, item order and nested folder labels.
+- Admin sign-in is separate; registering does not grant moderation permissions.
+- Public API specification: https://www.funkyoushift.com/community/openapi.json

@@ -70,7 +70,7 @@ class PageParser(HTMLParser):
 
 def tracked_files() -> set[str]:
     output = subprocess.check_output(
-        ["git", "ls-files"], cwd=ROOT, text=True, encoding="utf-8"
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard"], cwd=ROOT, text=True, encoding="utf-8"
     )
     deleted = set(
         subprocess.check_output(
@@ -96,7 +96,7 @@ def local_target(page: str, reference: str) -> str | None:
         path = path[1:]
     else:
         path = posixpath.join(posixpath.dirname(page), path)
-    directory_reference = path.endswith("/")
+    directory_reference = path.endswith("/") or path.endswith("/.")
     path = posixpath.normpath(path)
     if directory_reference:
         path = posixpath.join(path, "index.html")

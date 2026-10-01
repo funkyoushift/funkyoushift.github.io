@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Borderlands 4 Community API &amp; SDK Integration | FunkYouSHiFT</title>
+<meta name="description" content="Connect any website, app or SDK mod to the Borderlands 4 community library with a free-to-read API, JavaScript and Python clients.">
+<link rel="canonical" href="https://www.funkyoushift.com/community/api.html"><link rel="stylesheet" href="library.css">
+<style>pre{padding:20px;border:1px solid #554669;border-radius:10px;background:#1c1928;overflow:auto;line-height:1.6}code{overflow-wrap:anywhere}section{margin-top:40px}li{margin:12px 0}table{width:100%;border-collapse:collapse}th,td{padding:12px;text-align:left;border-bottom:1px solid #554669;overflow-wrap:anywhere}</style>
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:title" content="Borderlands 4 Community Library API">
+<meta property="og:description" content="Add approved BL4 item collections to your website, app or SDK mod. Read-only API with JavaScript and Python clients.">
+<meta property="og:url" content="https://www.funkyoushift.com/community/api.html">
+<meta property="og:image" content="https://www.funkyoushift.com/images/team-funkyoushift-new.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Borderlands 4 Community Library API",
+  "description": "Public read-only API documentation and JavaScript/Python integration clients for approved Borderlands 4 item collections.",
+  "url": "https://www.funkyoushift.com/community/api.html",
+  "inLanguage": "en",
+  "author": {
+    "@id": "https://www.funkyoushift.com/#funkyoushift"
+  },
+  "isPartOf": {
+    "@id": "https://www.funkyoushift.com/#website"
+  }
+}</script></head><body><header><a class="brand" href="/">FunkYouSHiFT</a><nav aria-label="Main navigation"><a href="./">Community library</a><a href="https://msbt-community-library.screename53.workers.dev/portal">Admin sign in</a></nav></header><main>
+<p class="eyebrow">BUILD WITH THE COMMUNITY</p><h1>One library. Your interface.</h1>
+<p class="intro">Bring approved Borderlands 4 item collections into your website, desktop app, bot, or SDK mod. Public reads need no account or API key. Keep your own design and decide how users import items.</p>
+<div class="actions"><a href="community-api-kit.zip">Download integration kit</a><a href="openapi.json">OpenAPI specification</a><a href="community-library.js">JavaScript client</a><a href="community_library.py">Python client</a></div>
+<section><h2>Start with two requests</h2><p>Base URL: <code>https://msbt-community-library.screename53.workers.dev/api/v1</code></p>
+<table><thead><tr><th>Request</th><th>What you get</th></tr></thead><tbody><tr><td><code>GET /folders?q=Vex&amp;offset=0</code></td><td>Search titles and creators. Up to 25 results and a next offset.</td></tr><tr><td><code>GET /folders/{id}</code></td><td>The approved collection, its ordered items, relative folder paths, and SHA-256 digest.</td></tr></tbody></table>
+<p>Read the returned <code>next</code> value for pagination; stop when it is <code>null</code>. Collections may change while paging. Public browser requests work from any origin without cookies. Administrative and submission routes are separate.</p></section>
+<section><h2>JavaScript: browser or Node 20+</h2><p>Copy the downloaded client into your project. In a browser, load it with a script tag. In Node, use <code>const CommunityLibrary = require('./community-library.js')</code>.</p>
+<pre><code>&lt;script src="community-library.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+async function loadCollection() {
+  const library = new CommunityLibrary();
+  const page = await library.list({ query: 'Vex' });
+  if (!page.folders.length) return;
+  const result = await library.get(page.folders[0].id);
+  // result.folder.items: { name, folder, serial }[]
+  // Render text with textContent; import only after user confirmation.
+  console.log(result.folder, library.shareLink(result.id));
+}
+loadCollection().catch(console.error);
+&lt;/script&gt;</code></pre>
+<p>The client verifies the digest before returning a folder, caps downloads, sets a timeout, and rejects redirects. Errors include a <code>status</code> property when there is an HTTP response.</p></section>
+<section><h2>Python: no dependencies</h2><p>Copy <code>community_library.py</code> next to your code. In a game mod, fetch on a background thread and pass results to the game thread before touching UI or Unreal objects.</p>
+<pre><code>import community_library as library
+
+page = library.list_folders('Vex')
+if page['folders']:
+    result = library.get_folder(page['folders'][0]['id'])
+    for item in result['folder']['items']:
+        print(item['name'], item['folder'], item['serial'])</code></pre></section>
+<section><h2>Integration rules</h2><ul>
+<li>Preserve serial case, duplicates, item order, names, and nested paths. Folder paths are labels; never use them as filesystem paths.</li>
+<li>Only approved collections are public. A private, missing, rejected, or withdrawn folder returns 404. Imported copies belong to the user and should not be silently overwritten.</li>
+<li>The service currently allows 120 read requests per minute per IP, shared across clients and read routes. Do not poll constantly. On 429, wait at least 60 seconds; use bounded backoff for network failures and 503 responses.</li>
+<li>Folder content is limited to 16 MiB. Page item previews rather than rendering thousands of rows at once.</li>
+<li>Codes are format-checked, not proven legitimate or safe to equip. The digest detects changed contents; it does not verify the creator’s identity.</li>
+<li>This v1 API is read-only. It cannot publish, edit, delete, approve, or grant team access. Keep admin credentials out of integrations.</li>
+</ul></section>
+<section><h2>Admin access</h2><p><a href="https://msbt-community-library.screename53.workers.dev/portal">Sign in to the admin portal</a> with your individual account. The owner assigns access: reviewers approve or reject; editors also edit; admins also delete; the owner manages the team. A new account has no team permissions.</p><p>Password changes are available. Email verification and forgotten-password recovery are not configured yet.</p></section>
+</main><footer><a href="./">Back to the community library</a></footer></body></html>
