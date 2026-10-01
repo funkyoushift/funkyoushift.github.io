@@ -18,7 +18,7 @@
 <link rel="icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="library.css">
 <script src="contract.js" defer></script>
-<script src="library.js?v=20261001-2" defer></script>
+<script src="library.js?v=20261001-3" defer></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -71,6 +71,7 @@
 <form id="search" method="get" action="/community/"><label for="query">Find a folder or creator</label><div class="search-row"><input id="query" name="q" type="search" maxlength="100" placeholder="Search collections…"><button>Search</button></div></form>
 <nav class="search-topics" aria-label="Search collections by Vault Hunter"><span>Try a Vault Hunter:</span><a href="?q=Vex">Vex</a><a href="?q=Rafa">Rafa</a><a href="?q=Amon">Amon</a><a href="?q=Harlowe">Harlowe</a><a href="?q=C4SH">C4SH</a><a href="?q=Loveless">Loveless</a></nav>
 <noscript><p>Enable JavaScript to search and preview live collections. Developers can also read approved folders through the <a href="api.html">public community library API</a>.</p></noscript>
+<label for="page-size">Folders per page</label><select id="page-size"><option>25</option><option>50</option><option selected>100</option></select>
 <p id="status" role="status" aria-live="polite">Loading community folders…</p>
 <div id="collections" class="collections"></div>
 <button id="more" type="button" hidden>Load more folders</button>

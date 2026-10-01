@@ -14,7 +14,7 @@ async function request(route){
 async function browse(append=false){
   const run=++listRun;$('status').textContent='Loading community folders…';$('more').disabled=true;
   if(!append){$('collections').replaceChildren();next=null;$('more').hidden=true;}
-  try{const data=await request('/folders?'+new URLSearchParams({q:query,offset:append?next||0:0}));if(run!==listRun)return;
+  try{const data=await request('/folders?'+new URLSearchParams({q:query,offset:append?next||0:0,limit:$('page-size').value}));if(run!==listRun)return;
     for(const folder of data.folders){const card=node('article','');card.className='collection';card.append(node('h2',credited(folder.title,folder.creator)),node('p',`By ${folder.creator} · ${folder.item_count} items`),node('p',folder.description));const button=node('button','Preview folder');button.type='button';button.addEventListener('click',()=>openFolder(folder.id));card.append(button);$('collections').append(card);}
     next=data.next;$('more').hidden=next===null;$('status').textContent=$('collections').children.length?`${$('collections').children.length} folders shown`:'No approved folders found. Try another search.';
   }catch(error){if(run===listRun)$('status').textContent=error.message;}finally{if(run===listRun)$('more').disabled=false;}
@@ -46,3 +46,5 @@ $('copy-codes').onclick=()=>current&&copyText(current.folder.items.map(i=>i.seri
 $('download').onclick=()=>{if(!current)return;const url=URL.createObjectURL(new Blob([JSON.stringify({ok:true,id:current.id,digest:current.digest,folder:current.folder},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='community-folder-'+current.id+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $('query').value=query;
 browse().then(()=>{if(location.hash.length>1)openFolder(location.hash.slice(1));});
+
+$('page-size').onchange=()=>browse();
