@@ -1,168 +1,131 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FunkYouBoostingTools · BL3 Codes</title>
-  <meta name="description" content="Browse and submit Borderlands 3 item serials for FunkYouBoostingTools. Community collector on funkyoushift.com." />
-  <link rel="canonical" href="https://www.funkyoushift.com/codes/" />
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="top">
-    <div class="brand-block">
-      <img class="brand-mark" src="logo.webp" alt="" width="40" height="40" onerror="this.style.display='none'" />
-      <div>
-        <div class="brand">FunkYouBoostingTools</div>
-        <p class="sub">Borderlands 3 community codes · by FunkYouSHiFT</p>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="#browse" class="nav-link active" data-jump="browse">Browse</a>
-      <a href="#submit" class="nav-link" data-jump="submit">Submit a code</a>
-      <a id="downloadLink" class="nav-link" href="https://github.com/funkyoushift/FunkYouBoostingTools" rel="noopener" target="_blank">Download / Updates</a>
-      <a class="nav-link" href="https://github.com/funkyoushift/FunkYouBoostingTools/issues" rel="noopener" target="_blank">Support</a>
-      <a class="nav-link" href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Discord</a>
-      <a class="nav-link" href="https://www.funkyoushift.com/" rel="noopener">Hub</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="browse" class="panel">
-      <div class="section-head">
-        <h1>Codes browser</h1>
-        <p class="meta" id="catalogMeta">Loading catalog…</p>
-      </div>
-
-      <div class="filters">
-        <label class="grow">Search
-          <input id="q" type="search" placeholder="9-Volt, Lyuda, Transformer, BL3(…" autocomplete="off" />
-        </label>
-        <label>Slot
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FunkYouBoostingTools · BL3 Codes</title>
+<meta content="Browse and submit Borderlands 3 item serials for FunkYouBoostingTools. Community collector on funkyoushift.com." name="description"/>
+<link href="https://www.funkyoushift.com/codes/" rel="canonical"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="/professional.css?v=20261006" rel="stylesheet"/></head>
+<body class="professional-trial funk-trial"><a class="trial-skip" href="#main-content">Skip to content</a><header class="trial-header"><div class="trial-bar"><a class="trial-brand" href="/">FUNKYOUSHIFT<span class="brand-dot">.</span></a><button aria-controls="trial-nav" aria-expanded="false" class="trial-menu">Menu</button><nav aria-label="Main navigation" id="trial-nav"><a href="/borderlands-resources.html">Tools</a><a href="/community/">BL4 library</a><a href="/codes/">BL3 codes</a><a href="/borderlands-builds.html">Builds</a><a href="/borderlands-discord.html">Community</a><a href="/video.html">Watch</a></nav><a class="trial-call" href="/donate.html">Support the tools</a></div></header>
+<main id="main-content">
+<section class="panel" id="browse">
+<div class="section-head">
+<h1>Codes browser</h1>
+<p class="meta" id="catalogMeta">Loading catalog…</p>
+</div>
+<div class="filters">
+<label class="grow">Search
+          <input autocomplete="off" id="q" placeholder="9-Volt, Lyuda, Transformer, BL3(…" type="search"/>
+</label>
+<label>Slot
           <select id="fCategory">
-            <option value="">All</option>
-          </select>
-        </label>
-        <label>Type
+<option value="">All</option>
+</select>
+</label>
+<label>Type
           <select id="fType">
-            <option value="">All</option>
-          </select>
-        </label>
-        <label>Rarity
+<option value="">All</option>
+</select>
+</label>
+<label>Rarity
           <select id="fRarity">
-            <option value="">All</option>
-          </select>
-        </label>
-        <label>Manufacturer
+<option value="">All</option>
+</select>
+</label>
+<label>Manufacturer
           <select id="fMfg">
-            <option value="">All</option>
-          </select>
-        </label>
-        <label>Source
+<option value="">All</option>
+</select>
+</label>
+<label>Source
           <select id="fSource">
-            <option value="">All</option>
-            <option value="lootlemon">Lootlemon</option>
-            <option value="community">Community</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="list-bar">
-        <span id="resultCount">0 codes</span>
-        <div class="row">
-          <button type="button" id="clearFilters">Clear filters</button>
-          <button type="button" id="copyList">Copy list</button>
-          <button type="button" id="clearList">Clear list</button>
-        </div>
-      </div>
-      <p class="hint" id="pickedMeta">Nothing in your list yet. Use Add on a card, then copy the serials in one paste.</p>
-
-      <div id="grid" class="grid" aria-live="polite"></div>
-    </section>
-
-    <section id="submit" class="panel form-panel">
-      <div class="section-head">
-        <h2>Submit a code</h2>
-        <p class="meta">Share a legit or community BL3 serial. This form posts to <strong>funkyoushift.com</strong>. FunkYouSHiFT reviews the queue, then the code appears in the live catalog. Same field names will ship in FunkYouBoostingTools Items/Spawn later.</p>
-      </div>
-
-      <form id="submitForm" novalidate>
-        <div class="form-grid">
-          <label class="wide">Item name
-            <input id="name" name="name" required maxlength="120" placeholder="Lyuda" />
-            <span class="err" data-err="name"></span>
-          </label>
-          <label class="wide">BL3 serial
-            <textarea id="serial" name="serial" required rows="3" placeholder="BL3(...)" spellcheck="false"></textarea>
-            <span class="err" data-err="serial"></span>
-          </label>
-          <label>Type / slot
+<option value="">All</option>
+<option value="lootlemon">Lootlemon</option>
+<option value="community">Community</option>
+</select>
+</label>
+</div>
+<div class="list-bar">
+<span id="resultCount">0 codes</span>
+<div class="row">
+<button id="clearFilters" type="button">Clear filters</button>
+<button id="copyList" type="button">Copy list</button>
+<button id="clearList" type="button">Clear list</button>
+</div>
+</div>
+<p class="hint" id="pickedMeta">Nothing in your list yet. Use Add on a card, then copy the serials in one paste.</p>
+<div aria-live="polite" class="grid" id="grid"></div>
+</section>
+<section class="panel form-panel" id="submit">
+<div class="section-head">
+<h2>Submit a code</h2>
+<p class="meta">Share a Borderlands 3 item serial for community review. Approved submissions can appear in the public catalog.</p>
+</div>
+<form id="submitForm" novalidate="">
+<div class="form-grid">
+<label class="wide">Item name
+            <input id="name" maxlength="120" name="name" placeholder="Lyuda" required=""/>
+<span class="err" data-err="name"></span>
+</label>
+<label class="wide">BL3 serial
+            <textarea id="serial" name="serial" placeholder="BL3(...)" required="" rows="3" spellcheck="false"></textarea>
+<span class="err" data-err="serial"></span>
+</label>
+<label>Type / slot
             <select id="type" name="type">
-              <option value="">— optional —</option>
-            </select>
-            <span class="err" data-err="type"></span>
-          </label>
-          <label>Rarity
+<option value="">— optional —</option>
+</select>
+<span class="err" data-err="type"></span>
+</label>
+<label>Rarity
             <select id="rarity" name="rarity">
-              <option value="">— optional —</option>
-            </select>
-            <span class="err" data-err="rarity"></span>
-          </label>
-          <label>Manufacturer
-            <input id="manufacturer" name="manufacturer" maxlength="80" placeholder="Vladof" />
-          </label>
-          <label>Your name
-            <input id="submitter" name="submitter" maxlength="80" placeholder="optional" />
-          </label>
-          <label>Discord
-            <input id="discord" name="discord" maxlength="80" placeholder="name#0000 or @handle" />
-          </label>
-          <label class="wide">Notes
-            <textarea id="notes" name="notes" rows="3" maxlength="2000" placeholder="Anoints, parts, where you found it…"></textarea>
-          </label>
-          <label class="wide">Image URL
-            <input id="imageUrl" name="imageUrl" maxlength="500" placeholder="https://… (optional, your own screenshot)" />
-            <span class="err" data-err="imageUrl"></span>
-          </label>
-          <label class="wide">Or upload a screenshot
-            <input id="imageFile" name="image" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
-            <span class="err" data-err="image"></span>
-          </label>
-        </div>
-        <div class="row form-actions">
-          <button type="submit" class="primary" id="submitBtn">Submit to queue</button>
-          <button type="button" id="exportJson">Download JSON instead</button>
-          <button type="reset" id="resetForm">Reset</button>
-        </div>
-        <p class="hint" id="formStatus">Posts to <code>https://www.funkyoushift.com/codes/api/submit</code>. The app itself is downloaded from GitHub, not this page.</p>
-      </form>
-    </section>
-
-    <section id="about" class="panel about">
-      <h2>About this collector</h2>
-      <p>This is the FunkYouBoostingTools community codes desk for <strong>Borderlands 3</strong>, hosted on <a href="https://www.funkyoushift.com/">funkyoushift.com</a>. It is not a Borderlands 4 page and not save-editor.be. Downloads and updates live on <a href="https://github.com/funkyoushift/FunkYouBoostingTools">GitHub</a>. Seeded names and serials come from the public Lootlemon BL3 database. Cards use placeholders when there is no community screenshot.</p>
-      <p>Owner review: <a href="review.html">review.html</a> on this domain. With the Cloudflare collector it uses the review key; without it, load <code>data/submissions.json</code> or a downloaded JSON. Locally you can also run <code>node review.js pending</code>. Approved rows go into <code>data/community.json</code>.</p>
-      <p class="meta">License: PolyForm Noncommercial · Maintained by FunkYouSHiFT</p>
-    </section>
-  </main>
-
-  <footer class="site-foot">
-    <img class="brand-mark" src="logo.webp" alt="" width="32" height="32" onerror="this.style.display='none'" />
-    <nav class="foot-links">
-      <a href="https://github.com/funkyoushift/FunkYouBoostingTools" rel="noopener" target="_blank">GitHub</a>
-      <a href="https://github.com/funkyoushift/FunkYouBoostingTools/releases" rel="noopener" target="_blank">Downloads</a>
-      <a href="https://github.com/funkyoushift/FunkYouBoostingTools/issues" rel="noopener" target="_blank">Support</a>
-      <a href="https://discord.com/servers/funk-s-borderlands-trading-hub-997021744764289084" rel="noopener" target="_blank">Discord</a>
-      <a href="https://www.funkyoushift.com/codes/">Codes</a>
-      <a href="https://www.funkyoushift.com/">Website</a>
-    </nav>
-    <p class="meta">PolyForm Noncommercial · Maintained by FunkYouSHiFT. Downloads stay on GitHub, not this page.</p>
-  </footer>
-
-  <div id="toast" hidden></div>
-  <script src="config.js?v=3"></script>
-  <script src="shared/fields.js?v=3"></script>
-  <script src="app.js?v=3"></script>
-</body>
+<option value="">— optional —</option>
+</select>
+<span class="err" data-err="rarity"></span>
+</label>
+<label>Manufacturer
+            <input id="manufacturer" maxlength="80" name="manufacturer" placeholder="Vladof"/>
+</label>
+<label>Your name
+            <input id="submitter" maxlength="80" name="submitter" placeholder="optional"/>
+</label>
+<label>Discord
+            <input id="discord" maxlength="80" name="discord" placeholder="name#0000 or @handle"/>
+</label>
+<label class="wide">Notes
+            <textarea id="notes" maxlength="2000" name="notes" placeholder="Anoints, parts, where you found it…" rows="3"></textarea>
+</label>
+<label class="wide">Image URL
+            <input id="imageUrl" maxlength="500" name="imageUrl" placeholder="https://… (optional, your own screenshot)"/>
+<span class="err" data-err="imageUrl"></span>
+</label>
+<label class="wide">Or upload a screenshot
+            <input accept="image/png,image/jpeg,image/webp,image/gif" id="imageFile" name="image" type="file"/>
+<span class="err" data-err="image"></span>
+</label>
+</div>
+<div class="row form-actions">
+<button class="primary" id="submitBtn" type="submit">Submit to queue</button>
+<button id="exportJson" type="button">Download JSON instead</button>
+<button id="resetForm" type="reset">Reset</button>
+</div>
+<p class="hint" id="formStatus">Submissions are reviewed before publication. Software downloads are available from the official GitHub releases.</p>
+</form>
+</section>
+<section class="panel about" id="about">
+<h2>About this collector</h2>
+<p>This is the FunkYouBoostingTools community codes desk for <strong>Borderlands 3</strong>, hosted on <a href="/">funkyoushift.com</a>. It is not a Borderlands 4 page and not save-editor.be. Downloads and updates live on <a href="https://github.com/funkyoushift/FunkYouBoostingTools">GitHub</a>. Seeded names and serials come from the public Lootlemon BL3 database. Cards use placeholders when there is no community screenshot.</p>
+<p>Owner review: <a href="review.html">review.html</a> on this domain. With the Cloudflare collector it uses the review key; without it, load <code>data/submissions.json</code> or a downloaded JSON. Locally you can also run <code>node review.js pending</code>. Approved rows go into <code>data/community.json</code>.</p>
+<p class="meta">License: PolyForm Noncommercial · Maintained by FunkYouSHiFT</p>
+</section>
+</main>
+<div hidden="" id="toast"></div>
+<script src="config.js?v=3"></script>
+<script src="shared/fields.js?v=3"></script>
+<script src="app.js?v=3"></script>
+<footer class="trial-footer"><div class="trial-footer-grid"><div><strong>FUNKYOUSHIFT</strong><p>Tools, shared gear and people<br/>who know Borderlands.</p></div><div><strong>Play &amp; build</strong><a href="/borderlands-resources.html">Tools &amp; downloads</a><a href="/borderlands-modding.html">Modding guide</a><a href="/community/">BL4 community library</a><a href="/codes/">BL3 item codes</a></div><div><strong>The community</strong><a href="/borderlands-discord.html">Join Discord</a><a href="/video.html">Watch</a><a href="/merch.html">Merch</a><a href="/giveaway.html">Giveaways</a></div><div><strong>Keep it going</strong><a href="/donate.html">Support development</a><a href="/community/api.html">Developers / API</a><p>External tools belong to their creators.<br/>Back up your saves before making changes.</p></div></div></footer><script defer="" src="/professional.js?v=20261006"></script></body>
 </html>

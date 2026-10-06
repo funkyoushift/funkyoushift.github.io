@@ -1,3 +1,12 @@
 # Keep the machine-readable discovery mirror in the published static site.
 include:
   - .well-known
+
+exclude:
+  - community/review
+  - codes/cloudflare
+  - tools/server
+  - "*.md"
+  - "*.py"
+  - "*.zip"
+  - codes/data/submissions.json
