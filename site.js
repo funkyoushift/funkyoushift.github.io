@@ -37,6 +37,21 @@
     }
     window.dispatchEvent(new CustomEvent('funk-cta', { detail: { name: name, counts: counts } }));
   }
+  function clickContext(el){
+    // Only approved page and experiment labels; never retain query strings or link URLs.
+    var pages = ['/borderlands-discord.html', '/borderlands-4-modded-weapons.html', '/video.html', '/borderlands-modding.html'];
+    var path = window.location.pathname;
+    var context = { source_page: pages.indexOf(path) !== -1 ? path : 'other_page' };
+    context.cta_location = el.getAttribute('data-cta-location') === 'stream_rhythm' ? 'stream_rhythm' : 'existing_page';
+    context.cta_variant = el.getAttribute('data-cta-variant') === 'saturday_v1' ? 'saturday_v1' : 'baseline';
+    context.destination_stage = 'internal_navigation';
+    try {
+      var destination = new URL(el.getAttribute('href') || '', window.location.href);
+      var channels = ['discord.com', 'discord.gg', 'www.twitch.tv', 'twitch.tv', 'www.youtube.com', 'youtube.com', 'youtu.be'];
+      if (channels.indexOf(destination.hostname) !== -1) context.destination_stage = 'external_channel';
+    } catch (e) { /* An invalid link remains an internal navigation attempt. */ }
+    return context;
+  }
   window.FunkCTA = {
     track: trackCta,
     report: function(){ return loadCounts(); },
@@ -124,6 +139,6 @@
     if (!el) return;
     if (el.classList && el.classList.contains('twitch-loader')) return; // handled above
     var name = inferCta(el);
-    if (name) trackCta(name);
+    if (name) trackCta(name, clickContext(el));
   }, true);
 })();
