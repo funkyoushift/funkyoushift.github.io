@@ -296,3 +296,7 @@ Homepage image direction: keep action buttons literal and obvious. Community/fun
 
 ### Iframe tool behavior note
 The Tools page loads GZO, BL-SDK, and AMC as external iframes. Production embeds are intentionally not sandboxed by default because sandboxing can block file picker APIs, Blob downloads, popups, and cross-origin editor flows. The site now adds clearer fallback messaging and outside-frame buttons for important SDK GitHub/Discord links. If GZO save upload/download still fails in-frame, the likely fix is on the embedded editor side: use normal `<input type="file">` for uploads and Blob URL + `<a download>` for exports, or provide iframe-compatible fallbacks if the editor uses File System Access APIs.
+
+## 2026-10-26 — Buy Me a Coffee support destination
+
+Martin/FunkYouSHiFT's donation page, GitHub funding link and sitewide profile metadata now point to https://buymeacoffee.com/funkyoushift. The supplied QR decodes to that exact URL using ZXing; the HTTPS page returned 200 with the title Martin Wenn (FunkYouSHiFT). Old PayPal, Cash App and Venmo QR assets were removed from the site. Mattmab's independent Ko-fi, St. Jude charity links and Streamlabs merch remain separate. This change was ported onto the current origin/main site after discovering the older local checkout was five commits behind. Validation and public deployment are recorded separately.

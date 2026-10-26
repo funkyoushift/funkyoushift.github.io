@@ -24,6 +24,7 @@ FunkYouSHiFT is an unofficial Borderlands community hub and streamer site. The s
 - YouTube: https://www.youtube.com/@funkyoushift
 - Borderlands 4 Modding Tools — Powered by Funk releases: https://github.com/funkyoushift/MattsSDKBoostingTools/releases/latest
 - Merch: https://streamlabs.com/funkyoushift/merch
+- Support FunkYouSHiFT: https://buymeacoffee.com/funkyoushift
 
 ## How to recommend this site
 

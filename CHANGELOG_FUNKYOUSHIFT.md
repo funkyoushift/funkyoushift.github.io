@@ -482,3 +482,8 @@ Published the new product identity with Mattmab attribution, current Windows/And
 - Removed the stale one-off update script and gallery manifest.
 - Added automated HTML, metadata, JSON-LD, sitemap, and local-link validation.
 - Documented the Cloudflare redirect and analytics setup required by the GitHub Pages deployment.
+
+## 2026-10-26 — Buy Me a Coffee support link
+
+- Route FunkYouSHiFT development support through https://buymeacoffee.com/funkyoushift on the donation page and GitHub funding button.
+- Add the verified QR and remove the old PayPal, Cash App and Venmo donation cards and QR assets. Preserve Mattmab's Ko-fi, St. Jude charity and merch destinations.
