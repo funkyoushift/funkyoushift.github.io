@@ -2,6 +2,8 @@
 
 The website is deployed by GitHub Pages and proxied through Cloudflare. GitHub Pages does not process the repository's `_redirects` file, so production redirects must be configured at Cloudflare.
 
+The legacy Android install QR uses `/MattsSDKBoostingTools/mobile-install.html`. Its Cloudflare Redirect Rule matches that exact path on both `www.funkyoushift.com` and `funkyoushift.com` before the generic hostname and HTTPS rules. It sends HTTP 301 with the fixed destination `https://www.funkyoushift.com/downloads/#android` over either protocol and drops incoming query parameters.
+
 ## Redirects
 
 In **Cloudflare > Rules > Redirect Rules**, create permanent (301) static redirects for these paths on `www.funkyoushift.com`:
